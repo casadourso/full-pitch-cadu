@@ -1,0 +1,2467 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casa do Urso Investor Deck</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- INLINE SVG SPRITE -->
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="ic-paw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/><path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"/><circle cx="4" cy="8" r="2"/></symbol>
+  <symbol id="ic-network" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></symbol>
+  <symbol id="ic-quote" viewBox="0 0 24 24" fill="currentColor"><path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/></symbol>
+  <symbol id="ic-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="ic-brain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.46 2.5 2.5 0 0 1-1.44-4.6 2.5 2.5 0 0 1 1.44-4.6A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.46 2.5 2.5 0 0 0 1.44-4.6 2.5 2.5 0 0 0-1.44-4.6A2.5 2.5 0 0 0 14.5 2Z"/></symbol>
+  <symbol id="ic-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></symbol>
+  <symbol id="ic-hand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"/><path d="M10 10.5a2 2 0 0 0-2-2a2 2 0 0 0-2 2V18a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/></symbol>
+  <symbol id="ic-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol>
+  <symbol id="ic-message" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+  <symbol id="ic-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></symbol>
+  <symbol id="ic-table" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/></symbol>
+  <symbol id="ic-unplug" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m19 5 3-3"/><path d="m2 22 3-3"/><path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z"/><path d="M17.6 10.7a2.4 2.4 0 0 0 0-3.4L15 5l-6 6 2.7 2.7a2.4 2.4 0 0 0 3.4 0Z"/></symbol>
+  <symbol id="ic-trending" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></symbol>
+  <symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="ic-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></symbol>
+  <symbol id="ic-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></symbol>
+  <symbol id="ic-clipboard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></symbol>
+  <symbol id="ic-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></symbol>
+  <symbol id="ic-messages" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></symbol>
+  <symbol id="ic-zoom" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><path d="M11 8v6"/><path d="M8 11h6"/></symbol>
+  <symbol id="ic-bar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/><line x1="2" x2="22" y1="20" y2="20"/></symbol>
+  <symbol id="ic-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+  <symbol id="ic-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+  <symbol id="ic-rocket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09Z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2Z"/></symbol>
+  <symbol id="ic-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+  <symbol id="ic-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
+  <symbol id="ic-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
+  <symbol id="ic-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+  <symbol id="ic-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="ic-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></symbol>
+  <symbol id="ic-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></symbol>
+  <symbol id="ic-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></symbol>
+  <symbol id="ic-grad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></symbol>
+  <symbol id="ic-flag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></symbol>
+</svg>
+
+<style>
+/* ══ TOKENS ══ */
+:root {
+  --coral: #F87171;
+  --coral-light: #FEE2E2;
+  --coral-dark: #DC2626;
+  --navy: #0F1729;
+  --navy-2: #1A2340;
+  --ink: #1A1F2E;
+  --slate: #4B5563;
+  --mist: #9CA3AF;
+  --cloud: #F3F4F6;
+  --white: #FFFFFF;
+  --border: #E5E7EB;
+  --serif: 'Poppins', sans-serif;
+  --sans: 'Plus Jakarta Sans', sans-serif;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.04);
+  --shadow: 0 4px 16px rgba(0,0,0,0.07), 0 1px 4px rgba(0,0,0,0.04);
+  --shadow-md: 0 8px 32px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* ══ RESET ══ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); background: var(--white); color: var(--ink); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+.ic { display: inline-block; vertical-align: middle; flex-shrink: 0; }
+
+/* ══ PROGRESS BAR ══ */
+#progress-bar {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  background: var(--coral);
+  width: 0%;
+  z-index: 1000;
+  transition: width 0.1s linear;
+}
+
+/* ══ NAV ══ */
+#nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 48px;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+#nav.scrolled { border-color: var(--border); }
+
+.nav-logo {
+  display: flex; align-items: center; gap: 9px;
+  font-family: var(--serif); font-size: 16px; font-weight: 700;
+  color: var(--ink); letter-spacing: -0.3px; text-decoration: none;
+}
+.nav-logo-bear {
+  width: 28px; height: 28px; border-radius: 7px;
+  background: var(--coral); display: flex; align-items: center;
+  justify-content: center; color: var(--white);
+}
+
+.nav-pills {
+  display: flex; gap: 4px; align-items: center;
+  list-style: none;
+}
+.nav-pill {
+  font-size: 11.5px; font-weight: 600; color: var(--mist);
+  padding: 5px 12px; border-radius: 100px; cursor: pointer;
+  border: none; background: none; font-family: var(--sans);
+  transition: color 0.2s, background 0.2s;
+  letter-spacing: 0.01em;
+}
+.nav-pill:hover { color: var(--ink); background: var(--cloud); }
+.nav-pill.active { color: var(--coral-dark); background: var(--coral-light); }
+
+.nav-right { display: flex; align-items: center; gap: 10px; }
+
+/* Lang toggle */
+.lang-toggle {
+  display: flex; background: var(--cloud); border-radius: 100px;
+  padding: 3px; gap: 2px;
+}
+.lang-btn {
+  border: none; background: transparent; border-radius: 100px;
+  padding: 4px 11px; font-family: var(--sans); font-size: 11px;
+  font-weight: 700; color: var(--mist); cursor: pointer;
+  transition: background 0.15s, color 0.15s; letter-spacing: 0.04em;
+  display: flex; align-items: center; gap: 4px;
+}
+.lang-btn.active { background: var(--white); color: var(--ink); box-shadow: 0 1px 4px rgba(0,0,0,0.10); }
+
+.nav-cta {
+  background: var(--coral); color: var(--white); border: none;
+  padding: 8px 20px; border-radius: 100px; font-family: var(--sans);
+  font-size: 12px; font-weight: 700; cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 10px rgba(248,113,113,0.35);
+  letter-spacing: 0.01em;
+}
+.nav-cta:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(248,113,113,0.4); }
+
+/* ══ DOT NAV ══ */
+#dot-nav {
+  position: fixed; right: 22px; top: 50%;
+  transform: translateY(-50%);
+  z-index: 800; display: flex;
+  flex-direction: column; gap: 9px; align-items: center;
+}
+.dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--border); border: none; cursor: pointer; padding: 0;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+.dot:hover { background: var(--slate); transform: scale(1.35); }
+.dot.active { background: var(--coral); transform: scale(1.2); box-shadow: 0 0 0 3px var(--coral-light); }
+.dot::before {
+  content: attr(data-label);
+  position: absolute; right: calc(100% + 10px); top: 50%; transform: translateY(-50%);
+  background: var(--ink); color: var(--white); font-family: var(--sans);
+  font-size: 10.5px; font-weight: 600; white-space: nowrap;
+  padding: 3px 9px; border-radius: 5px; opacity: 0;
+  pointer-events: none; transition: opacity 0.15s;
+}
+.dot:hover::before { opacity: 1; }
+
+/* ══ ANIMATIONS ══ */
+.fadeUp {
+  opacity: 0; transform: translateY(26px);
+  transition: opacity 0.65s cubic-bezier(0.16,1,0.3,1), transform 0.65s cubic-bezier(0.16,1,0.3,1);
+}
+.fadeUp.animate { opacity: 1; transform: none; }
+.delay-1 { transition-delay: 0.08s; }
+.delay-2 { transition-delay: 0.16s; }
+.delay-3 { transition-delay: 0.24s; }
+.delay-4 { transition-delay: 0.32s; }
+.delay-5 { transition-delay: 0.40s; }
+
+/* Main transition for lang switch */
+#main-content { transition: opacity 0.15s; }
+#main-content.switching { opacity: 0; }
+
+/* ══ SECTION BASE ══ */
+section {
+  min-height: 100vh;
+  display: flex; align-items: center;
+  position: relative; overflow: hidden;
+  padding: 100px 0 60px;
+}
+.inner {
+  max-width: 1320px; margin: 0 auto;
+  padding: 0 64px; width: 100%;
+}
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--coral); margin-bottom: 18px;
+}
+.eyebrow::before { content:''; width:16px; height:2px; background:var(--coral); border-radius:2px; }
+h2.slide-title {
+  font-family: var(--serif); font-size: clamp(34px, 4vw, 54px);
+  line-height: 1.1; letter-spacing: -0.025em; font-weight: 700;
+  color: var(--ink); margin-bottom: 16px;
+}
+h2.slide-title em { font-style: italic; color: var(--coral); }
+.slide-subtitle {
+  font-size: 17px; line-height: 1.7; color: var(--slate);
+  max-width: 560px; margin-bottom: 48px; font-weight: 400;
+}
+
+/* Light / dark backgrounds */
+.bg-white  { background: var(--white); }
+.bg-cloud  { background: var(--cloud); }
+.bg-navy   { background: var(--navy); }
+.bg-navy h2.slide-title { color: var(--white); }
+.bg-navy .slide-subtitle { color: rgba(255,255,255,0.5); }
+.bg-navy .eyebrow { color: var(--coral); }
+.bg-navy .eyebrow::before { background: var(--coral); }
+
+/* slide watermark number */
+.slide-num {
+  position: absolute; bottom: 28px; right: 52px;
+  font-family: var(--serif); font-size: 80px; font-weight: 800;
+  color: rgba(0,0,0,0.04); line-height: 1; pointer-events: none;
+  user-select: none; letter-spacing: -0.06em;
+}
+.bg-navy .slide-num { color: rgba(255,255,255,0.04); }
+
+/* ══ CARDS ══ */
+.card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 16px; padding: 28px 24px; box-shadow: var(--shadow-sm);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.card-icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 14px; background: var(--cloud);
+  color: var(--coral); transition: background 0.2s;
+}
+.card:hover .card-icon { background: var(--coral-light); }
+.card-title { font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 6px; letter-spacing: -0.01em; }
+.card-desc  { font-size: 12.5px; color: var(--slate); line-height: 1.6; }
+
+/* ══════════════════════════════════
+   01 COVER
+══════════════════════════════════ */
+#cover { background: var(--white); }
+#cover::before {
+  content: ''; position: absolute; top: -160px; right: -160px;
+  width: 640px; height: 640px;
+  background: radial-gradient(circle, #FEE2E2 0%, transparent 68%);
+  border-radius: 50%; pointer-events: none;
+}
+#cover::after {
+  content: ''; position: absolute; bottom: -80px; left: -80px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, #F0FDF4 0%, transparent 68%);
+  border-radius: 50%; pointer-events: none;
+}
+.cover-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 72px; align-items: center; position: relative; z-index: 1;
+}
+.cover-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--coral-light); color: var(--coral-dark);
+  border-radius: 100px; padding: 5px 14px; font-size: 11px;
+  font-weight: 700; letter-spacing: 0.05em; margin-bottom: 24px;
+}
+.cover-dot { width: 6px; height: 6px; background: var(--coral); border-radius: 50%; animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(1.5)} }
+.cover-h1 {
+  font-family: var(--serif); font-size: clamp(40px,5vw,68px);
+  line-height: 1.05; letter-spacing: -0.03em; font-weight: 700;
+  color: var(--ink); margin-bottom: 22px;
+}
+.cover-h1 em { font-style: italic; color: var(--coral); }
+.cover-p { font-size: 18px; line-height: 1.7; color: var(--slate); margin-bottom: 38px; max-width: 420px; }
+.cover-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-coral {
+  background: var(--coral); color: var(--white); border: none;
+  padding: 13px 28px; border-radius: 100px; font-family: var(--sans);
+  font-size: 14px; font-weight: 700; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(248,113,113,0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-coral:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(248,113,113,0.45); }
+.btn-outline {
+  background: transparent; color: var(--ink); border: 1.5px solid var(--border);
+  padding: 13px 28px; border-radius: 100px; font-family: var(--sans);
+  font-size: 14px; font-weight: 600; cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+.btn-outline:hover { border-color: var(--slate); background: var(--cloud); }
+
+/* Cover right stat cards */
+.cover-stats { display: flex; flex-direction: column; gap: 16px; }
+.cover-stat {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 16px; padding: 22px 24px; box-shadow: var(--shadow);
+  display: flex; align-items: center; gap: 18px;
+}
+.cs-icon {
+  width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.cs-num {
+  font-family: var(--serif); font-size: 28px; font-weight: 700;
+  letter-spacing: -0.03em; color: var(--ink); line-height: 1;
+}
+.cs-num span { color: var(--coral); }
+.cs-lbl { font-size: 12px; color: var(--mist); margin-top: 2px; font-weight: 500; }
+.cs-tag {
+  margin-left: auto; background: var(--cloud); border-radius: 100px;
+  padding: 4px 10px; font-size: 10.5px; font-weight: 700;
+  color: var(--slate); white-space: nowrap; flex-shrink: 0;
+}
+.cs-tag.green { background: #DCFCE7; color: #16A34A; }
+
+/* ══════════════════════════════════
+   02 FOUNDER
+══════════════════════════════════ */
+#founder { background: var(--navy); }
+#founder::before {
+  content: ''; position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(248,113,113,0.08) 0%, transparent 65%);
+  border-radius: 50%; pointer-events: none;
+}
+.founder-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; position: relative; z-index: 1; }
+.founder-quote-wrap { }
+.quote-mark { font-size: 48px; color: var(--coral); line-height: 1; margin-bottom: 12px; font-family: var(--serif); }
+blockquote {
+  font-family: var(--serif); font-size: clamp(22px,2.8vw,34px);
+  line-height: 1.35; font-weight: 600; color: var(--white);
+  letter-spacing: -0.02em; margin-bottom: 32px;
+}
+blockquote em { font-style: italic; color: var(--coral); }
+.founder-attr {
+  display: flex; align-items: center; gap: 14px;
+}
+.founder-avatar {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--coral) 0%, #FB923C 100%);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-size: 16px; font-weight: 700; color: var(--white);
+}
+.founder-name { font-weight: 700; color: var(--white); font-size: 14px; }
+.founder-role { font-size: 12px; color: rgba(255,255,255,0.45); margin-top: 1px; }
+
+.founder-cards { display: flex; flex-direction: column; gap: 14px; }
+.adv-card {
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px; padding: 22px 20px; transition: background 0.2s;
+}
+.adv-card:hover { background: rgba(255,255,255,0.08); }
+.adv-icon {
+  width: 36px; height: 36px; border-radius: 10px; background: rgba(248,113,113,0.15);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--coral); margin-bottom: 10px;
+}
+.adv-title { font-size: 13.5px; font-weight: 700; color: var(--white); margin-bottom: 5px; }
+.adv-desc  { font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.6; }
+
+/* ══════════════════════════════════
+   02b FRAGMENTED PROBLEM DIAGRAM
+══════════════════════════════════ */
+#frag-problem { background: var(--white); }
+.frag-layout {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-top: 40px;
+}
+.frag-diagram {
+  position: relative;
+  width: 340px; height: 340px;
+}
+.frag-node {
+  position: absolute;
+  display: flex; align-items: center; gap: 10px;
+  background: var(--white); border: 1.5px solid var(--border);
+  border-radius: 12px; padding: 10px 16px;
+  box-shadow: var(--shadow-sm);
+  font-size: 13px; font-weight: 600; color: var(--ink);
+  white-space: nowrap;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.frag-node:hover { border-color: var(--coral); transform: scale(1.05); }
+.frag-node .fn-icon {
+  width: 30px; height: 30px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; color: var(--white); font-size: 14px;
+}
+.frag-node:nth-child(1) { top: 0; left: 50%; transform: translateX(-50%); }
+.frag-node:nth-child(2) { top: 18%; right: -10px; }
+.frag-node:nth-child(3) { top: 55%; right: -20px; }
+.frag-node:nth-child(4) { bottom: 0; left: 50%; transform: translateX(-50%); }
+.frag-node:nth-child(5) { top: 55%; left: -20px; }
+.frag-node:nth-child(6) { top: 18%; left: -10px; }
+
+.frag-center-label {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px; color: var(--border); pointer-events: none;
+}
+
+.frag-lines {
+  position: absolute; inset: 0;
+  pointer-events: none;
+}
+.frag-lines line {
+  stroke: var(--border);
+  stroke-width: 1.5;
+  stroke-dasharray: 6 4;
+  opacity: 0.6;
+}
+
+.frag-arrow {
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+}
+.frag-arrow svg { color: var(--coral); }
+
+.frag-text-list {
+  display: flex; flex-direction: column; gap: 12px;
+  margin-top: 32px;
+}
+.frag-text-item {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 14px; color: var(--slate); line-height: 1.6;
+}
+.frag-text-item .fti-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--coral); margin-top: 8px; flex-shrink: 0;
+}
+
+/* ══════════════════════════════════
+   02c SOLUTION PLATFORM DIAGRAM
+══════════════════════════════════ */
+#sol-platform { background: var(--cloud); }
+.sol-plat-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  margin-top: 40px;
+}
+/* Ecosystem Stack Diagram */
+.eco-stack {
+  display: flex; flex-direction: column; gap: 0;
+  max-width: 400px; margin: 0 auto;
+}
+.eco-layer {
+  border-radius: 16px; padding: 18px 20px;
+  position: relative;
+}
+.eco-layer--top {
+  background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%);
+  border: 1px solid #C7D2FE;
+  border-radius: 16px 16px 6px 6px;
+}
+.eco-layer--mid {
+  background: linear-gradient(135deg, #FFF1F2 0%, #FFE4E6 100%);
+  border: 2px solid var(--coral);
+  z-index: 2; position: relative;
+  box-shadow: 0 8px 40px rgba(248,113,113,0.18);
+}
+.eco-layer--bot {
+  background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+  border: 1px solid #A7F3D0;
+  border-radius: 6px 6px 16px 16px;
+}
+.eco-layer-label {
+  font-size: 9px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 1.5px; margin-bottom: 12px;
+}
+.eco-layer--top .eco-layer-label { color: #4338CA; }
+.eco-layer--mid .eco-layer-label { color: var(--coral-dark); }
+.eco-layer--bot .eco-layer-label { color: #059669; }
+
+.eco-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.eco-card {
+  display: flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.9); border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 10px; padding: 9px 12px;
+  font-size: 12px; font-weight: 600; color: var(--ink);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.eco-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+.eco-card .hs-icon {
+  width: 26px; height: 26px; border-radius: 7px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; color: var(--white);
+}
+
+.eco-center-row {
+  display: flex; align-items: center; justify-content: center; gap: 14px;
+}
+.eco-logo {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #FECACA, #F87171);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 24px rgba(248,113,113,0.3);
+  animation: eco-glow 3s ease-in-out infinite;
+  flex-shrink: 0; color: var(--white);
+}
+.eco-title {
+  font-family: var(--serif); font-size: 18px; font-weight: 700;
+  color: var(--coral-dark);
+}
+.eco-subtitle {
+  font-size: 11px; color: var(--coral); margin-top: 2px;
+  font-weight: 500;
+}
+
+/* Flow arrows between layers */
+.eco-flow {
+  display: flex; justify-content: center; gap: 28px;
+  padding: 5px 0; position: relative; z-index: 3;
+}
+.eco-flow-col {
+  display: flex; flex-direction: column; align-items: center; gap: 1px;
+}
+.eco-flow-dot {
+  width: 4px; height: 4px; border-radius: 50%;
+  background: var(--coral); opacity: 0.15;
+}
+.eco-flow-dot.lit {
+  width: 5px; height: 5px; opacity: 0.7;
+  animation: dot-fall 1.8s ease-in-out infinite;
+}
+.eco-flow-col:nth-child(2) .eco-flow-dot.lit { animation-delay: 0.25s; }
+.eco-flow-col:nth-child(3) .eco-flow-dot.lit { animation-delay: 0.5s; }
+
+@keyframes eco-glow {
+  0%, 100% { box-shadow: 0 4px 24px rgba(248,113,113,0.3); }
+  50% { box-shadow: 0 4px 36px rgba(248,113,113,0.45), 0 0 60px rgba(248,113,113,0.12); }
+}
+@keyframes dot-fall {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 0.2; transform: scale(0.5); }
+}
+
+.sol-key-msg {
+  margin-top: 32px;
+  background: var(--coral-light);
+  border: 1px solid #FECACA;
+  border-radius: 12px;
+  padding: 18px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--coral-dark);
+  line-height: 1.55;
+}
+
+.sol-connect-list {
+  display: flex; flex-direction: column; gap: 10px;
+  margin-top: 24px;
+}
+.sol-connect-item {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 14px; color: var(--slate); line-height: 1.5;
+}
+.sol-connect-item .sci-icon {
+  width: 28px; height: 28px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; background: var(--coral-light); color: var(--coral);
+}
+
+/* ══════════════════════════════════
+   03 DISCOVERY
+══════════════════════════════════ */
+#discovery { background: var(--cloud); }
+.discovery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: start; }
+.actor-list { display: flex; flex-direction: column; gap: 8px; }
+.actor-row {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 10px; padding: 12px 16px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.actor-row:hover { border-color: var(--coral-light); transform: translateX(3px); }
+.a-ico {
+  width: 34px; height: 34px; border-radius: 8px; background: var(--cloud);
+  border: 1px solid var(--border); display: flex; align-items: center;
+  justify-content: center; color: var(--slate); flex-shrink: 0;
+}
+.a-name { font-size: 13px; font-weight: 700; color: var(--ink); }
+.a-sub  { font-size: 11px; color: var(--mist); margin-top: 1px; }
+
+.chaos-card {
+  background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 24px;
+  display: flex; flex-direction: column; gap: 16px;
+}
+.chaos-label { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mist); }
+.chaos-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.ctag {
+  display: flex; align-items: center; gap: 6px;
+  background: var(--cloud); border: 1px solid var(--border);
+  border-radius: 100px; padding: 6px 12px;
+  font-size: 12px; font-weight: 500; color: var(--slate);
+  transform: rotate(var(--r));
+}
+.ctag:nth-child(1){--r:-2deg}.ctag:nth-child(2){--r:1.5deg}.ctag:nth-child(3){--r:-1deg}.ctag:nth-child(4){--r:2deg}
+.chaos-insight {
+  background: var(--coral-light); border: 1px solid #FECACA;
+  border-radius: 10px; padding: 14px 16px;
+  font-size: 13px; color: var(--coral-dark); font-weight: 500; line-height: 1.55;
+}
+
+/* ══════════════════════════════════
+   04 PROBLEM
+══════════════════════════════════ */
+#problem { background: var(--white); }
+.prob-top { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-bottom: 40px; }
+.prob-stat {
+  background: var(--cloud); border-radius: 14px; padding: 24px 20px;
+  text-align: center;
+}
+.prob-stat-num {
+  font-family: var(--serif); font-size: 40px; font-weight: 700;
+  letter-spacing: -0.03em; color: var(--ink); line-height: 1; margin-bottom: 6px;
+}
+.prob-stat-num span { color: var(--coral); }
+.prob-stat-lbl { font-size: 12px; color: var(--mist); line-height: 1.4; font-weight: 500; }
+.prob-consequences { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; }
+.consq-card {
+  border: 1.5px solid var(--border); border-radius: 12px; padding: 20px 18px;
+  display: flex; gap: 14px; align-items: flex-start;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.consq-card:hover { border-color: var(--coral-light); transform: translateY(-2px); }
+.consq-num {
+  font-family: var(--serif); font-size: 32px; font-weight: 800;
+  color: var(--coral-light); letter-spacing: -0.04em; line-height: 1; flex-shrink: 0;
+}
+.consq-title { font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+.consq-desc  { font-size: 12px; color: var(--slate); line-height: 1.55; }
+
+/* ══════════════════════════════════
+   05 SOLUTION
+══════════════════════════════════ */
+#solution { background: var(--cloud); }
+.feat-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; background: var(--border); border-radius: 18px; overflow: hidden; }
+.feat-cell { background: var(--white); padding: 28px 22px; transition: background 0.2s; }
+.feat-cell:hover { background: #FAFAFA; }
+.feat-cell:nth-child(1){border-radius:18px 0 0 0} .feat-cell:nth-child(3){border-radius:0 18px 0 0}
+.feat-cell:nth-child(4){border-radius:0 0 0 18px} .feat-cell:nth-child(6){border-radius:0 0 18px 0}
+.fi { width: 38px; height: 38px; border-radius: 10px; background: var(--cloud); display: flex; align-items: center; justify-content: center; color: var(--coral); margin-bottom: 12px; transition: background 0.2s; }
+.feat-cell:hover .fi { background: var(--coral-light); }
+.ft { font-size: 13.5px; font-weight: 700; color: var(--ink); margin-bottom: 5px; letter-spacing: -0.01em; }
+.fd { font-size: 12px; color: var(--slate); line-height: 1.6; }
+
+/* ══════════════════════════════════
+   06 WORKFLOW
+══════════════════════════════════ */
+#workflow { background: var(--navy); }
+.wf-steps { display: grid; grid-template-columns: repeat(4,1fr); position: relative; margin-top: 12px; }
+.wf-steps::before {
+  content: ''; position: absolute; top: 28px;
+  left: calc(12.5% + 20px); right: calc(12.5% + 20px); height: 2px;
+  background: linear-gradient(to right, var(--coral), rgba(248,113,113,0.3), var(--coral), rgba(248,113,113,0.3));
+  background-size: 200% 100%; animation: gf 3s linear infinite;
+}
+@keyframes gf { 0%{background-position:0%}100%{background-position:-200%} }
+.wf-step { text-align: center; padding: 0 16px; }
+.wf-num-wrap { display: flex; justify-content: center; margin-bottom: 18px; position: relative; z-index: 1; }
+.wf-num {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: rgba(255,255,255,0.06); border: 2px solid rgba(255,255,255,0.12);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-size: 20px; font-weight: 700; color: var(--coral);
+  transition: background 0.2s, border-color 0.2s;
+}
+.wf-step:hover .wf-num { background: var(--coral); border-color: var(--coral); color: var(--white); }
+.wf-icon-wrap {
+  width: 38px; height: 38px; border-radius: 10px;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(255,255,255,0.5); margin: 0 auto 10px;
+  transition: background 0.2s, color 0.2s;
+}
+.wf-step:hover .wf-icon-wrap { background: rgba(248,113,113,0.15); color: var(--coral); }
+.wf-t { font-size: 13.5px; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+.wf-d { font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.6; }
+
+/* ══════════════════════════════════
+   07 TRACTION
+══════════════════════════════════ */
+#traction { background: var(--white); }
+.traction-layout { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: start; }
+.traction-left { }
+.lab-quote {
+  background: var(--cloud); border-left: 3px solid var(--coral);
+  border-radius: 0 12px 12px 0; padding: 20px 22px; margin-bottom: 28px;
+  font-size: 15px; font-style: italic; color: var(--slate); line-height: 1.65;
+}
+.lab-quote strong { color: var(--ink); font-style: normal; }
+.traction-chart { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 24px; box-shadow: var(--shadow-sm); }
+.tc-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 20px; }
+.tc-mrr { font-family: var(--serif); font-size: 32px; font-weight: 700; color: var(--ink); letter-spacing: -0.03em; }
+.tc-tag { background: #DCFCE7; color: #16A34A; border-radius: 100px; padding: 4px 10px; font-size: 11px; font-weight: 700; display: flex; align-items: center; gap: 4px; }
+.rev-bars { display: flex; align-items: flex-end; gap: 10px; height: 96px; }
+.rb-w { flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 5px; }
+.rb { width: 100%; border-radius: 5px 5px 0 0; background: var(--cloud); animation: barG .9s cubic-bezier(.16,1,.3,1) backwards; transform-origin: bottom; }
+@keyframes barG { from{transform:scaleY(0)} }
+.rb.act  { background: var(--coral); }
+.rb.proj { background: #FECACA; }
+.rbv { font-size: 9px; font-weight: 600; color: var(--mist); }
+
+.metric-cards { display: flex; flex-direction: column; gap: 12px; }
+.metric-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 20px 22px; box-shadow: var(--shadow-sm); }
+.mc-label { font-size: 10px; font-weight: 700; color: var(--mist); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+.mc-val { font-family: var(--serif); font-size: 28px; font-weight: 700; letter-spacing: -0.03em; color: var(--ink); line-height: 1; }
+.mc-val span { color: var(--coral); }
+.mc-sub { font-size: 11.5px; color: var(--mist); margin-top: 3px; }
+
+/* ══════════════════════════════════
+   08 MARKET
+══════════════════════════════════ */
+#market { background: var(--cloud); }
+.market-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+/* Market funnel bars */
+.mkt-funnel {
+  display: flex; flex-direction: column; gap: 12px;
+  align-items: center; justify-content: center;
+}
+.mkt-bar {
+  border-radius: 14px; padding: 22px 24px;
+  display: flex; align-items: baseline; gap: 14px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.mkt-bar:hover { transform: scale(1.02); box-shadow: var(--shadow); }
+.mkt-bar--tam {
+  width: 100%;
+  background: rgba(248,113,113,0.06);
+  border: 1.5px solid rgba(248,113,113,0.2);
+}
+.mkt-bar--sam {
+  width: 78%;
+  background: rgba(248,113,113,0.12);
+  border: 1.5px solid rgba(248,113,113,0.3);
+}
+.mkt-bar--som {
+  width: 55%;
+  background: var(--coral);
+  border: 1.5px solid var(--coral);
+  box-shadow: 0 6px 24px rgba(248,113,113,0.25);
+}
+.mkt-bar-tag {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; flex-shrink: 0; min-width: 32px;
+}
+.mkt-bar-val {
+  font-family: var(--serif); font-size: 28px; font-weight: 700;
+  letter-spacing: -0.03em; line-height: 1; flex-shrink: 0;
+}
+.mkt-bar-desc {
+  font-size: 12px; font-weight: 500; opacity: 0.7;
+}
+.mkt-bar--tam .mkt-bar-tag { color: var(--coral); }
+.mkt-bar--tam .mkt-bar-val { color: var(--ink); }
+.mkt-bar--tam .mkt-bar-desc { color: var(--slate); }
+.mkt-bar--sam .mkt-bar-tag { color: var(--coral-dark); }
+.mkt-bar--sam .mkt-bar-val { color: var(--ink); }
+.mkt-bar--sam .mkt-bar-desc { color: var(--slate); }
+.mkt-bar--som .mkt-bar-tag,
+.mkt-bar--som .mkt-bar-val,
+.mkt-bar--som .mkt-bar-desc { color: var(--white); }
+
+.market-right { display: flex; flex-direction: column; gap: 16px; }
+.mkt-stat {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 14px; padding: 22px 20px; display: flex; gap: 16px;
+  align-items: center; box-shadow: var(--shadow-sm);
+  transition: transform 0.2s;
+}
+.mkt-stat:hover { transform: translateX(4px); }
+.mkt-ico {
+  width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.mkt-num { font-family: var(--serif); font-size: 26px; font-weight: 700; letter-spacing: -0.03em; color: var(--ink); line-height: 1; }
+.mkt-num span { color: var(--coral); }
+.mkt-lbl { font-size: 12px; color: var(--mist); margin-top: 2px; font-weight: 500; }
+
+/* ══════════════════════════════════
+   09 BIZ MODEL
+══════════════════════════════════ */
+#bizmodel { background: var(--white); }
+.biz-layout { display: grid; grid-template-columns: 1.1fr 1fr; gap: 44px; align-items: start; }
+.pricing-stack { display: flex; flex-direction: column; gap: 12px; }
+.price-card {
+  background: var(--cloud); border: 1px solid var(--border);
+  border-radius: 13px; padding: 20px 22px;
+  display: flex; align-items: center; justify-content: space-between;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.price-card:hover { border-color: var(--coral-light); transform: translateX(3px); }
+.price-card.featured { background: var(--navy); border-color: var(--navy); }
+.pc-label { font-size: 10px; font-weight: 700; color: var(--mist); letter-spacing: 0.1em; text-transform: uppercase; }
+.price-card.featured .pc-label { color: rgba(255,255,255,0.4); }
+.pc-name { font-size: 15px; font-weight: 700; color: var(--ink); margin-top: 2px; }
+.price-card.featured .pc-name { color: var(--white); }
+.pc-price { font-family: var(--serif); font-size: 24px; font-weight: 700; color: var(--coral); letter-spacing: -0.03em; }
+.pc-price small { font-family: var(--sans); font-size: 11px; color: var(--mist); }
+
+.math-card {
+  background: var(--navy); border-radius: 16px; padding: 28px 26px; color: var(--white);
+  position: relative; overflow: hidden;
+}
+.math-card::before {
+  content: ''; position: absolute; top: -40px; right: -40px;
+  width: 160px; height: 160px;
+  background: radial-gradient(circle, rgba(248,113,113,0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.math-label { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 14px; }
+.math-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
+.math-row:last-child { border-bottom: none; padding-bottom: 0; }
+.math-key { font-size: 13px; color: rgba(255,255,255,0.5); }
+.math-val { font-family: var(--serif); font-size: 20px; font-weight: 700; color: var(--white); letter-spacing: -0.02em; }
+.math-val.accent { color: var(--coral); font-size: 28px; }
+.math-divider { height: 1px; background: rgba(255,255,255,0.07); margin: 4px 0; }
+
+/* ══════════════════════════════════
+   10 COMPETITION
+══════════════════════════════════ */
+#competition { background: var(--cloud); }
+.comp-table { border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+.comp-hdr { display: grid; grid-template-columns: 2fr 1fr 1fr 1.2fr; background: var(--navy); padding: 14px 20px; gap: 12px; }
+.ch { font-size: 10.5px; font-weight: 700; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.1em; }
+.ch.ours { color: var(--coral); }
+.comp-row { display: grid; grid-template-columns: 2fr 1fr 1fr 1.2fr; padding: 14px 20px; gap: 12px; border-top: 1px solid var(--border); align-items: center; background: var(--white); transition: background 0.15s; }
+.comp-row:hover { background: #FAFAFA; }
+.comp-row.ours { background: var(--cloud); border-left: 3px solid var(--coral); }
+.cf { font-size: 13px; font-weight: 600; color: var(--ink); }
+.cc { display: flex; align-items: center; gap: 5px; font-size: 12.5px; font-weight: 500; }
+.cy{color:#16A34A} .cn{color:var(--mist)} .cp{color:#D97706}
+
+/* ══════════════════════════════════
+   11 GTM
+══════════════════════════════════ */
+#gtm { background: var(--white); }
+.gtm-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; }
+.gtm-card {
+  border: 1px solid var(--border); border-radius: 14px; padding: 22px;
+  display: flex; gap: 16px; align-items: flex-start;
+  background: var(--white); box-shadow: var(--shadow-sm);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.gtm-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.gtm-ico-wrap { flex-shrink: 0; }
+.gtm-ico {
+  width: 44px; height: 44px; border-radius: 12px; background: var(--cloud);
+  border: 1px solid var(--border); display: flex; align-items: center;
+  justify-content: center; color: var(--slate); transition: background 0.2s, color 0.2s;
+}
+.gtm-card:hover .gtm-ico { background: var(--coral-light); color: var(--coral); }
+.gtm-step-num { font-size: 10px; font-weight: 700; color: var(--mist); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 5px; text-align: center; }
+.gtm-t { font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 5px; }
+.gtm-d { font-size: 12px; color: var(--slate); line-height: 1.6; }
+
+/* ══════════════════════════════════
+   12 ASK
+══════════════════════════════════ */
+#ask { background: var(--navy); }
+.ask-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: 52px; align-items: start; position: relative; z-index: 1; }
+#ask::before {
+  content: ''; position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%,-50%); width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(248,113,113,0.09) 0%, transparent 65%);
+  border-radius: 50%; pointer-events: none;
+}
+.raise-box {
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 20px; padding: 36px 32px;
+}
+.raise-label { font-size: 10px; font-weight: 700; color: var(--coral); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 10px; }
+.raise-amt { font-family: var(--serif); font-size: 52px; font-weight: 700; letter-spacing: -0.04em; color: var(--white); line-height: 1; margin-bottom: 4px; }
+.raise-sub { font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 28px; }
+.fund-divider { height: 1px; background: rgba(255,255,255,0.08); margin: 20px 0; }
+.fund-label { font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 14px; }
+.fund-bars { display: flex; flex-direction: column; gap: 12px; }
+.fbar { display: flex; align-items: center; gap: 10px; }
+.fbar-lbl { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.6); min-width: 170px; }
+.fbar-track { flex: 1; height: 5px; background: rgba(255,255,255,0.08); border-radius: 100px; overflow: hidden; }
+.fbar-fill { height: 100%; background: var(--coral); border-radius: 100px; animation: fb 1.2s cubic-bezier(.16,1,.3,1) backwards; }
+@keyframes fb { from{width:0!important} }
+.fbar-pct { font-size: 12px; font-weight: 700; color: var(--coral); min-width: 32px; text-align: right; }
+
+.milestones { display: flex; flex-direction: column; gap: 14px; }
+.ms-title { font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px; }
+.ms-card {
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px; padding: 16px 18px; display: flex; gap: 14px; align-items: flex-start;
+  transition: background 0.2s;
+}
+.ms-card:hover { background: rgba(255,255,255,0.08); }
+.ms-num {
+  font-family: var(--serif); font-size: 22px; font-weight: 800;
+  color: rgba(248,113,113,0.3); line-height: 1; flex-shrink: 0;
+  letter-spacing: -0.04em;
+}
+.ms-t { font-size: 13px; font-weight: 700; color: var(--white); margin-bottom: 3px; }
+.ms-d { font-size: 11.5px; color: rgba(255,255,255,0.4); line-height: 1.5; }
+
+/* ══════════════════════════════════
+   13 VISION
+══════════════════════════════════ */
+#vision { background: var(--white); }
+.vision-center { text-align: center; max-width: 760px; margin: 0 auto 52px; }
+.vision-compare { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; background: var(--border); border-radius: 18px; overflow: hidden; }
+.vc-cell {
+  background: var(--white); padding: 32px 26px;
+  transition: background 0.2s;
+}
+.vc-cell.ours { background: var(--navy); }
+.vc-cell:hover { background: var(--cloud); }
+.vc-cell.ours:hover { background: var(--navy-2); }
+.vc-cell:nth-child(1){border-radius:18px 0 0 0} .vc-cell:nth-child(3){border-radius:0 18px 0 0}
+.vc-logo-wrap {
+  width: 44px; height: 44px; border-radius: 12px; display: flex;
+  align-items: center; justify-content: center; margin-bottom: 14px;
+  font-family: var(--serif); font-size: 18px; font-weight: 800;
+}
+.vc-company { font-size: 16px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+.vc-cell.ours .vc-company { color: var(--white); }
+.vc-tagline { font-size: 12px; color: var(--mist); margin-bottom: 16px; line-height: 1.5; }
+.vc-cell.ours .vc-tagline { color: rgba(255,255,255,0.45); }
+.vc-desc { font-size: 12.5px; color: var(--slate); line-height: 1.65; }
+.vc-cell.ours .vc-desc { color: rgba(255,255,255,0.6); }
+.vc-badge {
+  display: inline-block; margin-top: 14px; background: var(--coral-light);
+  color: var(--coral-dark); border-radius: 100px;
+  padding: 4px 12px; font-size: 10.5px; font-weight: 700;
+}
+.vc-cell.ours .vc-badge { background: rgba(248,113,113,0.2); color: var(--coral); }
+
+/* ══════════════════════════════════
+   PRODUCT SLIDES shared
+══════════════════════════════════ */
+.product-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 56px;
+  align-items: center;
+}
+.product-callouts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.callout {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+.callout:last-child { border-bottom: none; }
+.callout-num {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--coral-light);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  flex-shrink: 0;
+  min-width: 28px;
+}
+.callout-title { font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+.callout-desc  { font-size: 12.5px; color: var(--slate); line-height: 1.6; }
+
+/* ── THERAPIST MOCKUP ── */
+.therapist-mockup {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  font-size: 12px;
+}
+.tm-topbar {
+  background: var(--navy);
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.tm-dots { display: flex; gap: 5px; }
+.tm-dot { width: 9px; height: 9px; border-radius: 50%; }
+.tm-title { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.5); margin-left: 8px; }
+.tm-body { display: grid; grid-template-columns: 200px 1fr; }
+.tm-sidebar {
+  background: #F8F9FB;
+  border-right: 1px solid var(--border);
+  padding: 14px 0;
+}
+.tm-sb-header {
+  padding: 0 14px 12px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 8px;
+}
+.tm-child-name { font-size: 13px; font-weight: 700; color: var(--ink); }
+.tm-child-age  { font-size: 10.5px; color: var(--mist); margin-top: 1px; }
+.tm-sb-section { padding: 8px 14px; }
+.tm-sb-label { font-size: 9.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--mist); margin-bottom: 6px; }
+.tm-sb-tag {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: var(--coral-light); color: var(--coral-dark);
+  border-radius: 5px; padding: 3px 8px;
+  font-size: 10px; font-weight: 700; margin-bottom: 4px;
+}
+.tm-goal-row { display: flex; align-items: center; gap: 7px; margin-bottom: 6px; }
+.tm-goal-label { font-size: 10.5px; color: var(--slate); flex: 1; line-height: 1.3; }
+.tm-goal-bar-track { width: 40px; height: 4px; background: var(--border); border-radius: 100px; overflow: hidden; flex-shrink: 0; }
+.tm-goal-bar { height: 100%; background: var(--coral); border-radius: 100px; }
+.tm-goal-pct { font-size: 9.5px; font-weight: 700; color: var(--coral); min-width: 24px; text-align: right; }
+.tm-main { padding: 16px 18px; }
+.tm-main-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.tm-session-title { font-size: 13px; font-weight: 700; color: var(--ink); }
+.tm-session-date  { font-size: 10.5px; color: var(--mist); }
+.tm-textarea-mock {
+  background: #F8F9FB; border: 1px solid var(--border);
+  border-radius: 8px; padding: 10px 12px; margin-bottom: 12px;
+  color: var(--slate); font-size: 11px; line-height: 1.6;
+  font-family: var(--sans);
+}
+.tm-rating-row { display: flex; gap: 6px; margin-bottom: 12px; align-items: center; }
+.tm-rating-label { font-size: 10.5px; color: var(--mist); margin-right: 4px; }
+.tm-rating-star { font-size: 14px; }
+.tm-activities { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 14px; }
+.tm-act-tag {
+  background: var(--cloud); border: 1px solid var(--border);
+  border-radius: 100px; padding: 3px 10px;
+  font-size: 10px; font-weight: 600; color: var(--slate);
+}
+.tm-act-tag.active {
+  background: var(--coral-light); border-color: #FECACA;
+  color: var(--coral-dark);
+}
+.tm-save-btn {
+  background: var(--coral); color: var(--white);
+  border: none; border-radius: 8px; padding: 9px 18px;
+  font-family: var(--sans); font-size: 11px; font-weight: 700;
+  width: 100%; cursor: default;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+}
+
+/* ── FAMILY MOCKUP ── */
+.family-mockup-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.phone-frame {
+  width: 260px;
+  background: var(--navy);
+  border-radius: 36px;
+  padding: 12px;
+  box-shadow: 0 24px 64px rgba(15,23,41,0.35), 0 4px 16px rgba(15,23,41,0.2);
+  position: relative;
+}
+.phone-notch {
+  width: 80px; height: 22px;
+  background: var(--navy);
+  border-radius: 0 0 14px 14px;
+  position: absolute;
+  top: 12px; left: 50%; transform: translateX(-50%);
+  z-index: 2;
+}
+.phone-screen {
+  background: var(--white);
+  border-radius: 26px;
+  overflow: hidden;
+  padding-top: 28px;
+}
+.ps-header {
+  background: var(--coral);
+  padding: 14px 16px 16px;
+  color: var(--white);
+}
+.ps-greeting { font-size: 10px; opacity: 0.75; font-weight: 500; }
+.ps-child-name { font-size: 15px; font-weight: 700; letter-spacing: -0.02em; margin-top: 1px; }
+.ps-summary {
+  display: flex; gap: 8px; margin-top: 10px;
+}
+.ps-sum-card {
+  flex: 1; background: rgba(255,255,255,0.15);
+  border-radius: 8px; padding: 7px 8px; text-align: center;
+}
+.ps-sum-num  { font-size: 14px; font-weight: 700; color: var(--white); line-height: 1; }
+.ps-sum-lbl  { font-size: 8.5px; color: rgba(255,255,255,0.7); margin-top: 2px; }
+.ps-body { padding: 12px 14px; }
+.ps-section-title { font-size: 9.5px; font-weight: 700; color: var(--mist); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+.ps-update-card {
+  background: var(--cloud); border-radius: 10px;
+  padding: 10px 12px; margin-bottom: 8px;
+}
+.ps-update-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
+.ps-update-who  { font-size: 10px; font-weight: 700; color: var(--ink); }
+.ps-update-when { font-size: 9px; color: var(--mist); }
+.ps-update-text { font-size: 10px; color: var(--slate); line-height: 1.55; }
+.ps-update-pill {
+  display: inline-flex; align-items: center; gap: 4px;
+  background: #DCFCE7; border-radius: 100px;
+  padding: 2px 7px; font-size: 9px; font-weight: 700; color: #16A34A;
+  margin-top: 6px;
+}
+.ps-progress-section { margin-top: 10px; }
+.ps-prog-row { display: flex; align-items: center; gap: 7px; margin-bottom: 7px; }
+.ps-prog-lbl   { font-size: 9.5px; color: var(--slate); flex: 1; }
+.ps-prog-track { width: 50px; height: 4px; background: var(--border); border-radius: 100px; overflow: hidden; flex-shrink: 0; }
+.ps-prog-fill  { height: 100%; border-radius: 100px; }
+.ps-next {
+  background: var(--navy); border-radius: 10px; padding: 10px 12px;
+  margin-top: 10px; display: flex; justify-content: space-between; align-items: center;
+}
+.ps-next-lbl { font-size: 9.5px; color: rgba(255,255,255,0.5); }
+.ps-next-val { font-size: 11px; font-weight: 700; color: var(--white); margin-top: 2px; }
+.ps-next-ico { font-size: 18px; }
+.ps-nav-bar {
+  display: flex; justify-content: space-around;
+  padding: 10px 0 14px;
+  border-top: 1px solid var(--border);
+  margin-top: 8px;
+}
+.ps-nav-item { display: flex; flex-direction: column; align-items: center; gap: 3px; }
+.ps-nav-ico  { font-size: 14px; color: var(--mist); }
+.ps-nav-ico.active { color: var(--coral); }
+.ps-nav-lbl  { font-size: 7.5px; font-weight: 600; color: var(--mist); }
+.ps-nav-lbl.active { color: var(--coral); }
+
+/* ══════════════════════════════════
+   TEAM SLIDE
+══════════════════════════════════ */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 52px;
+}
+.team-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.team-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+
+.team-avatar {
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-size: 48px;
+  font-weight: 800;
+  position: relative;
+  overflow: hidden;
+}
+/* Each member gets a distinct gradient */
+.avatar-manu    { background: linear-gradient(135deg, #FEE2E2 0%, #FECACA 60%, #FCA5A5 100%); color: var(--coral-dark); }
+.avatar-mariana { background: linear-gradient(135deg, #EDE9FE 0%, #DDD6FE 60%, #C4B5FD 100%); color: #6D28D9; }
+.avatar-miguel  { background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 60%, #93C5FD 100%); color: #1D4ED8; }
+.avatar-adriano { background: linear-gradient(135deg, #D1FAE5 0%, #A7F3D0 60%, #6EE7B7 100%); color: #065F46; }
+
+.team-avatar-initial {
+  font-size: 52px;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+
+/* Subtle decorative circle behind initial */
+.team-avatar::before {
+  content: '';
+  position: absolute;
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  bottom: -20px; right: -20px;
+}
+.team-avatar::after {
+  content: '';
+  position: absolute;
+  width: 70px; height: 70px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  top: -10px; left: -10px;
+}
+
+.team-info { padding: 20px 20px 22px; }
+.team-name {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  margin-bottom: 2px;
+}
+.team-role {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--coral);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+.team-bio {
+  font-size: 12.5px;
+  color: var(--slate);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+.team-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.team-tag {
+  background: var(--cloud);
+  border-radius: 100px;
+  padding: 3px 10px;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--slate);
+}
+
+/* Founder card same as others */
+
+/* ══════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════ */
+@media (max-width: 900px) {
+  #nav { padding: 12px 24px; }
+  .nav-pills { display: none; }
+  #dot-nav { display: none; }
+  .inner { padding: 0 28px; }
+  section { padding: 88px 0 52px; }
+  .cover-grid, .founder-layout, .discovery-grid, .traction-layout, .market-layout, .biz-layout, .ask-layout { grid-template-columns: 1fr; gap: 36px; }
+  .cover-grid .cover-stats { display: none; }
+  .prob-top { grid-template-columns: 1fr 1fr; }
+  .feat-grid { grid-template-columns: 1fr 1fr; }
+  .wf-steps { grid-template-columns: 1fr 1fr; }
+  .wf-steps::before { display: none; }
+  .gtm-grid { grid-template-columns: 1fr; }
+  .vision-compare { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr 1fr; }
+  .ch:last-child, .cc:last-child { display: none; }
+  .slide-num { display: none; }
+  .mkt-funnel { gap: 10px; }
+  .mkt-bar { padding: 16px 18px; gap: 10px; }
+  .mkt-bar-val { font-size: 22px; }
+  .mkt-bar--sam { width: 88%; }
+  .mkt-bar--som { width: 70%; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══ PROGRESS BAR ══ -->
+<div id="progress-bar"></div>
+
+<!-- ══ NAV ══ -->
+<nav id="nav">
+  <a href="#cover" class="nav-logo">
+    <img src="Horizontal.png" alt="Casa do Urso" style="width:100px;height:auto">
+  </a>
+
+  <ul class="nav-pills" id="navPills">
+    <li><button class="nav-pill" data-target="founder"     data-i18n="nav_02">Descoberta</button></li>
+    <li><button class="nav-pill" data-target="discovery"   data-i18n="nav_03">Problema</button></li>
+    <li><button class="nav-pill" data-target="problem"     data-i18n="nav_04">Solução</button></li>
+    <li><button class="nav-pill" data-target="solution"    data-i18n="nav_05">Tração</button></li>
+    <li><button class="nav-pill" data-target="traction"    data-i18n="nav_06">Mercado</button></li>
+    <li><button class="nav-pill" data-target="market"      data-i18n="nav_07">Pedido</button></li>
+    <li><button class="nav-pill" data-target="ask"         data-i18n="nav_08">Visão</button></li>
+  </ul>
+
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="btnPt" onclick="setLang('pt')">
+        <span>🇧🇷</span> PT
+      </button>
+      <button class="lang-btn" id="btnEn" onclick="setLang('en')">
+        <span>🇺🇸</span> EN
+      </button>
+    </div>
+    <button class="nav-cta" data-i18n="nav_cta">Agendar Reunião</button>
+  </div>
+</nav>
+
+<!-- ══ DOT NAV ══ -->
+<nav id="dot-nav" aria-label="Navegação por slides">
+  <button class="dot active" data-target="cover"       data-i18n-label="nav_01" data-label="Fundadora"></button>
+  <button class="dot"        data-target="founder"     data-i18n-label="nav_02" data-label="Descoberta"></button>
+  <button class="dot"        data-target="discovery"   data-i18n-label="nav_03" data-label="Problema"></button>
+  <button class="dot"        data-target="problem"     data-i18n-label="nav_04" data-label="Solução"></button>
+  <button class="dot"        data-target="solution"    data-i18n-label="nav_05" data-label="Tração"></button>
+  <button class="dot"        data-target="workflow"    data-i18n-label="nav_wf"       data-label="Produto"></button>
+  <button class="dot"        data-target="prod-therapist" data-i18n-label="nav_pt"    data-label="Terapeuta"></button>
+  <button class="dot"        data-target="prod-family"    data-i18n-label="nav_pf"    data-label="Família"></button>
+  <button class="dot"        data-target="traction"    data-i18n-label="nav_06"       data-label="Mercado"></button>
+  <button class="dot"        data-target="market"      data-i18n-label="nav_07" data-label="Pedido"></button>
+  <button class="dot"        data-target="bizmodel"    data-i18n-label="nav_biz" data-label="Modelo"></button>
+  <button class="dot"        data-target="competition" data-i18n-label="nav_comp" data-label="Competição"></button>
+  <button class="dot"        data-target="gtm"         data-i18n-label="nav_gtm" data-label="Estratégia"></button>
+  <button class="dot"        data-target="team"        data-i18n-label="nav_team" data-label="Time"></button>
+  <button class="dot"        data-target="ask"         data-i18n-label="nav_08" data-label="Captação"></button>
+  <button class="dot"        data-target="vision"      data-i18n-label="nav_vis" data-label="Visão"></button>
+</nav>
+
+<div id="main-content">
+
+<!-- ════════════════════════════════
+  01 COVER
+════════════════════════════════ -->
+<section id="cover" class="bg-white">
+  <div class="inner">
+    <div class="cover-grid">
+      <div>
+        <div class="cover-badge fadeUp"><span class="cover-dot"></span><span data-i18n="cover_badge">Pré-Seed · 2025</span></div>
+        <h1 class="cover-h1 fadeUp delay-1" data-i18n-html="cover_h1">Construímos uma clínica.<br>Então encontramos<br>o <em>problema real.</em></h1>
+        <p class="cover-p fadeUp delay-2" data-i18n="cover_p">A Casa do Urso é a infraestrutura que conecta terapeutas, clínicas, escolas e famílias nascida de dentro do problema.</p>
+        <div class="cover-btns fadeUp delay-3">
+          <button class="btn-coral" data-i18n="cover_btn1">Ver o Pitch</button>
+          <button class="btn-outline" data-i18n="cover_btn2">Fale Conosco</button>
+        </div>
+      </div>
+      <div class="cover-stats">
+        <div class="cover-stat fadeUp delay-2">
+          <div class="cs-icon" style="background:#FEF3C7;color:#D97706;"><svg class="ic" width="20" height="20"><use href="#ic-building"/></svg></div>
+          <div>
+            <div class="cs-num"><span>1</span> <span data-i18n="cover_year">ano</span></div>
+            <div class="cs-lbl" data-i18n="cover_stat1">Operando como clínica real</div>
+          </div>
+          <div class="cs-tag" data-i18n="cover_tag1">Laboratório</div>
+        </div>
+        <div class="cover-stat fadeUp delay-3">
+          <div class="cs-icon" style="background:#DCFCE7;color:#16A34A;"><svg class="ic" width="20" height="20"><use href="#ic-users"/></svg></div>
+          <div>
+            <div class="cs-num"><span>1.246</span></div>
+            <div class="cs-lbl" data-i18n="cover_stat2">famílias buscaram atendimento nos últimos 12 meses</div>
+          </div>
+          <div class="cs-tag green" data-i18n="cover_tag2">104/mês</div>
+        </div>
+        <div class="cover-stat fadeUp delay-4">
+          <div class="cs-icon" style="background:#EDE9FE;color:#7C3AED;"><svg class="ic" width="20" height="20"><use href="#ic-target"/></svg></div>
+          <div>
+            <div class="cs-num">R$<span>1,5M</span></div>
+            <div class="cs-lbl" data-i18n="cover_stat3">Captação pré-seed</div>
+          </div>
+          <div class="cs-tag" data-i18n="cover_tag3">Aberto</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-num">01</div>
+</section>
+
+<!-- ════════════════════════════════
+  02 FOUNDER
+════════════════════════════════ -->
+<section id="founder" class="bg-navy">
+  <div class="inner">
+    <div class="founder-layout">
+      <div class="founder-quote-wrap">
+        <div class="eyebrow fadeUp" data-i18n="founder_eyebrow">A Fundadora</div>
+        <div class="quote-mark fadeUp delay-1">"</div>
+        <blockquote class="fadeUp delay-2" data-i18n-html="founder_quote">Eu não me propus a construir uma startup. Eu me propus a ajudar crianças. O problema era tão grande que a startup foi <em>inevitável</em>.</blockquote>
+        <div class="founder-attr fadeUp delay-3">
+          <div class="founder-avatar">M</div>
+          <div>
+            <div class="founder-name" data-i18n="founder_name">Manu Costa</div>
+            <div class="founder-role" data-i18n="founder_role">Fundadora & CEO, Casa do Urso</div>
+          </div>
+        </div>
+      </div>
+      <div class="founder-cards">
+        <div class="adv-card fadeUp delay-2">
+          <div class="adv-icon"><svg class="ic" width="17" height="17"><use href="#ic-building"/></svg></div>
+          <div class="adv-title" data-i18n="adv1_title">Clínica como laboratório</div>
+          <div class="adv-desc"  data-i18n="adv1_desc">Não vendemos para o mercado. Nós somos o mercado. A clínica revelou o problema de dentro para fora.</div>
+        </div>
+        <div class="adv-card fadeUp delay-3">
+          <div class="adv-icon"><svg class="ic" width="17" height="17"><use href="#ic-sparkle"/></svg></div>
+          <div class="adv-title" data-i18n="adv2_title">Founder-problem fit real</div>
+          <div class="adv-desc"  data-i18n="adv2_desc">Manuela viveu a dor como gestora. Não é hipótese é diagnóstico.</div>
+        </div>
+        <div class="adv-card fadeUp delay-4">
+          <div class="adv-icon"><svg class="ic" width="17" height="17"><use href="#ic-code"/></svg></div>
+          <div class="adv-title" data-i18n="adv3_title">Produto e clínica juntos</div>
+          <div class="adv-desc"  data-i18n="adv3_desc">A plataforma é construída em cima de operações reais. Cada feature foi validada com pacientes reais.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-num">02</div>
+</section>
+
+<!-- ════════════════════════════════
+  02b FRAGMENTED PROBLEM
+════════════════════════════════ -->
+<section id="frag-problem" class="bg-white">
+  <div class="inner">
+    <div class="eyebrow fadeUp" data-i18n="frag_eyebrow">O Problema</div>
+    <h2 class="slide-title fadeUp delay-1" data-i18n-html="frag_h">Cuidado fragmentado.<br><em>Dados espalhados.</em></h2>
+    <p class="slide-subtitle fadeUp delay-2" data-i18n="frag_sub">Os dados de desenvolvimento de uma criança estão espalhados entre múltiplas pessoas e sistemas. Não existe um único lugar onde o histórico completo exista.</p>
+
+    <div class="frag-layout fadeUp delay-3">
+      <!-- Left: scattered diagram -->
+      <div style="display:flex;justify-content:center">
+        <div class="frag-diagram">
+          <svg class="frag-lines" viewBox="0 0 340 340">
+            <line x1="170" y1="50" x2="280" y2="100"/>
+            <line x1="280" y1="100" x2="300" y2="210"/>
+            <line x1="300" y1="210" x2="170" y2="300"/>
+            <line x1="170" y1="300" x2="40" y2="210"/>
+            <line x1="40" y1="210" x2="60" y2="100"/>
+            <line x1="60" y1="100" x2="170" y2="50"/>
+            <line x1="170" y1="50" x2="300" y2="210"/>
+            <line x1="60" y1="100" x2="300" y2="210"/>
+          </svg>
+          <div class="frag-node"><div class="fn-icon" style="background:#6366F1"><svg class="ic" width="14" height="14"><use href="#ic-brain"/></svg></div><span data-i18n="fn1">Terapeutas</span></div>
+          <div class="frag-node"><div class="fn-icon" style="background:#F59E0B"><svg class="ic" width="14" height="14"><use href="#ic-building"/></svg></div><span data-i18n="fn2">Clínicas</span></div>
+          <div class="frag-node"><div class="fn-icon" style="background:#10B981"><svg class="ic" width="14" height="14"><use href="#ic-book"/></svg></div><span data-i18n="fn3">Escolas</span></div>
+          <div class="frag-node"><div class="fn-icon" style="background:#EC4899"><svg class="ic" width="14" height="14"><use href="#ic-users"/></svg></div><span data-i18n="fn4">Pais</span></div>
+          <div class="frag-node"><div class="fn-icon" style="background:#8B5CF6"><svg class="ic" width="14" height="14"><use href="#ic-file"/></svg></div><span data-i18n="fn5">PDFs e Relatórios</span></div>
+          <div class="frag-node"><div class="fn-icon" style="background:#64748B"><svg class="ic" width="14" height="14"><use href="#ic-unplug"/></svg></div><span data-i18n="fn6">Sistemas desconectados</span></div>
+          <div class="frag-center-label">?</div>
+        </div>
+      </div>
+
+      <!-- Center: arrow -->
+      <div class="frag-arrow">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </div>
+
+      <!-- Right: consequences -->
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--mist);margin-bottom:16px" data-i18n="frag_consq_lbl">Consequências</div>
+        <div class="frag-text-list">
+          <div class="frag-text-item"><div class="fti-dot"></div><span data-i18n="frag_c1">Impossível coordenar terapias entre profissionais</span></div>
+          <div class="frag-text-item"><div class="fti-dot"></div><span data-i18n="frag_c2">Progresso de desenvolvimento invisível</span></div>
+          <div class="frag-text-item"><div class="fti-dot"></div><span data-i18n="frag_c3">Insights não são compartilhados entre equipes</span></div>
+          <div class="frag-text-item"><div class="fti-dot"></div><span data-i18n="frag_c4">Decisões de tratamento sem dados estruturados</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-num">02b</div>
+</section>
+
+<!-- ════════════════════════════════
+  02c SOLUTION PLATFORM
+════════════════════════════════ -->
+<section id="sol-platform" class="bg-cloud">
+  <div class="inner">
+    <div class="eyebrow fadeUp" data-i18n="splat_eyebrow">A Solução</div>
+    <h2 class="slide-title fadeUp delay-1" data-i18n-html="splat_h">Uma plataforma compartilhada<br>para <em>coordenar o cuidado.</em></h2>
+    <p class="slide-subtitle fadeUp delay-2" data-i18n="splat_sub">A Casa do Urso é a plataforma central onde todo o cuidado de neurodesenvolvimento é coordenado e registrado.</p>
+
+    <div class="sol-plat-layout fadeUp delay-3">
+      <!-- Left: ecosystem stack diagram -->
+      <div style="display:flex;justify-content:center">
+        <div class="eco-stack">
+
+          <div class="eco-layer eco-layer--top">
+            <div class="eco-layer-label">Stakeholders</div>
+            <div class="eco-grid">
+              <div class="eco-card"><div class="hs-icon" style="background:#6366F1"><svg class="ic" width="12" height="12"><use href="#ic-brain"/></svg></div><span data-i18n="hs1">Terapeutas</span></div>
+              <div class="eco-card"><div class="hs-icon" style="background:#F59E0B"><svg class="ic" width="12" height="12"><use href="#ic-building"/></svg></div><span data-i18n="hs2">Clínicas</span></div>
+              <div class="eco-card"><div class="hs-icon" style="background:#10B981"><svg class="ic" width="12" height="12"><use href="#ic-book"/></svg></div><span data-i18n="hs3">Escolas</span></div>
+              <div class="eco-card"><div class="hs-icon" style="background:#EC4899"><svg class="ic" width="12" height="12"><use href="#ic-users"/></svg></div><span data-i18n="hs4">Famílias</span></div>
+            </div>
+          </div>
+
+          <div class="eco-flow">
+            <div class="eco-flow-col"><div class="eco-flow-dot lit"></div><div class="eco-flow-dot"></div><div class="eco-flow-dot"></div></div>
+            <div class="eco-flow-col"><div class="eco-flow-dot lit"></div><div class="eco-flow-dot"></div><div class="eco-flow-dot"></div></div>
+            <div class="eco-flow-col"><div class="eco-flow-dot lit"></div><div class="eco-flow-dot"></div><div class="eco-flow-dot"></div></div>
+          </div>
+
+          <div class="eco-layer eco-layer--mid">
+            <div class="eco-layer-label">Plataforma</div>
+            <div class="eco-center-row">
+              <div class="eco-logo"><img src="urso.svg" width="32" height="32" alt="Casa do Urso" style="display:block"></div>
+              <div>
+                <div class="eco-title">Casa do Urso</div>
+                <div class="eco-subtitle">Coordenação centralizada do cuidado</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="eco-flow">
+            <div class="eco-flow-col"><div class="eco-flow-dot lit"></div><div class="eco-flow-dot"></div><div class="eco-flow-dot"></div></div>
+            <div class="eco-flow-col"><div class="eco-flow-dot lit"></div><div class="eco-flow-dot"></div><div class="eco-flow-dot"></div></div>
+          </div>
+
+          <div class="eco-layer eco-layer--bot">
+            <div class="eco-layer-label">Resultados</div>
+            <div class="eco-grid">
+              <div class="eco-card"><div class="hs-icon" style="background:#8B5CF6"><svg class="ic" width="12" height="12"><use href="#ic-file"/></svg></div><span data-i18n="hs5">Dados Clínicos</span></div>
+              <div class="eco-card"><div class="hs-icon" style="background:#0EA5E9"><svg class="ic" width="12" height="12"><use href="#ic-trending"/></svg></div><span data-i18n="hs6">Progresso</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right: text + key message -->
+      <div>
+        <div class="sol-connect-list">
+          <div class="sol-connect-item"><div class="sci-icon"><svg class="ic" width="14" height="14"><use href="#ic-building"/></svg></div><span data-i18n="splat_p1">Clínicas gerenciam perfis e protocolos na plataforma</span></div>
+          <div class="sol-connect-item"><div class="sci-icon"><svg class="ic" width="14" height="14"><use href="#ic-brain"/></svg></div><span data-i18n="splat_p2">Terapeutas registram sessões e progresso em tempo real</span></div>
+          <div class="sol-connect-item"><div class="sci-icon"><svg class="ic" width="14" height="14"><use href="#ic-book"/></svg></div><span data-i18n="splat_p3">Escolas acompanham o desenvolvimento integrado</span></div>
+          <div class="sol-connect-item"><div class="sci-icon"><svg class="ic" width="14" height="14"><use href="#ic-users"/></svg></div><span data-i18n="splat_p4">Famílias recebem visibilidade completa do cuidado</span></div>
+        </div>
+
+        <div class="sol-key-msg" data-i18n="splat_key">A Casa do Urso se torna o sistema central onde o cuidado de neurodesenvolvimento é coordenado e registrado.</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-num">02c</div>
+</section>
+
+<!-- ════════════════════════════════
+  03 DISCOVERY
+════════════════════════════════ -->
+<section id="discovery" class="bg-cloud">
+  <div class="inner">
+    <div class="eyebrow fadeUp" data-i18n="disc_eyebrow">A Descoberta</div>
+    <h2 class="slide-title fadeUp delay-1" data-i18n-html="disc_h">Uma criança.<br><em>5+ profissionais.</em> Zero coordenação.</h2>
+    <div class="discovery-grid" style="margin-top:40px">
+      <div class="actor-list fadeUp delay-2">
+        <div class="actor-row"><div class="a-ico"><svg class="ic" width="16" height="16"><use href="#ic-brain"/></svg></div><div><div class="a-name" data-i18n="actor1">Psicólogos</div><div class="a-sub" data-i18n="actor1s">Terapia comportamental</div></div></div>
+        <div class="actor-row"><div class="a-ico"><svg class="ic" width="16" height="16"><use href="#ic-mic"/></svg></div><div><div class="a-name" data-i18n="actor2">Fonoaudiólogos</div><div class="a-sub" data-i18n="actor2s">Linguagem e comunicação</div></div></div>
+        <div class="actor-row"><div class="a-ico"><svg class="ic" width="16" height="16"><use href="#ic-hand"/></svg></div><div><div class="a-name" data-i18n="actor3">Terapeutas Ocupacionais</div><div class="a-sub" data-i18n="actor3s">Integração sensorial</div></div></div>
+        <div class="actor-row"><div class="a-ico"><svg class="ic" width="16" height="16"><use href="#ic-book"/></svg></div><div><div class="a-name" data-i18n="actor4">Educadores</div><div class="a-sub" data-i18n="actor4s">Suporte escolar e inclusão</div></div></div>
+        <div class="actor-row"><div class="a-ico"><svg class="ic" width="16" height="16"><use href="#ic-users"/></svg></div><div><div class="a-name" data-i18n="actor5">Pais e Famílias</div><div class="a-sub" data-i18n="actor5s">Cuidado diário e reforço</div></div></div>
+      </div>
+      <div class="fadeUp delay-3">
+        <div class="chaos-card">
+          <div class="chaos-label" data-i18n="chaos_lbl">"Infraestrutura" Atual</div>
+          <div class="chaos-tags">
+            <div class="ctag"><svg class="ic" width="12" height="12"><use href="#ic-message"/></svg> <span data-i18n="ct1">WhatsApp</span></div>
+            <div class="ctag"><svg class="ic" width="12" height="12"><use href="#ic-file"/></svg> <span data-i18n="ct2">PDFs</span></div>
+            <div class="ctag"><svg class="ic" width="12" height="12"><use href="#ic-table"/></svg> <span data-i18n="ct3">Planilhas</span></div>
+            <div class="ctag"><svg class="ic" width="12" height="12"><use href="#ic-unplug"/></svg> <span data-i18n="ct4">Sistemas isolados</span></div>
+          </div>
+          <div class="chaos-insight" data-i18n-html="chaos_insight"><strong>Insight da clínica:</strong> Os profissionais eram bons. A coordenação era o problema. Cada um trabalhava em silos, sem visão do progresso da criança como um todo.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-num">03</div>
+</section>
+
+<!-- ════════════════════════════════
+  04 PROBLEM
+════════════════════════════════ -->
+<section id="problem" class="bg-white">
+  <div class="inner">
+    <div class="eyebrow fadeUp" data-i18n="prob_eyebrow">O Problema</div>
+    <h2 class="slide-title fadeUp delay-1" data-i18n-html="prob_h">Um mercado de <em>R$720M+</em><br>sem nenhuma infraestrutura.</h2>
+    <div class="prob-top fadeUp delay-2" style="margin-bottom:36px">
+      <div class="prob-stat"><div class="prob-stat-num"><span>1M+</span></div><div class="prob-stat-lbl" data-i18n="ps1">Crianças com autismo no Brasil</div></div>
+      <div class="prob-stat"><div class="prob-stat-num"><span>5M+</span></div><div class="prob-stat-lbl" data-i18n="ps2">Com necessidades de neurodesenvolvimento</div></div>
+      <div class="prob-stat"><div class="prob-stat-num">6K–<span>10K</span></div><div class="prob-stat-lbl" data-i18n="ps3">Clínicas no ecossistema</div></div>
+    </div>
+    <div class="prob-consequences fadeUp delay-3">
+      <div class="consq-card"><div class="consq-num">01</div><div><div class="consq-title" data-i18n="cq1t">Progresso invisível</div><div class="consq-desc" data-i18n="cq1d">Famílias não sabem o que acontece em cada sessão. Terapeutas não veem o progresso consolidado.</div></div></div>
+      <div class="consq-card"><div class="consq-num">02</div><div><div class="consq-title" data-i18n="cq2t">Esforço duplicado</div><div class="consq-desc" data-i18n="cq2d">Cada profissional repete avaliações e histórico porque não há registro compartilhado.</div></div></div>
+      <div class="consq-card"><div class="consq-num">03</div><div><div class="consq-title" data-i18n="cq3t">Família excluída</div><div class="consq-desc" data-i18n="cq3d">Pais são os responsáveis pelo cuidado em casa mas recebem zero suporte estruturado dos profissionais.</div></div></div>
+      <div class="consq-card"><div class="consq-num">04</div><div><div class="consq-title" data-i18n="cq4t">Dados perdidos</div><div class="consq-desc" data-i18n="cq4d">Nenhum dado clínico estruturado é gerado. É impossível provar eficácia ou otimizar protocolos.</div></div></div>
+    </div>
+  </div>
+  <div class="slide-num">04</div>
+</section>
+
+<!-- ════════════════════════════════
+  05 SOLUTION
+════════════════════════════════ -->
+<section id="solution" class="bg-cloud">
+  <div class="inner">
+    <div class="eyebrow fadeUp" data-i18n="sol_eyebrow">A Solução</div>
+    <h2 class="slide-title fadeUp delay-1" data-i18n-html="sol_h">O <em>sistema operacional</em><br>do neurodesenvolvimento.</h2>
+    <p class="slide-subtitle fadeUp delay-2" data-i18n="sol_sub">Uma plataforma que estrutura dados, conecta profissionais e devolve visibilidade para todos os atores do cuidado.</p>
+    <div class="feat-grid fadeUp delay-3">
+      <div class="feat-cell"><div class="fi"><svg class="ic" width="18" height="18"><use href="#ic-clipboard"/></svg></div><div class="ft" data-i18n="f1t">Perfil Compartilhado</div><div class="fd" data-i18n="f1d">Diagnóstico, histórico e planos de terapia centralizados e visíveis para toda a equipe.</div></div>
+      <div class="feat-cell"><div class="fi"><svg class="ic" width="18" height="18"><use href="#ic-trending"/></svg></div><div class="ft" data-i18n="f2t">Registro de Terapia</div><div class="fd" data-i18n="f2d">Terapeutas registram sessões e progresso em relação às metas de desenvolvimento em tempo real.</div></div>
+      <div class="feat-cell"><div class="fi"><svg class="ic" width="18" height="18"><use href="#ic-messages"/></svg></div><div class="ft" data-i18n="f3t">Coordenação Clínica</div><div class="fd" data-i18n="f3d">Comunicação estruturada entre profissionais substitui grupos informais de WhatsApp.</div></div>
+      <div class="feat-cell"><div class="fi"><svg class="ic" width="18" height="18"><use href="#ic-bell"/></svg></div><div class="ft" data-i18n="f4t">Portal da Família</div><div class="fd" data-i18n="f4d">Pais recebem atualizações estruturadas e acessíveis, sem jargão clínico.</div></div>
+      <div class="feat-cell"><div class="fi"><svg class="ic" width="18" height="18"><use href="#ic-zoom"/></svg></div><div class="ft" data-i18n="f5t">Insights de Desenvolvimento</div><div class="fd" data-i18n="f5d">IA analisa dados longitudinais e gera sinais de progresso e alertas de desvio.</div></div>
+      <div class="feat-cell"><div class="fi"><svg class="ic" width="18" height="18"><use href="#ic-file"/></svg></div><div class="ft" data-i18n="f6t">Relatórios Automáticos</div><div class="fd" data-i18n="f6d">Relatórios clínicos gerados automaticamente a partir dos dados de sessão. Zero retrabalho.</div></div>
+    </div>
+  </div>
+  <div class="slide-num">05</div>
+</section>
+
+<!-- ════════════════════════════════
+  06 WORKFLOW
+════════════════════════════════ -->
+<section id="workflow" class="bg-navy">
+  <div class="inner">
+    <div class="eyebrow fadeUp" data-i18n="wf_eyebrow">Como Funciona</div>
+    <h2 class="slide-title fadeUp delay-1" data-i18n-html="wf_h">Quatro etapas.<br><em>Um registro conectado.</em></h2>
+    <p class="slide-subtitle fadeUp delay-2" data-i18n="wf_sub">Do primeiro diagnóstico ao acompanhamento contínuo tudo em um único ecossistema.</p>
+    <div class="wf-steps fadeUp delay-3">
+      <div class="wf-step">
+        <div class="wf-num-wrap"><div class="wf-num">1</div></div>
+        <div class="wf-icon-wrap"><svg class="ic" width="17" height="17"><use href="#ic-clipboard"/></svg></div>
+        <div class="wf-t" data-i18n="wf1t">Perfil da Criança</div>
+        <div class="wf-d" data-i18n="wf1d">Clínica cria perfil com diagnóstico, histórico e planos de terapia.</div>
+      </div>
+      <div class="wf-step">
+        <div class="wf-num-wrap"><div class="wf-num">2</div></div>
+        <div class="wf-icon-wrap"><svg class="ic" width="17" height="17"><use href="#ic-trending"/></svg></div>
+        <div class="wf-t" data-i18n="wf2t">Registro de Sessão</div>
+        <div class="wf-d" data-i18n="wf2d">Terapeutas registram progresso e resultados em relação às metas.</div>
+      </div>
+      <div class="wf-step">
+        <div class="wf-num-wrap"><div class="wf-num">3</div></div>
+        <div class="wf-icon-wrap"><svg class="ic" width="17" height="17"><use href="#ic-bell"/></svg></div>
+        <div class="wf-t" data-i18n="wf3t">Família e Escola</div>
+        <div class="wf-d" data-i18n="wf3d">Pais e educadores recebem atualizações estruturadas e acessíveis.</div>
+      </div>
+      <div class="wf-step">
+        <div class="wf-num-wrap"><div class="wf-num">4</div></div>
+        <div class="wf-icon-wrap"><svg class="ic" width="17" height="17"><use href="#ic-sparkle"/></svg></div>
+        <div class="wf-t" data-i18n="wf4t">Insights</div>
+        <div class="wf-d" data-i18n="wf4d">Plataforma gera relatórios, tendências e alertas de desenvolvimento.</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-num">06</div>
+</section>
+
+<!-- ════════════════════════════════
+  06b PRODUCT: THERAPIST VIEW
+════════════════════════════════ -->
+<section id="prod-therapist" class="bg-cloud">
+  <div class="inner">
+    <div class="product-layout">
+
+      <!-- LEFT: callouts -->
+      <div>
+        <div class="eyebrow fadeUp" data-i18n="pt_eyebrow">Visão do Terapeuta</div>
+        <h2 class="slide-title fadeUp delay-1" data-i18n-html="pt_h">Menos papel.<br>Mais <em>clínica.</em></h2>
+        <p class="slide-subtitle fadeUp delay-2" data-i18n="pt_sub" style="margin-bottom:32px">O terapeuta registra a sessão em minutos. A plataforma faz o resto.</p>
+        <div class="product-callouts fadeUp delay-3">
+          <div class="callout">
+            <div class="callout-num">01</div>
+            <div>
+              <div class="callout-title" data-i18n="ptc1t">Perfil sempre atualizado</div>
+              <div class="callout-desc"  data-i18n="ptc1d">Diagnóstico, metas e histórico da criança em um único lugar acessível no início de cada sessão.</div>
+            </div>
+          </div>
+          <div class="callout">
+            <div class="callout-num">02</div>
+            <div>
+              <div class="callout-title" data-i18n="ptc2t">Registro estruturado</div>
+              <div class="callout-desc"  data-i18n="ptc2d">Notas de sessão com atividades, avaliação e progresso por meta. Dados que viram insights.</div>
+            </div>
+          </div>
+          <div class="callout">
+            <div class="callout-num">03</div>
+            <div>
+              <div class="callout-title" data-i18n="ptc3t">Relatório automático</div>
+              <div class="callout-desc"  data-i18n="ptc3d">Ao salvar, a sessão já alimenta o relatório mensal e notifica a família. Zero retrabalho.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: therapist screenshot -->
+      <div class="fadeUp delay-2" style="display:flex;align-items:center">
+        <img src="terapeuta.png" alt="Casa do Urso Tela do Terapeuta" style="width:100%;display:block;border-radius:16px;box-shadow:var(--shadow-md)">
+      </div>
+
+    </div>
+  </div>
+  <div class="slide-num">06b</div>
+</section>
+
+<!-- ════════════════════════════════
+  06c PRODUCT: FAMILY VIEW
+════════════════════════════════ -->
+<section id="prod-family" class="bg-white">
+  <div class="inner">
+    <div class="product-layout" style="grid-template-columns:1fr 1fr">
+
+      <!-- LEFT: phone mockup -->
+      <div class="family-mockup-wrap fadeUp delay-1">
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="phone-screen" style="padding-top:0">
+            <img src="familia.png" alt="Casa do Urso Tela da Família" style="width:100%;height:100%;object-fit:cover;display:block">
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: callouts -->
+      <div>
+        <div class="eyebrow fadeUp" data-i18n="pf_eyebrow">Visão da Família</div>
+        <h2 class="slide-title fadeUp delay-1" data-i18n-html="pf_h">A família<br>finalmente <em>incluída.</em></h2>
+        <p class="slide-subtitle fadeUp delay-2" data-i18n="pf_sub" style="margin-bottom:32px">Pais recebem atualizações claras de todos os profissionais sem precisar ligar para cada um.</p>
+        <div class="product-callouts fadeUp delay-3">
+          <div class="callout">
+            <div class="callout-num">01</div>
+            <div>
+              <div class="callout-title" data-i18n="pfc1t">Uma visão unificada</div>
+              <div class="callout-desc"  data-i18n="pfc1d">Atualizações de todos os terapeutas em um único app. Sem WhatsApp, sem ligações, sem PDFs.</div>
+            </div>
+          </div>
+          <div class="callout">
+            <div class="callout-num">02</div>
+            <div>
+              <div class="callout-title" data-i18n="pfc2t">Progresso visível</div>
+              <div class="callout-desc"  data-i18n="pfc2d">Metas de desenvolvimento acompanhadas semana a semana. Os pais sabem o que comemorar.</div>
+            </div>
+          </div>
+          <div class="callout">
+            <div class="callout-num">03</div>
+            <div>
+              <div class="callout-title" data-i18n="pfc3t">Sugestões para casa</div>
+              <div class="callout-desc"  data-i18n="pfc3d">Cada atualização inclui o que os pais podem reforçar em casa. A terapia continua fora da clínica.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="slide-num">06c</div>
+</section>
+
+<!-- ════════════════════════════════
+  07 TRACTION
+════════════════════════════════ -->
+<section id="traction" class="bg-white">
+  <div class="inner">
+    <div class="eyebrow fadeUp" data-i18n="tr_eyebrow">Tração</div>
+    <h2 class="slide-title fadeUp delay-1" data-i18n-html="tr_h">A clínica como<br><em>laboratório vivo.</em></h2>
+    <div class="traction-layout">
+      <div class="traction-left">
+        <div class="lab-quote fadeUp delay-2">
+          <span data-i18n-html="lab_quote"><strong>A clínica não é só prova de conceito</strong> é onde o produto é construído. Cada feature foi testada com profissionais e famílias reais antes de escalar.</span>
+        </div>
+        <div class="traction-chart fadeUp delay-3">
+          <div class="tc-header">
+            <div>
+              <div style="font-size:10px;color:var(--mist);font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px" data-i18n="tc_lbl">Famílias atendidas por mês</div>
+              <div class="tc-mrr">104<span style="font-size:18px;font-family:var(--sans);color:var(--slate);font-weight:600">/mês</span></div>
+            </div>
+            <div class="tc-tag"><svg class="ic" width="11" height="11"><use href="#ic-trending"/></svg> <span data-i18n="tc_tag">Crescendo</span></div>
+          </div>
+          <div class="rev-bars">
+            <div class="rb-w"><div class="rb" style="height:30%;animation-delay:.1s"></div><div class="rbv">62</div></div>
+            <div class="rb-w"><div class="rb" style="height:42%;animation-delay:.2s"></div><div class="rbv">72</div></div>
+            <div class="rb-w"><div class="rb" style="height:55%;animation-delay:.3s"></div><div class="rbv">80</div></div>
+            <div class="rb-w"><div class="rb" style="height:68%;animation-delay:.4s"></div><div class="rbv">90</div></div>
+            <div class="rb-w"><div class="rb" style="height:82%;animation-delay:.5s"></div><div class="rbv">97</div></div>
+            <div class="rb-w"><div class="rb act" style="height:100%;animation-delay:.6s"></div><div class="rbv">104</div></div>
+          </div>
+          <div style="margin-top:10px;font-size:10px;color:var(--mist)" data-i18n="tc_note">Últimos 6 meses de operação da clínica</div>
+        </div>
+      </div>
+      <div class="metric-cards">
+        <div class="metric-card fadeUp delay-2">
+          <div class="mc-label" data-i18n="mc1l">Famílias atendidas</div>
+          <div class="mc-val"><span>1.246</span></div>
+          <div class="mc-sub" data-i18n="mc1s">nos últimos 12 meses em São Paulo</div>
+        </div>
+        <div class="metric-card fadeUp delay-3">
+          <div class="mc-label" data-i18n="mc2l">Profissionais ativos</div>
+          <div class="mc-val"><span>5</span>+</div>
+          <div class="mc-sub" data-i18n="mc2s">terapeutas usando o protocolo diariamente</div>
+        </div>
+        <div class="metric-card fadeUp delay-4">
+          <div class="mc-label" data-i18n="mc3l">Lista de espera ativa</div>
+          <div class="mc-val" style="font-size:20px;font-family:var(--sans);font-weight:700;line-height:1.25" data-i18n="mc3v">Demanda maior que capacidade</div>
+          <div class="mc-sub" data-i18n="mc3s">Indicações constantes sem esforço de marketing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-num">07</div>
+</section>
+
+<!-- ════════════════════════════════
+  08 MARKET
+════════════════════════════════ -->
+<section id="market" class="bg-cloud">
+  <div class="inner">
+    <div class="eyebrow fadeUp" data-i18n="mkt_eyebrow">Tamanho de Mercado</div>
+    <h2 class="slide-title fadeUp delay-1" data-i18n-html="mkt_h">Um mercado enorme.<br><em>Zero infraestrutura.</em></h2>
+    <div class="market-layout">
+      <div class="mkt-funnel fadeUp delay-2">
+        <div class="mkt-bar mkt-bar--tam">
+          <div class="mkt-bar-tag">TAM</div>
+          <div class="mkt-bar-val">R$720M</div>
+          <div class="mkt-bar-desc" data-i18n="tam_sub">Mercado Total</div>
+        </div>
+        <div class="mkt-bar mkt-bar--sam">
+          <div class="mkt-bar-tag">SAM</div>
+          <div class="mkt-bar-val">R$144M</div>
+          <div class="mkt-bar-desc" data-i18n="sam_sub">Mercado Endereçável</div>
+        </div>
+        <div class="mkt-bar mkt-bar--som">
+          <div class="mkt-bar-tag">SOM</div>
+          <div class="mkt-bar-val">R$7.2M</div>
+          <div class="mkt-bar-desc">ARR</div>
+        </div>
+      </div>
+      <div class="market-right fadeUp delay-3">
+        <div class="mkt-stat">
+          <div class="mkt-ico" style="background:#FFF7ED;color:#D97706"><svg class="ic" width="20" height="20"><use href="#ic-users"/></svg></div>
+          <div><div class="mkt-num"><span>5M+</span></div><div class="mkt-lbl" data-i18n="ms1">Crianças com necessidades de neurodesenvolvimento no Brasil</div></div>
+        </div>
+        <div class="mkt-stat">
+          <div class="mkt-ico" style="background:#EFF6FF;color:#3B82F6"><svg class="ic" width="20" height="20"><use href="#ic-building"/></svg></div>
+          <div><div class="mkt-num">6K–<span>10K</span></div><div class="mkt-lbl" data-i18n="ms2">Clínicas de neurodesenvolvimento no ecossistema</div></div>
+        </div>
+        <div class="mkt-stat">
+          <div class="mkt-ico" style="background:#F5F3FF;color:#7C3AED"><svg class="ic" width="20" height="20"><use href="#ic-target"/></svg></div>
+          <div><div class="mkt-num">1K <span data-i18n="mkt_clinics" style="font-size:16px;color:var(--slate)">clínicas</span></div><div class="mkt-lbl" data-i18n="ms3">= R$7.2M ARR (10–15% do mercado endereçável)</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-num">08</div>
+</section>
+
+<!-- ════════════════════════════════
+  09 BIZMODEL
+════════════════════════════════ -->
+<section id="bizmodel" class="bg-white">
+  <div class="inner">
+    <div class="eyebrow fadeUp" data-i18n="biz_eyebrow">Modelo de Negócio</div>
+    <h2 class="slide-title fadeUp delay-1" data-i18n-html="biz_h">SaaS simples.<br><em>Focado na clínica.</em></h2>
+    <div class="biz-layout">
+      <div class="pricing-stack fadeUp delay-2">
+        <div class="price-card">
+          <div><div class="pc-label" data-i18n="pc1l">Inicial</div><div class="pc-name" data-i18n="pc1n">Clínica Pequena</div></div>
+          <div class="pc-price">R$300 <small>/mês</small></div>
+        </div>
+        <div class="price-card featured">
+          <div><div class="pc-label" data-i18n="pc2l">Crescimento</div><div class="pc-name" data-i18n="pc2n">Clínica Média</div></div>
+          <div class="pc-price">R$600 <small style="color:rgba(255,255,255,.35)">/mês</small></div>
+        </div>
+        <div class="price-card">
+          <div><div class="pc-label" data-i18n="pc3l">Escala</div><div class="pc-name" data-i18n="pc3n">Clínica Grande</div></div>
+          <div class="pc-price">R$1.200 <small>/mês</small></div>
+        </div>
+        <div style="background:var(--cloud);border-radius:10px;padding:14px 16px;font-size:12px;color:var(--mist);" data-i18n="pc_driver">
+          Preço baseado em: número de terapeutas · crianças atendidas · funcionalidades
+        </div>
+      </div>
+      <div class="fadeUp delay-3">
+        <div class="math-card">
+          <div class="math-label" data-i18n="math_lbl">Cenário Conservador</div>
+          <div class="math-row"><span class="math-key" data-i18n="math_k1">Clínicas na plataforma</span><span class="math-val">1.000</span></div>
+          <div class="math-row"><span class="math-key" data-i18n="math_k2">Ticket médio/mês</span><span class="math-val">R$600</span></div>
+          <div class="math-divider"></div>
+          <div class="math-row"><span class="math-key">MRR</span><span class="math-val">R$600K</span></div>
+          <div class="math-row"><span class="math-key">ARR</span><span class="math-val accent">R$7.2M</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-num">09</div>
+</section>
+
+<!-- ════════════════════════════════
+  10 COMPETITION
+════════════════════════════════ -->
+<section id="competition" class="bg-cloud">
+  <div class="inner">
+    <div class="eyebrow fadeUp" data-i18n="comp_eyebrow">Concorrência</div>
+    <h2 class="slide-title fadeUp delay-1" data-i18n-html="comp_h">Uma categoria<br><em>completamente diferente.</em></h2>
+    <p class="slide-subtitle fadeUp delay-2" data-i18n="comp_sub">Players existentes fazem entrega de terapia ou administração clínica. Ninguém constrói a camada de infraestrutura de coordenação.</p>
+    <div class="comp-table fadeUp delay-3">
+      <div class="comp-hdr">
+        <div class="ch" data-i18n="comp_c0">Capacidade</div>
+        <div class="ch" data-i18n="comp_c1">Software Clínico</div>
+        <div class="ch" data-i18n="comp_c2">Genial Care</div>
+        <div class="ch ours">Casa do Urso</div>
+      </div>
+      <div class="comp-row"><div class="cf" data-i18n="cr1">Administração e agendamento</div><div class="cc cy"><svg class="ic" width="14" height="14"><use href="#ic-check"/></svg> <span data-i18n="yes">Sim</span></div><div class="cc cp"><svg class="ic" width="14" height="14"><use href="#ic-minus"/></svg> <span data-i18n="par">Parcial</span></div><div class="cc cy"><svg class="ic" width="14" height="14"><use href="#ic-check"/></svg> <span data-i18n="yes">Sim</span></div></div>
+      <div class="comp-row"><div class="cf" data-i18n="cr2">Rede de entrega de terapia</div><div class="cc cn"><svg class="ic" width="14" height="14"><use href="#ic-x"/></svg> <span data-i18n="no">Não</span></div><div class="cc cy"><svg class="ic" width="14" height="14"><use href="#ic-check"/></svg> <span data-i18n="yes">Sim</span></div><div class="cc cn"><svg class="ic" width="14" height="14"><use href="#ic-x"/></svg> <span data-i18n="oos">Fora do escopo</span></div></div>
+      <div class="comp-row ours"><div class="cf" data-i18n="cr3">Coordenação entre profissionais</div><div class="cc cn"><svg class="ic" width="14" height="14"><use href="#ic-x"/></svg> <span data-i18n="no">Não</span></div><div class="cc cn"><svg class="ic" width="14" height="14"><use href="#ic-x"/></svg> <span data-i18n="no">Não</span></div><div class="cc cy"><svg class="ic" width="14" height="14"><use href="#ic-check"/></svg> <strong data-i18n="core">Core</strong></div></div>
+      <div class="comp-row ours"><div class="cf" data-i18n="cr4">Portal para famílias</div><div class="cc cn"><svg class="ic" width="14" height="14"><use href="#ic-x"/></svg> <span data-i18n="no">Não</span></div><div class="cc cn"><svg class="ic" width="14" height="14"><use href="#ic-x"/></svg> <span data-i18n="no">Não</span></div><div class="cc cy"><svg class="ic" width="14" height="14"><use href="#ic-check"/></svg> <strong data-i18n="core">Core</strong></div></div>
+      <div class="comp-row ours"><div class="cf" data-i18n="cr5">Dados estruturados de desenvolvimento</div><div class="cc cn"><svg class="ic" width="14" height="14"><use href="#ic-x"/></svg> <span data-i18n="no">Não</span></div><div class="cc cn"><svg class="ic" width="14" height="14"><use href="#ic-x"/></svg> <span data-i18n="no">Não</span></div><div class="cc cy"><svg class="ic" width="14" height="14"><use href="#ic-check"/></svg> <strong data-i18n="core">Core</strong></div></div>
+      <div class="comp-row ours"><div class="cf" data-i18n="cr6">Insights e relatórios automáticos</div><div class="cc cn"><svg class="ic" width="14" height="14"><use href="#ic-x"/></svg> <span data-i18n="no">Não</span></div><div class="cc cn"><svg class="ic" width="14" height="14"><use href="#ic-x"/></svg> <span data-i18n="no">Não</span></div><div class="cc cy"><svg class="ic" width="14" height="14"><use href="#ic-check"/></svg> <strong data-i18n="core">Core</strong></div></div>
+    </div>
+  </div>
+  <div class="slide-num">10</div>
+</section>
+
+<!-- ════════════════════════════════
+  11 GTM
+════════════════════════════════ -->
+<section id="gtm" class="bg-white">
+  <div class="inner">
+    <div class="eyebrow fadeUp" data-i18n="gtm_eyebrow">Estratégia de Go-to-Market</div>
+    <h2 class="slide-title fadeUp delay-1" data-i18n-html="gtm_h">Entrar pelo ecossistema.<br><em>Escalar pelo efeito de rede.</em></h2>
+    <div class="gtm-grid fadeUp delay-2">
+      <div class="gtm-card"><div class="gtm-ico-wrap"><div class="gtm-ico"><svg class="ic" width="19" height="19"><use href="#ic-building"/></svg></div><div class="gtm-step-num" data-i18n="s1">Etapa 01</div></div><div><div class="gtm-t" data-i18n="g1t">Clínica Própria</div><div class="gtm-d" data-i18n="g1d">Começar com a Casa do Urso como clínica cliente. Validação imediata, custo zero de aquisição.</div></div></div>
+      <div class="gtm-card"><div class="gtm-ico-wrap"><div class="gtm-ico"><svg class="ic" width="19" height="19"><use href="#ic-users"/></svg></div><div class="gtm-step-num" data-i18n="s2">Etapa 02</div></div><div><div class="gtm-t" data-i18n="g2t">Rede de Terapeutas</div><div class="gtm-d" data-i18n="g2d">Profissionais indicam a plataforma para colegas e outras clínicas onde trabalham.</div></div></div>
+      <div class="gtm-card"><div class="gtm-ico-wrap"><div class="gtm-ico"><svg class="ic" width="19" height="19"><use href="#ic-grad"/></svg></div><div class="gtm-step-num" data-i18n="s3">Etapa 03</div></div><div><div class="gtm-t" data-i18n="g3t">Parcerias com Escolas</div><div class="gtm-d" data-i18n="g3d">Parceiros educacionais puxam demanda pelo lado da educação, criando flywheel de dois lados.</div></div></div>
+      <div class="gtm-card"><div class="gtm-ico-wrap"><div class="gtm-ico"><svg class="ic" width="19" height="19"><use href="#ic-refresh"/></svg></div><div class="gtm-step-num" data-i18n="s4">Etapa 04</div></div><div><div class="gtm-t" data-i18n="g4t">Flywheel de Indicações</div><div class="gtm-d" data-i18n="g4d">Cada novo ator na rede aumenta o valor para todos. Crescimento orgânico composto.</div></div></div>
+    </div>
+  </div>
+  <div class="slide-num">11</div>
+</section>
+
+<!-- ════════════════════════════════
+  TEAM
+════════════════════════════════ -->
+<section id="team" class="bg-cloud">
+  <div class="inner">
+    <div class="eyebrow fadeUp" data-i18n="team_eyebrow">O Time</div>
+    <h2 class="slide-title fadeUp delay-1" data-i18n-html="team_h">As pessoas certas<br>para <em>resolver isso.</em></h2>
+    <p class="slide-subtitle fadeUp delay-2" data-i18n="team_sub">Um time pequeno e complementar com expertise em produto, design, tecnologia e operações clínicas.</p>
+
+    <div class="team-grid">
+
+      <!-- Manu Founder, spans 2 cols -->
+      <div class="team-card fadeUp delay-1">
+        <div class="team-avatar avatar-manu">
+          <span class="team-avatar-initial">M</span>
+        </div>
+        <div class="team-info">
+          <div class="team-role" data-i18n="manu_role">Founder & CEO</div>
+          <div class="team-name">Manuela Costa</div>
+          <div class="team-bio" data-i18n="manu_bio">Fundou a Casa do Urso após identificar a lacuna de coordenação gerindo uma clínica de TEA em São Paulo. Product designer com +10 anos de experiência em sistemas de design e produtos digitais. Construiu a plataforma do zero.</div>
+          <div class="team-tags">
+            <span class="team-tag" data-i18n="tag_founder">Fundadora</span>
+            <span class="team-tag" data-i18n="tag_design_sys">Design Systems</span>
+            <span class="team-tag" data-i18n="tag_clinic">Gestora Clínica</span>
+            <span class="team-tag">Product</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Adriano -->
+      <div class="team-card fadeUp delay-2">
+        <div class="team-avatar avatar-adriano">
+          <span class="team-avatar-initial">A</span>
+        </div>
+        <div class="team-info">
+          <div class="team-role" data-i18n="adriano_role">Head of Clinical Operations</div>
+          <div class="team-name">Adriano</div>
+          <div class="team-bio" data-i18n="adriano_bio">Coordena os fluxos clínicos da Casa do Urso. Especialista em protocolos de neurodesenvolvimento e na ponte entre prática clínica e produto digital.</div>
+          <div class="team-tags">
+            <span class="team-tag" data-i18n="tag_neuro">Neurodesenvolvimento</span>
+            <span class="team-tag" data-i18n="tag_protocols">Protocolos</span>
+            <span class="team-tag" data-i18n="tag_ops">Operações</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- John Doe -->
+      <div class="team-card fadeUp delay-3">
+        <div class="team-avatar avatar-miguel">
+          <span class="team-avatar-initial">M</span>
+        </div>
+        <div class="team-info">
+          <div class="team-role" data-i18n="john_role">Lead Developer</div>
+          <div class="team-name">John Doe</div>
+          <div class="team-bio" data-i18n="john_bio">Responsável pela arquitetura e desenvolvimento da plataforma. Constrói a infraestrutura técnica que suporta o produto desde o dia um.</div>
+          <div class="team-tags">
+            <span class="team-tag">Full-stack</span>
+            <span class="team-tag" data-i18n="tag_infra">Infraestrutura</span>
+            <span class="team-tag" data-i18n="tag_platform">Plataforma</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mariana -->
+      <div class="team-card fadeUp delay-4">
+        <div class="team-avatar avatar-mariana">
+          <span class="team-avatar-initial">M</span>
+        </div>
+        <div class="team-info">
+          <div class="team-role" data-i18n="mariana_role">Co-founder & Head of Brand</div>
+          <div class="team-name">Mariana</div>
+          <div class="team-bio" data-i18n="mariana_bio">Responsável pela identidade visual e comunicação da marca. Garante que a Casa do Urso se apresente com credibilidade e calor em cada ponto de contato.</div>
+          <div class="team-tags">
+            <span class="team-tag" data-i18n="tag_cofounder">Co-fundadora</span>
+            <span class="team-tag" data-i18n="tag_brand">Branding</span>
+            <span class="team-tag" data-i18n="tag_visual">Identidade Visual</span>
+            <span class="team-tag">UI</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="slide-num">12</div>
+</section>
+
+<!-- ════════════════════════════════
+  12 ASK
+════════════════════════════════ -->
+<section id="ask" class="bg-navy">
+  <div class="inner">
+    <div class="ask-layout">
+      <div>
+        <div class="eyebrow fadeUp" data-i18n="ask_eyebrow">A Captação</div>
+        <div class="raise-box fadeUp delay-1">
+          <div class="raise-label" data-i18n="raise_lbl">Captando</div>
+          <div class="raise-amt">R$1–1,5M</div>
+          <div class="raise-sub" data-i18n="raise_sub">Rodada Pré-Seed</div>
+          <div class="fund-divider"></div>
+          <div class="fund-label" data-i18n="fund_lbl">Uso dos Recursos</div>
+          <div class="fund-bars">
+            <div class="fbar"><div class="fbar-lbl" data-i18n="fb1">Desenvolvimento de produto</div><div class="fbar-track"><div class="fbar-fill" style="width:50%;animation-delay:.2s"></div></div><div class="fbar-pct">50%</div></div>
+            <div class="fbar"><div class="fbar-lbl" data-i18n="fb2">Integração clínica</div><div class="fbar-track"><div class="fbar-fill" style="width:30%;animation-delay:.4s"></div></div><div class="fbar-pct">30%</div></div>
+            <div class="fbar"><div class="fbar-lbl" data-i18n="fb3">Operações e crescimento</div><div class="fbar-track"><div class="fbar-fill" style="width:20%;animation-delay:.6s"></div></div><div class="fbar-pct">20%</div></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="ms-title fadeUp delay-1" data-i18n="ms_title">Milestones 18 Meses</div>
+        <div class="milestones">
+          <div class="ms-card fadeUp delay-2"><div class="ms-num">01</div><div><div class="ms-t" data-i18n="ms1t">Lançar plataforma v1</div><div class="ms-d" data-i18n="ms1d">MVP com perfil, sessões e portal da família. 5 clínicas piloto.</div></div></div>
+          <div class="ms-card fadeUp delay-3"><div class="ms-num">02</div><div><div class="ms-t" data-i18n="ms2t">50 clínicas ativas</div><div class="ms-d" data-i18n="ms2d">MRR de R$30K via plataforma. Integração com rede de terapeutas.</div></div></div>
+          <div class="ms-card fadeUp delay-4"><div class="ms-num">03</div><div><div class="ms-t" data-i18n="ms3t">Parcerias educacionais</div><div class="ms-d" data-i18n="ms3d">Primeiras integrações com escolas. Flywheel de dois lados ativado.</div></div></div>
+          <div class="ms-card fadeUp delay-5"><div class="ms-num">04</div><div><div class="ms-t" data-i18n="ms4t">200 clínicas / R$120K MRR</div><div class="ms-d" data-i18n="ms4d">Posição clara de liderança. Setup para Série A.</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-num">12</div>
+</section>
+
+<!-- ════════════════════════════════
+  13 VISION
+════════════════════════════════ -->
+<section id="vision" class="bg-white">
+  <div class="inner">
+    <div class="vision-center">
+      <div class="eyebrow fadeUp" style="justify-content:center" data-i18n="vis_eyebrow">Nossa Visão</div>
+      <h2 class="slide-title fadeUp delay-1" style="text-align:center;margin:0 auto 16px" data-i18n-html="vis_h">Somos para o neurodesenvolvimento<br>o que a <em>Stripe</em> é para pagamentos.</h2>
+      <p class="slide-subtitle fadeUp delay-2" style="text-align:center;margin:0 auto 48px" data-i18n="vis_sub">Infraestrutura que desaparece por baixo do cuidado mas torna tudo mais eficiente, conectado e mensurável.</p>
+    </div>
+    <div class="vision-compare fadeUp delay-3">
+      <div class="vc-cell">
+        <div class="vc-logo-wrap" style="background:#EFF6FF;color:#2563EB">S</div>
+        <div class="vc-company">Stripe</div>
+        <div class="vc-tagline" data-i18n="vc1tag">Infraestrutura de pagamentos</div>
+        <div class="vc-desc" data-i18n="vc1d">Toda empresa de internet usa Stripe sem pensar. A infraestrutura desaparece, o negócio escala.</div>
+        <div class="vc-badge" data-i18n="vc1b">Infraestrutura financeira</div>
+      </div>
+      <div class="vc-cell">
+        <div class="vc-logo-wrap" style="background:#F0FDF4;color:#16A34A">E</div>
+        <div class="vc-company">Epic Systems</div>
+        <div class="vc-tagline" data-i18n="vc2tag">OS dos hospitais nos EUA</div>
+        <div class="vc-desc" data-i18n="vc2d">Toda clínica e hospital nos EUA roda em Epic. O sistema que conecta todos os dados de saúde.</div>
+        <div class="vc-badge" data-i18n="vc2b">Infraestrutura hospitalar</div>
+      </div>
+      <div class="vc-cell ours">
+        <div class="vc-logo-wrap" style="background:rgba(248,113,113,0.2);color:var(--coral)">🐻</div>
+        <div class="vc-company">Casa do Urso</div>
+        <div class="vc-tagline" data-i18n="vc3tag">OS do neurodesenvolvimento</div>
+        <div class="vc-desc" data-i18n="vc3d">Toda clínica, escola e terapeuta conectados em uma plataforma. Dados estruturados. Melhores resultados para milhões de crianças.</div>
+        <div class="vc-badge" data-i18n="vc3b">Infraestrutura clínica</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-num">13</div>
+</section>
+
+</div><!-- end #main-content -->
+
+<script>
+/* ══ I18N ══ */
+const i18n = {
+pt:{
+  nav_01:'Fundadora',nav_02:'Descoberta',nav_03:'Problema',nav_04:'Solução',
+  nav_05:'Tração',nav_06:'Mercado',nav_07:'Captação',nav_08:'Visão',
+  nav_wf:'Produto',nav_biz:'Modelo',nav_comp:'Competição',nav_gtm:'Estratégia',nav_vis:'Visão',
+  nav_team:'Time',
+  nav_cta:'Agendar Reunião',
+  cover_badge:'Pré-Seed · 2025',
+  cover_h1:'Construímos uma clínica.<br>Então encontramos<br>o <em>problema real.</em>',
+  cover_p:'A Casa do Urso é a infraestrutura que conecta terapeutas, clínicas, escolas e famílias nascida de dentro do problema.',
+  cover_btn1:'Ver o Pitch',cover_btn2:'Fale Conosco',
+  cover_year:'ano',cover_stat1:'Operando como clínica real',cover_stat2:'famílias buscaram atendimento nos últimos 12 meses',cover_stat3:'Captação pré-seed',
+  cover_tag1:'Laboratório',cover_tag2:'104/mês',cover_tag3:'Aberto',
+  founder_eyebrow:'A Fundadora',
+  founder_quote:'Eu não me propus a construir uma startup. Eu me propus a ajudar crianças. O problema era tão grande que a startup foi <em>inevitável</em>.',
+  founder_name:'Manu Costa',founder_role:'Fundadora & CEO, Casa do Urso',
+  adv1_title:'Clínica como laboratório',adv1_desc:'Não vendemos para o mercado. Nós somos o mercado. A clínica revelou o problema de dentro para fora.',
+  adv2_title:'Founder-problem fit real',adv2_desc:'Manu viveu a dor como gestora, como terapeuta e como mãe. Não é hipótese é diagnóstico.',
+  adv3_title:'Produto e clínica juntos',adv3_desc:'A plataforma é construída em cima de operações reais. Cada feature foi validada com pacientes reais.',
+  frag_eyebrow:'O Problema',frag_h:'Cuidado fragmentado.<br><em>Dados espalhados.</em>',
+  frag_sub:'Os dados de desenvolvimento de uma criança estão espalhados entre múltiplas pessoas e sistemas. Não existe um único lugar onde o histórico completo exista.',
+  fn1:'Terapeutas',fn2:'Clínicas',fn3:'Escolas',fn4:'Pais',fn5:'PDFs e Relatórios',fn6:'Sistemas desconectados',
+  frag_consq_lbl:'Consequências',
+  frag_c1:'Impossível coordenar terapias entre profissionais',
+  frag_c2:'Progresso de desenvolvimento invisível',
+  frag_c3:'Insights não são compartilhados entre equipes',
+  frag_c4:'Decisões de tratamento sem dados estruturados',
+  splat_eyebrow:'A Solução',splat_h:'Uma plataforma compartilhada<br>para <em>coordenar o cuidado.</em>',
+  splat_sub:'A Casa do Urso é a plataforma central onde todo o cuidado de neurodesenvolvimento é coordenado e registrado.',
+  hs1:'Terapeutas',hs2:'Clínicas',hs3:'Escolas',hs4:'Famílias',hs5:'Dados Clínicos',hs6:'Progresso',
+  splat_p1:'Clínicas gerenciam perfis e protocolos na plataforma',
+  splat_p2:'Terapeutas registram sessões e progresso em tempo real',
+  splat_p3:'Escolas acompanham o desenvolvimento integrado',
+  splat_p4:'Famílias recebem visibilidade completa do cuidado',
+  splat_key:'A Casa do Urso se torna o sistema central onde o cuidado de neurodesenvolvimento é coordenado e registrado.',
+  disc_eyebrow:'A Descoberta',disc_h:'Uma criança.<br><em>5+ profissionais.</em> Zero coordenação.',
+  actor1:'Psicólogos',actor1s:'Terapia comportamental',actor2:'Fonoaudiólogos',actor2s:'Linguagem e comunicação',
+  actor3:'Terapeutas Ocupacionais',actor3s:'Integração sensorial',actor4:'Educadores',actor4s:'Suporte escolar e inclusão',
+  actor5:'Pais e Famílias',actor5s:'Cuidado diário e reforço',
+  chaos_lbl:'"Infraestrutura" Atual',ct1:'WhatsApp',ct2:'PDFs',ct3:'Planilhas',ct4:'Sistemas isolados',
+  chaos_insight:'<strong>Insight da clínica:</strong> Os profissionais eram bons. A coordenação era o problema. Cada um trabalhava em silos, sem visão do progresso da criança como um todo.',
+  prob_eyebrow:'O Problema',prob_h:'Um mercado de <em>R$720M+</em><br>sem nenhuma infraestrutura.',
+  ps1:'Crianças com autismo no Brasil',ps2:'Com necessidades de neurodesenvolvimento',ps3:'Clínicas no ecossistema',
+  cq1t:'Progresso invisível',cq1d:'Famílias não sabem o que acontece em cada sessão. Terapeutas não veem o progresso consolidado.',
+  cq2t:'Esforço duplicado',cq2d:'Cada profissional repete avaliações e histórico porque não há registro compartilhado.',
+  cq3t:'Família excluída',cq3d:'Pais são responsáveis pelo cuidado em casa mas recebem zero suporte estruturado dos profissionais.',
+  cq4t:'Dados perdidos',cq4d:'Nenhum dado clínico estruturado é gerado. É impossível provar eficácia ou otimizar protocolos.',
+  sol_eyebrow:'A Solução',sol_h:'O <em>sistema operacional</em><br>do neurodesenvolvimento.',
+  sol_sub:'Uma plataforma que estrutura dados, conecta profissionais e devolve visibilidade para todos os atores do cuidado.',
+  f1t:'Perfil Compartilhado',f1d:'Diagnóstico, histórico e planos de terapia centralizados e visíveis para toda a equipe.',
+  f2t:'Registro de Terapia',f2d:'Terapeutas registram sessões e progresso em relação às metas de desenvolvimento em tempo real.',
+  f3t:'Coordenação Clínica',f3d:'Comunicação estruturada entre profissionais substitui grupos informais de WhatsApp.',
+  f4t:'Portal da Família',f4d:'Pais recebem atualizações estruturadas e acessíveis, sem jargão clínico.',
+  f5t:'Insights de Desenvolvimento',f5d:'IA analisa dados longitudinais e gera sinais de progresso e alertas de desvio.',
+  f6t:'Relatórios Automáticos',f6d:'Relatórios clínicos gerados automaticamente a partir dos dados de sessão. Zero retrabalho.',
+  wf_eyebrow:'Como Funciona',wf_h:'Quatro etapas.<br><em>Um registro conectado.</em>',
+  wf_sub:'Do primeiro diagnóstico ao acompanhamento contínuo tudo em um único ecossistema.',
+  wf1t:'Perfil da Criança',wf1d:'Clínica cria perfil com diagnóstico, histórico e planos de terapia.',
+  wf2t:'Registro de Sessão',wf2d:'Terapeutas registram progresso e resultados em relação às metas.',
+  wf3t:'Família e Escola',wf3d:'Pais e educadores recebem atualizações estruturadas e acessíveis.',
+  wf4t:'Insights',wf4d:'Plataforma gera relatórios, tendências e alertas de desenvolvimento.',
+  pt_eyebrow:'Visão do Terapeuta',pt_h:'Menos papel.<br>Mais <em>clínica.</em>',
+  pt_sub:'O terapeuta registra a sessão em minutos. A plataforma faz o resto.',
+  ptc1t:'Perfil sempre atualizado',ptc1d:'Diagnóstico, metas e histórico da criança em um único lugar acessível no início de cada sessão.',
+  ptc2t:'Registro estruturado',ptc2d:'Notas de sessão com atividades, avaliação e progresso por meta. Dados que viram insights.',
+  ptc3t:'Relatório automático',ptc3d:'Ao salvar, a sessão já alimenta o relatório mensal e notifica a família. Zero retrabalho.',
+  tm_title:'Casa do Urso Registro de Sessão',tm_child:'Lucas Mendes',tm_age:'7 anos · TEA Nível 1',
+  tm_streak:'12 sessões',tm_goals_lbl:'Metas Ativas',
+  tg1:'Contato visual',tg2:'Comunicação verbal',tg3:'Regulação emocional',tg4:'Interação social',
+  tm_sess_title:'Sessão de hoje',
+  tm_notes:'Lucas demonstrou boa tolerância à frustração durante a atividade de blocos. Iniciou 3 interações verbais espontâneas. Dificuldade observada em transições entre atividades...',
+  tm_perf:'Desempenho:',tm_act_lbl:'Atividades',
+  ta1:'Blocos',ta2:'Role play',ta3:'Música',ta4:'Verbal',ta5:'Motor',ta6:'Sensorial',
+  tm_save:'Salvar sessão · Notificar família',
+  pf_eyebrow:'Visão da Família',pf_h:'A família<br>finalmente <em>incluída.</em>',
+  pf_sub:'Pais recebem atualizações claras de todos os profissionais sem precisar ligar para cada um.',
+  pfc1t:'Uma visão unificada',pfc1d:'Atualizações de todos os terapeutas em um único app. Sem WhatsApp, sem ligações, sem PDFs.',
+  pfc2t:'Progresso visível',pfc2d:'Metas de desenvolvimento acompanhadas semana a semana. Os pais sabem o que comemorar.',
+  pfc3t:'Sugestões para casa',pfc3d:'Cada atualização inclui o que os pais podem reforçar em casa. A terapia continua fora da clínica.',
+  ps_greeting:'Olá, Ana 👋',ps_child:'Lucas Mendes',ps_sess:'sessões',ps_profs:'profissionais',ps_prog:'progresso',
+  ps_updates:'Atualizações recentes',
+  ps_who1:'Dra. Carla · Psicóloga',ps_when1:'hoje',ps_text1:'Lucas teve ótimo desempenho hoje. Iniciou 3 interações espontâneas! Continue reforçando o contato visual em casa.',ps_pill1:'Progresso excelente',
+  ps_who2:'Maria · Fonoaudióloga',ps_when2:'ontem',ps_text2:'Trabalhamos frases de 3 palavras. Sugestão: praticar nomeação de objetos durante o jantar.',
+  ps_goals:'Metas da semana',ppg1:'Contato visual',ppg2:'Comunicação verbal',ppg3:'Regulação emocional',
+  ps_next_lbl:'Próxima sessão',ps_next_val:'Terça · 14h · Dra. Carla',
+  pn1:'Início',pn2:'Progresso',pn3:'Mensagens',pn4:'Perfil',
+  tr_eyebrow:'Tração',tr_h:'A clínica como<br><em>laboratório vivo.</em>',
+  lab_quote:'<strong>A clínica não é só prova de conceito</strong> é onde o produto é construído. Cada feature foi testada com profissionais e famílias reais antes de escalar.',
+  tc_lbl:'Famílias atendidas por mês',tc_tag:'Crescendo',tc_note:'Últimos 6 meses de operação da clínica',
+  mc1l:'Famílias atendidas',mc1s:'nos últimos 12 meses em São Paulo',
+  mc2l:'Profissionais ativos',mc2s:'terapeutas usando o protocolo diariamente',
+  mc3l:'Lista de espera ativa',mc3v:'Demanda maior que capacidade',mc3s:'Indicações constantes sem esforço de marketing',
+  mkt_eyebrow:'Tamanho de Mercado',mkt_h:'Um mercado enorme.<br><em>Zero infraestrutura.</em>',
+  tam_sub:'Mercado Total',sam_sub:'Mercado Endereçável',
+  ms1:'Crianças com necessidades de neurodesenvolvimento no Brasil',
+  ms2:'Clínicas de neurodesenvolvimento no ecossistema',
+  ms3:'= R$7.2M ARR (10–15% do mercado endereçável)',mkt_clinics:'clínicas',
+  biz_eyebrow:'Modelo de Negócio',biz_h:'SaaS simples.<br><em>Focado na clínica.</em>',
+  pc1l:'Inicial',pc1n:'Clínica Pequena',pc2l:'Crescimento',pc2n:'Clínica Média',pc3l:'Escala',pc3n:'Clínica Grande',
+  pc_driver:'Preço baseado em: número de terapeutas · crianças atendidas · funcionalidades',
+  math_lbl:'Cenário Conservador',math_k1:'Clínicas na plataforma',math_k2:'Ticket médio/mês',
+  comp_eyebrow:'Concorrência',comp_h:'Uma categoria<br><em>completamente diferente.</em>',
+  comp_sub:'Players existentes fazem entrega de terapia ou administração clínica. Ninguém constrói a camada de infraestrutura de coordenação.',
+  comp_c0:'Capacidade',comp_c1:'Software Clínico',comp_c2:'Genial Care',
+  cr1:'Administração e agendamento',cr2:'Rede de entrega de terapia',cr3:'Coordenação entre profissionais',
+  cr4:'Portal para famílias',cr5:'Dados estruturados de desenvolvimento',cr6:'Insights e relatórios automáticos',
+  yes:'Sim',no:'Não',par:'Parcial',oos:'Fora do escopo',core:'Core',
+  gtm_eyebrow:'Estratégia de Go-to-Market',gtm_h:'Entrar pelo ecossistema.<br><em>Escalar pelo efeito de rede.</em>',
+  s1:'Etapa 01',s2:'Etapa 02',s3:'Etapa 03',s4:'Etapa 04',
+  g1t:'Clínica Própria',g1d:'Começar com a Casa do Urso como clínica cliente. Validação imediata, custo zero de aquisição.',
+  g2t:'Rede de Terapeutas',g2d:'Profissionais indicam a plataforma para colegas e outras clínicas onde trabalham.',
+  g3t:'Parcerias com Escolas',g3d:'Parceiros educacionais puxam demanda pelo lado da educação, criando flywheel de dois lados.',
+  g4t:'Flywheel de Indicações',g4d:'Cada novo ator na rede aumenta o valor para todos. Crescimento orgânico composto.',
+  team_eyebrow:'O Time',
+  team_h:'As pessoas certas<br>para <em>resolver isso.</em>',
+  team_sub:'Um time pequeno e complementar com expertise em produto, design, tecnologia e operações clínicas.',
+  manu_role:'Founder & CEO',
+  manu_bio:'Fundou a Casa do Urso após identificar a lacuna de coordenação gerindo uma clínica de TEA em São Paulo. Product designer com +10 anos de experiência em sistemas de design e produtos digitais. Construiu a plataforma do zero.',
+  adriano_role:'Head of Clinical Operations',
+  adriano_bio:'Coordena os fluxos clínicos da Casa do Urso. Especialista em protocolos de neurodesenvolvimento e na ponte entre prática clínica e produto digital.',
+  john_role:'Lead Developer',
+  john_bio:'Responsável pela arquitetura e desenvolvimento da plataforma. Constrói a infraestrutura técnica que suporta o produto desde o dia um.',
+  mariana_role:'Co-founder & Head of Brand',
+  tag_founder:'Fundadora',tag_design_sys:'Design Systems',tag_clinic:'Gestora Clínica',
+  tag_neuro:'Neurodesenvolvimento',tag_protocols:'Protocolos',tag_ops:'Operações',
+  tag_infra:'Infraestrutura',tag_platform:'Plataforma',
+  tag_brand:'Branding',tag_visual:'Identidade Visual',tag_cofounder:'Co-fundadora',
+  ask_eyebrow:'A Captação',raise_lbl:'Captando',raise_sub:'Rodada Pré-Seed',fund_lbl:'Uso dos Recursos',
+  fb1:'Desenvolvimento de produto',fb2:'Integração clínica',fb3:'Operações e crescimento',
+  ms_title:'Milestones 18 Meses',
+  ms1t:'Lançar plataforma v1',ms1d:'MVP com perfil, sessões e portal da família. 5 clínicas piloto.',
+  ms2t:'50 clínicas ativas',ms2d:'MRR de R$30K via plataforma. Integração com rede de terapeutas.',
+  ms3t:'Parcerias educacionais',ms3d:'Primeiras integrações com escolas. Flywheel de dois lados ativado.',
+  ms4t:'200 clínicas / R$120K MRR',ms4d:'Posição clara de liderança. Setup para Série A.',
+  vis_eyebrow:'Nossa Visão',
+  vis_h:'Somos para o neurodesenvolvimento<br>o que a <em>Stripe</em> é para pagamentos.',
+  vis_sub:'Infraestrutura que desaparece por baixo do cuidado mas torna tudo mais eficiente, conectado e mensurável.',
+  vc1tag:'Infraestrutura de pagamentos',vc1d:'Toda empresa de internet usa Stripe sem pensar. A infraestrutura desaparece, o negócio escala.',vc1b:'Infraestrutura financeira',
+  vc2tag:'OS dos hospitais nos EUA',vc2d:'Toda clínica e hospital nos EUA roda em Epic. O sistema que conecta todos os dados de saúde.',vc2b:'Infraestrutura hospitalar',
+  vc3tag:'OS do neurodesenvolvimento',vc3d:'Toda clínica, escola e terapeuta conectados em uma plataforma. Dados estruturados. Melhores resultados para milhões de crianças.',vc3b:'Infraestrutura clínica',
+},
+en:{
+  nav_01:'Founder',nav_02:'Discovery',nav_03:'Problem',nav_04:'Solution',
+  nav_05:'Traction',nav_06:'Market',nav_07:'Ask',nav_08:'Vision',
+  nav_wf:'Product',nav_biz:'Model',nav_comp:'Competition',nav_gtm:'Strategy',nav_vis:'Vision',
+  nav_pt:'Therapist',nav_pf:'Family',
+  nav_team:'Team',
+  nav_cta:'Schedule a Call',
+  cover_badge:'Pre-Seed · 2025',
+  cover_h1:'We built a clinic.<br>Then we found<br>the <em>real problem.</em>',
+  cover_p:'Casa do Urso is the infrastructure connecting therapists, clinics, schools and families built from inside the problem.',
+  cover_btn1:'View the Deck',cover_btn2:'Contact Us',
+  cover_year:'year',cover_stat1:'Operating as a real clinic',cover_stat2:'families sought care in the last 12 months',cover_stat3:'Pre-seed raise',
+  cover_tag1:'Lab',cover_tag2:'104/month',cover_tag3:'Open',
+  founder_eyebrow:'The Founder',
+  founder_quote:'I didn\'t set out to build a startup. I set out to help children. The problem was so big that the startup was <em>inevitable</em>.',
+  founder_name:'Manu Costa',founder_role:'Founder & CEO, Casa do Urso',
+  adv1_title:'Clinic as laboratory',adv1_desc:'We don\'t sell to the market. We are the market. The clinic revealed the problem from the inside out.',
+  adv2_title:'Real founder-problem fit',adv2_desc:'Manu lived the pain as a manager, a therapist, and a mother. Not a hypothesis a diagnosis.',
+  adv3_title:'Product and clinic together',adv3_desc:'The platform is built on real operations. Every feature was validated with real patients.',
+  frag_eyebrow:'The Problem',frag_h:'Fragmented care.<br><em>Scattered data.</em>',
+  frag_sub:'Today the developmental data of a child is scattered across multiple people and systems. There is no single place where the full developmental history exists.',
+  fn1:'Therapists',fn2:'Clinics',fn3:'Schools',fn4:'Parents',fn5:'PDFs & Reports',fn6:'Disconnected systems',
+  frag_consq_lbl:'Consequences',
+  frag_c1:'Impossible to coordinate therapies across professionals',
+  frag_c2:'Developmental progress is invisible',
+  frag_c3:'Insights are not shared between teams',
+  frag_c4:'Treatment decisions made without structured data',
+  splat_eyebrow:'The Solution',splat_h:'A shared platform<br>to <em>coordinate care.</em>',
+  splat_sub:'Casa do Urso is building the central platform where all neurodevelopment care is coordinated and recorded.',
+  hs1:'Therapists',hs2:'Clinics',hs3:'Schools',hs4:'Families',hs5:'Clinical Data',hs6:'Progress',
+  splat_p1:'Clinics manage profiles and protocols on the platform',
+  splat_p2:'Therapists log sessions and progress in real time',
+  splat_p3:'Schools follow integrated development',
+  splat_p4:'Families receive full visibility into care',
+  splat_key:'Casa do Urso becomes the central system where neurodevelopment care is coordinated and recorded.',
+  disc_eyebrow:'The Discovery',disc_h:'One child.<br><em>5+ professionals.</em> Zero coordination.',
+  actor1:'Psychologists',actor1s:'Behavioral therapy',actor2:'Speech Therapists',actor2s:'Language & communication',
+  actor3:'Occupational Therapists',actor3s:'Sensory integration',actor4:'Educators',actor4s:'School support & inclusion',
+  actor5:'Parents & Families',actor5s:'Daily care & reinforcement',
+  chaos_lbl:'Current "Infrastructure"',ct1:'WhatsApp',ct2:'PDFs',ct3:'Spreadsheets',ct4:'Disconnected apps',
+  chaos_insight:'<strong>Clinic insight:</strong> The professionals were great. Coordination was the problem. Everyone worked in silos with no visibility into the child\'s overall progress.',
+  prob_eyebrow:'The Problem',prob_h:'A <em>R$720M+</em> market<br>with zero infrastructure.',
+  ps1:'Children with autism in Brazil',ps2:'With neurodevelopment needs',ps3:'Clinics in the ecosystem',
+  cq1t:'Invisible progress',cq1d:'Families don\'t know what happens in each session. Therapists can\'t see consolidated progress.',
+  cq2t:'Duplicated effort',cq2d:'Every professional repeats assessments and history because there\'s no shared record.',
+  cq3t:'Family excluded',cq3d:'Parents are responsible for home care but receive zero structured support from professionals.',
+  cq4t:'Lost data',cq4d:'No structured clinical data is generated. It\'s impossible to prove efficacy or optimize protocols.',
+  sol_eyebrow:'The Solution',sol_h:'The <em>operating system</em><br>of neurodevelopment.',
+  sol_sub:'A platform that structures data, connects professionals and restores visibility to all care stakeholders.',
+  f1t:'Shared Profile',f1d:'Diagnosis, history and therapy plans centralized and visible to the entire team.',
+  f2t:'Therapy Tracking',f2d:'Therapists log sessions and progress against developmental goals in real time.',
+  f3t:'Clinical Coordination',f3d:'Structured messaging between professionals replaces informal WhatsApp groups.',
+  f4t:'Family Portal',f4d:'Parents receive structured, accessible updates without clinical jargon.',
+  f5t:'Development Insights',f5d:'AI analyzes longitudinal data and generates progress signals and deviation alerts.',
+  f6t:'Automated Reports',f6d:'Clinical reports generated automatically from session data. Zero extra work.',
+  wf_eyebrow:'How It Works',wf_h:'Four steps.<br><em>One connected record.</em>',
+  wf_sub:'From the first diagnosis to ongoing development tracking all in one ecosystem.',
+  wf1t:'Child Profile',wf1d:'Clinic creates a profile with diagnosis, history and therapy plans.',
+  wf2t:'Session Log',wf2d:'Therapists record progress and outcomes against goals.',
+  wf3t:'Family & School',wf3d:'Parents and educators receive structured, accessible updates.',
+  wf4t:'Insights',wf4d:'Platform generates reports, trends and development alerts.',
+  pt_eyebrow:'Therapist View',pt_h:'Less paperwork.<br>More <em>therapy.</em>',
+  pt_sub:'The therapist logs the session in minutes. The platform handles the rest.',
+  ptc1t:'Always up-to-date profile',ptc1d:'Diagnosis, goals and the child\'s history in one place accessible at the start of every session.',
+  ptc2t:'Structured session log',ptc2d:'Session notes with activities, ratings and per-goal progress. Data that becomes insights.',
+  ptc3t:'Automatic report',ptc3d:'On save, the session feeds the monthly report and notifies the family. Zero extra work.',
+  tm_title:'Casa do Urso Session Log',tm_child:'Lucas Mendes',tm_age:'7 years old · ASD Level 1',
+  tm_streak:'12 sessions',tm_goals_lbl:'Active Goals',
+  tg1:'Eye contact',tg2:'Verbal communication',tg3:'Emotional regulation',tg4:'Social interaction',
+  tm_sess_title:"Today's session",
+  tm_notes:'Lucas showed good frustration tolerance during the block activity. Initiated 3 spontaneous verbal interactions. Difficulty observed in transitions between activities...',
+  tm_perf:'Performance:',tm_act_lbl:'Activities',
+  ta1:'Blocks',ta2:'Role play',ta3:'Music',ta4:'Verbal',ta5:'Motor',ta6:'Sensory',
+  tm_save:'Save session · Notify family',
+  pf_eyebrow:'Family View',pf_h:'The family<br>finally <em>included.</em>',
+  pf_sub:'Parents receive clear updates from all professionals without calling each one separately.',
+  pfc1t:'Unified view',pfc1d:'Updates from all therapists in one app. No WhatsApp, no calls, no PDFs.',
+  pfc2t:'Visible progress',pfc2d:'Developmental goals tracked week by week. Parents know exactly what to celebrate.',
+  pfc3t:'Home suggestions',pfc3d:'Each update includes what parents can reinforce at home. Therapy continues outside the clinic.',
+  ps_greeting:'Hi, Ana 👋',ps_child:'Lucas Mendes',ps_sess:'sessions',ps_profs:'professionals',ps_prog:'progress',
+  ps_updates:'Recent updates',
+  ps_who1:'Dr. Carla · Psychologist',ps_when1:'today',ps_text1:'Lucas had great performance today. Initiated 3 spontaneous interactions! Keep reinforcing eye contact at home.',ps_pill1:'Excellent progress',
+  ps_who2:'Maria · Speech Therapist',ps_when2:'yesterday',ps_text2:'We worked on 3-word sentences. Suggestion: practice object naming during dinner.',
+  ps_goals:'This week\'s goals',ppg1:'Eye contact',ppg2:'Verbal communication',ppg3:'Emotional regulation',
+  ps_next_lbl:'Next session',ps_next_val:'Tuesday · 2pm · Dr. Carla',
+  pn1:'Home',pn2:'Progress',pn3:'Messages',pn4:'Profile',
+  tr_eyebrow:'Traction',tr_h:'The clinic as a<br><em>living laboratory.</em>',
+  lab_quote:'<strong>The clinic isn\'t just proof of concept</strong> it\'s where the product is built. Every feature was tested with real professionals and families before scaling.',
+  tc_lbl:'Families served per month',tc_tag:'Growing',tc_note:'Last 6 months of clinic operations',
+  mc1l:'Families served',mc1s:'in the last 12 months in São Paulo',
+  mc2l:'Active professionals',mc2s:'therapists using the protocol daily',
+  mc3l:'Active waitlist',mc3v:'Demand exceeds capacity',mc3s:'Constant referrals with zero marketing effort',
+  mkt_eyebrow:'Market Size',mkt_h:'A massive market.<br><em>Zero infrastructure.</em>',
+  tam_sub:'Total Market',sam_sub:'Serviceable Market',
+  ms1:'Children with neurodevelopment needs in Brazil',
+  ms2:'Neurodevelopment clinics in the ecosystem',
+  ms3:'= R$7.2M ARR (10–15% of addressable market)',mkt_clinics:'clinics',
+  biz_eyebrow:'Business Model',biz_h:'Simple SaaS.<br><em>Clinic-first.</em>',
+  pc1l:'Starter',pc1n:'Small Clinic',pc2l:'Growth',pc2n:'Mid-size Clinic',pc3l:'Scale',pc3n:'Large Clinic',
+  pc_driver:'Pricing based on: number of therapists · children served · features',
+  math_lbl:'Conservative Scenario',math_k1:'Clinics on platform',math_k2:'Avg. ticket / month',
+  comp_eyebrow:'Competition',comp_h:'A completely<br><em>different category.</em>',
+  comp_sub:'Existing players do therapy delivery or clinic admin. No one builds the coordination infrastructure layer.',
+  comp_c0:'Capability',comp_c1:'Clinic Software',comp_c2:'Genial Care',
+  cr1:'Admin & scheduling',cr2:'Therapy delivery network',cr3:'Cross-professional coordination',
+  cr4:'Family portal',cr5:'Structured developmental data',cr6:'Automated insights & reports',
+  yes:'Yes',no:'No',par:'Partial',oos:'Out of scope',core:'Core',
+  gtm_eyebrow:'Go-to-Market Strategy',gtm_h:'Enter through the ecosystem.<br><em>Scale through network effects.</em>',
+  s1:'Step 01',s2:'Step 02',s3:'Step 03',s4:'Step 04',
+  g1t:'Own Clinic',g1d:'Start with Casa do Urso as a clinic customer. Instant validation, zero acquisition cost.',
+  g2t:'Therapist Network',g2d:'Professionals recommend the platform to peers and other clinics they work at.',
+  g3t:'School Partnerships',g3d:'Educational partners pull demand from the education side, creating a two-sided flywheel.',
+  g4t:'Referral Flywheel',g4d:'Each new actor in the network increases value for everyone. Compounding organic growth.',
+  team_eyebrow:'The Team',
+  team_h:'The right people<br>to <em>solve this.</em>',
+  team_sub:'A small, complementary team with expertise in product, design, technology and clinical operations.',
+  manu_role:'Founder & CEO',
+  manu_bio:'Founded Casa do Urso after spotting the coordination gap while managing an ASD clinic in São Paulo. Product designer with 10+ years in design systems and digital products. Built the platform from scratch.',
+  adriano_role:'Head of Clinical Operations',
+  adriano_bio:'Coordinates clinical workflows at Casa do Urso. Expert in neurodevelopment protocols and bridging clinical practice with digital product.',
+  john_role:'Lead Developer',
+  john_bio:'Responsible for platform architecture and development. Has been building the technical infrastructure supporting the product from day one.',
+  mariana_role:'Co-founder & Head of Brand',
+  tag_founder:'Founder',tag_design_sys:'Design Systems',tag_clinic:'Clinic Manager',
+  tag_neuro:'Neurodevelopment',tag_protocols:'Protocols',tag_ops:'Operations',
+  tag_infra:'Infrastructure',tag_platform:'Platform',
+  tag_brand:'Branding',tag_visual:'Visual Identity',tag_cofounder:'Co-founder',
+  ask_eyebrow:'The Ask',raise_lbl:'Raising',raise_sub:'Pre-Seed Round',fund_lbl:'Use of Funds',
+  fb1:'Product development',fb2:'Clinical integration',fb3:'Operations & growth',
+  ms_title:'Milestones 18 Months',
+  ms1t:'Launch platform v1',ms1d:'MVP with profile, sessions and family portal. 5 pilot clinics.',
+  ms2t:'50 active clinics',ms2d:'R$30K MRR via platform. Integration with therapist network.',
+  ms3t:'Educational partnerships',ms3d:'First school integrations. Two-sided flywheel activated.',
+  ms4t:'200 clinics / R$120K MRR',ms4d:'Clear market leadership. Setup for Series A.',
+  vis_eyebrow:'Our Vision',
+  vis_h:'We are to neurodevelopment<br>what <em>Stripe</em> is to payments.',
+  vis_sub:'Infrastructure that disappears beneath care but makes everything more efficient, connected and measurable.',
+  vc1tag:'Payments infrastructure',vc1d:'Every internet company uses Stripe without thinking. The infrastructure disappears, the business scales.',vc1b:'Financial infrastructure',
+  vc2tag:'OS for US hospitals',vc2d:'Every clinic and hospital in the US runs on Epic. The system that connects all health data.',vc2b:'Hospital infrastructure',
+  vc3tag:'OS for neurodevelopment',vc3d:'Every clinic, school and therapist connected in one platform. Structured data. Better outcomes for millions of children.',vc3b:'Clinical infrastructure',
+}
+};
+
+let currentLang = 'pt';
+
+function setLang(lang) {
+  if (lang === currentLang) return;
+  currentLang = lang;
+  const mc = document.getElementById('main-content');
+  mc.classList.add('switching');
+  setTimeout(() => {
+    const d = i18n[lang];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const k = el.getAttribute('data-i18n');
+      if (d[k] !== undefined) el.textContent = d[k];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const k = el.getAttribute('data-i18n-html');
+      if (d[k] !== undefined) el.innerHTML = d[k];
+    });
+    document.querySelectorAll('[data-i18n-label]').forEach(el => {
+      const k = el.getAttribute('data-i18n-label');
+      if (d[k] !== undefined) el.setAttribute('data-label', d[k]);
+    });
+    document.getElementById('btnPt').classList.toggle('active', lang === 'pt');
+    document.getElementById('btnEn').classList.toggle('active', lang === 'en');
+    document.documentElement.lang = lang;
+    mc.classList.remove('switching');
+  }, 150);
+}
+
+/* ══ SCROLL PROGRESS ══ */
+const progressBar = document.getElementById('progress-bar');
+window.addEventListener('scroll', () => {
+  const total = document.body.scrollHeight - window.innerHeight;
+  progressBar.style.width = (window.scrollY / total * 100) + '%';
+}, { passive: true });
+
+/* ══ NAV SCROLLED STATE ══ */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 20);
+}, { passive: true });
+
+/* ══ INTERSECTION OBSERVER ANIMATIONS ══ */
+const fadeObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('animate'); fadeObs.unobserve(e.target); } });
+}, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+document.querySelectorAll('.fadeUp').forEach(el => fadeObs.observe(el));
+setTimeout(() => document.querySelectorAll('#cover .fadeUp').forEach((el,i) => setTimeout(() => el.classList.add('animate'), i*100)), 100);
+
+/* ══ DOT NAV + NAV PILLS ACTIVE STATE ══ */
+const sections = Array.from(document.querySelectorAll('section[id]'));
+const dots     = Array.from(document.querySelectorAll('.dot'));
+const pills    = Array.from(document.querySelectorAll('.nav-pill'));
+
+const secObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const id = e.target.id;
+      dots.forEach(d => d.classList.toggle('active', d.dataset.target === id));
+      pills.forEach(p => p.classList.toggle('active', p.dataset.target === id));
+    }
+  });
+}, { threshold: 0.4 });
+sections.forEach(s => secObs.observe(s));
+
+dots.forEach(d => {
+  d.addEventListener('click', () => {
+    document.getElementById(d.dataset.target)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+pills.forEach(p => {
+  p.addEventListener('click', () => {
+    document.getElementById(p.dataset.target)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+/* ══ KEYBOARD NAV ══ */
+document.addEventListener('keydown', e => {
+  const idx = sections.findIndex(s => s.id === (dots.find(d => d.classList.contains('active'))?.dataset.target));
+  if (e.key === 'ArrowDown' || e.key === 'ArrowRight') sections[Math.min(idx+1, sections.length-1)]?.scrollIntoView({behavior:'smooth',block:'start'});
+  if (e.key === 'ArrowUp'   || e.key === 'ArrowLeft')  sections[Math.max(idx-1, 0)]?.scrollIntoView({behavior:'smooth',block:'start'});
+});
+</script>
+</body>
+</html>

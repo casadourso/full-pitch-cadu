@@ -586,6 +586,14 @@ blockquote em { font-style: italic; color: var(--coral); }
   flex-shrink: 0; background: var(--coral-light); color: var(--coral);
 }
 
+.ni-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+  margin-top: 40px;
+}
+
 /* ══════════════════════════════════
    03 DISCOVERY
 ══════════════════════════════════ */
@@ -730,7 +738,7 @@ blockquote em { font-style: italic; color: var(--coral); }
 .metric-cards { display: flex; flex-direction: column; gap: 12px; }
 .metric-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 20px 22px; box-shadow: var(--shadow-sm); }
 .mc-label { font-size: 10px; font-weight: 700; color: var(--mist); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
-.mc-val { font-family: var(--serif); font-size: 28px; font-weight: 700; letter-spacing: -0.03em; color: var(--ink); line-height: 1; }
+.mc-val { font-family: var(--serif); font-size: 28px; font-weight: 700; letter-spacing: -0.03em; color: rgba(248, 113, 113, 1); line-height: 1; }
 .mc-val span { color: var(--coral); }
 .mc-sub { font-size: 11.5px; color: var(--mist); margin-top: 3px; }
 
@@ -1169,6 +1177,7 @@ blockquote em { font-style: italic; color: var(--coral); }
   transition: transform 0.25s, box-shadow 0.25s;
 }
 .team-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+.team-card.is-hidden { display: none; }
 
 .team-avatar {
   width: 100%;
@@ -1274,6 +1283,102 @@ blockquote em { font-style: italic; color: var(--coral); }
   .mkt-bar--sam { width: 88%; }
   .mkt-bar--som { width: 70%; }
 }
+
+@media (max-width: 768px) {
+  #nav { padding: 10px 14px; }
+  .nav-cta { display: none; }
+  .inner { padding: 0 18px; }
+  section { min-height: auto; padding: 78px 0 44px; }
+  .slide-subtitle { font-size: 15px; margin-bottom: 30px; }
+  .cover-h1 { font-size: clamp(30px, 10vw, 44px); }
+
+  .frag-layout, .sol-plat-layout, .product-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  #prod-family .product-layout > :first-child { order: 2; }
+  #prod-family .product-layout > :last-child { order: 1; }
+  #prod-family .family-mockup-wrap {
+    justify-content: center;
+    margin-top: 6px;
+  }
+  #prod-family .product-callouts { gap: 10px; }
+  #prod-family .product-callouts .callout {
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    gap: 10px;
+    padding: 14px 0;
+    align-items: start;
+  }
+  #prod-family .product-callouts .callout-num {
+    min-width: 0;
+    font-size: 24px;
+    text-align: center;
+    line-height: 1.1;
+    margin-top: 2px;
+  }
+  .ni-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .frag-diagram {
+    width: min(100%, 300px);
+    height: 300px;
+    margin: 0 auto;
+  }
+  .frag-node {
+    white-space: normal;
+    max-width: 44vw;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  .frag-node:nth-child(2), .frag-node:nth-child(3) { right: 0; }
+  .frag-node:nth-child(5), .frag-node:nth-child(6) { left: 0; }
+
+  .tm-body { grid-template-columns: 1fr; }
+  .tm-sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .mkt-bar {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .mkt-bar-desc {
+    width: 100%;
+    margin-top: 4px;
+  }
+
+  .fbar {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .fbar-lbl {
+    min-width: 0;
+    width: 100%;
+  }
+  .fbar-pct { min-width: 0; }
+
+  .comp-table {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+  .comp-hdr, .comp-row { min-width: 560px; }
+}
+
+@media (max-width: 640px) {
+  .prob-top, .prob-consequences, .feat-grid, .wf-steps, .team-grid {
+    grid-template-columns: 1fr;
+  }
+  .raise-box { padding: 28px 22px; }
+  .raise-amt { font-size: 40px; }
+  .phone-frame { width: 220px; }
+  .mkt-bar--sam, .mkt-bar--som { width: 100%; }
+  #cover::before, #cover::after, #founder::before, #ask::before { display: none; }
+}
 </style>
 </head>
 <body>
@@ -1288,13 +1393,13 @@ blockquote em { font-style: italic; color: var(--coral); }
   </a>
 
   <ul class="nav-pills" id="navPills">
-    <li><button class="nav-pill" data-target="founder"     data-i18n="nav_02">Descoberta</button></li>
-    <li><button class="nav-pill" data-target="discovery"   data-i18n="nav_03">Problema</button></li>
-    <li><button class="nav-pill" data-target="problem"     data-i18n="nav_04">Solução</button></li>
-    <li><button class="nav-pill" data-target="solution"    data-i18n="nav_05">Tração</button></li>
-    <li><button class="nav-pill" data-target="traction"    data-i18n="nav_06">Mercado</button></li>
-    <li><button class="nav-pill" data-target="market"      data-i18n="nav_07">Pedido</button></li>
-    <li><button class="nav-pill" data-target="ask"         data-i18n="nav_08">Visão</button></li>
+    <li><button class="nav-pill" data-target="founder"     data-i18n="nav_founder">Fundadora</button></li>
+    <li><button class="nav-pill" data-target="frag-problem" data-i18n="nav_problem">Problema</button></li>
+    <li><button class="nav-pill" data-target="solution"    data-i18n="nav_solution">Solução</button></li>
+    <li><button class="nav-pill" data-target="traction"    data-i18n="nav_traction">Tração</button></li>
+    <li><button class="nav-pill" data-target="market"      data-i18n="nav_market">Mercado</button></li>
+    <li><button class="nav-pill" data-target="ask"         data-i18n="nav_ask">Captação</button></li>
+    <li><button class="nav-pill" data-target="vision"      data-i18n="nav_vision">Visão</button></li>
   </ul>
 
   <div class="nav-right">
@@ -1312,23 +1417,25 @@ blockquote em { font-style: italic; color: var(--coral); }
 
 <!-- ══ DOT NAV ══ -->
 <nav id="dot-nav" aria-label="Navegação por slides">
-  <button class="dot active" data-target="cover"       data-i18n-label="nav_01" data-label="Fundadora"></button>
-  <button class="dot"        data-target="founder"     data-i18n-label="nav_02" data-label="Descoberta"></button>
-  <button class="dot"        data-target="network-insight" data-i18n-label="nav_ni" data-label="Insight de Rede"></button>
-  <button class="dot"        data-target="discovery"   data-i18n-label="nav_03" data-label="Problema"></button>
-  <button class="dot"        data-target="problem"     data-i18n-label="nav_04" data-label="Solução"></button>
-  <button class="dot"        data-target="solution"    data-i18n-label="nav_05" data-label="Tração"></button>
-  <button class="dot"        data-target="workflow"    data-i18n-label="nav_wf"       data-label="Produto"></button>
-  <button class="dot"        data-target="prod-therapist" data-i18n-label="nav_pt"    data-label="Terapeuta"></button>
-  <button class="dot"        data-target="prod-family"    data-i18n-label="nav_pf"    data-label="Família"></button>
-  <button class="dot"        data-target="traction"    data-i18n-label="nav_06"       data-label="Mercado"></button>
-  <button class="dot"        data-target="market"      data-i18n-label="nav_07" data-label="Pedido"></button>
-  <button class="dot"        data-target="bizmodel"    data-i18n-label="nav_biz" data-label="Modelo"></button>
-  <button class="dot"        data-target="competition" data-i18n-label="nav_comp" data-label="Competição"></button>
-  <button class="dot"        data-target="gtm"         data-i18n-label="nav_gtm" data-label="Estratégia"></button>
-  <button class="dot"        data-target="team"        data-i18n-label="nav_team" data-label="Time"></button>
-  <button class="dot"        data-target="ask"         data-i18n-label="nav_08" data-label="Captação"></button>
-  <button class="dot"        data-target="vision"      data-i18n-label="nav_vis" data-label="Visão"></button>
+  <button class="dot active" data-target="cover"           data-i18n-label="dot_cover"      data-label="Capa"></button>
+  <button class="dot"        data-target="founder"         data-i18n-label="dot_founder"    data-label="Fundadora"></button>
+  <button class="dot"        data-target="frag-problem"    data-i18n-label="dot_frag"       data-label="Fragmentação"></button>
+  <button class="dot"        data-target="sol-platform"    data-i18n-label="dot_platform"   data-label="Plataforma"></button>
+  <button class="dot"        data-target="network-insight" data-i18n-label="dot_ni"         data-label="Insight de Rede"></button>
+  <button class="dot"        data-target="discovery"       data-i18n-label="dot_discovery"  data-label="Descoberta"></button>
+  <button class="dot"        data-target="problem"         data-i18n-label="dot_problem"    data-label="Problema"></button>
+  <button class="dot"        data-target="solution"        data-i18n-label="dot_solution"   data-label="Solução"></button>
+  <button class="dot"        data-target="workflow"        data-i18n-label="dot_workflow"   data-label="Como Funciona"></button>
+  <button class="dot"        data-target="prod-therapist"  data-i18n-label="dot_therapist"  data-label="Terapeuta"></button>
+  <button class="dot"        data-target="prod-family"     data-i18n-label="dot_family"     data-label="Família"></button>
+  <button class="dot"        data-target="traction"        data-i18n-label="dot_traction"   data-label="Tração"></button>
+  <button class="dot"        data-target="market"          data-i18n-label="dot_market"     data-label="Mercado"></button>
+  <button class="dot"        data-target="bizmodel"        data-i18n-label="dot_biz"        data-label="Modelo"></button>
+  <button class="dot"        data-target="competition"     data-i18n-label="dot_comp"       data-label="Concorrência"></button>
+  <button class="dot"        data-target="gtm"             data-i18n-label="dot_gtm"        data-label="Estratégia"></button>
+  <button class="dot"        data-target="team"            data-i18n-label="dot_team"       data-label="Time"></button>
+  <button class="dot"        data-target="ask"             data-i18n-label="dot_ask"        data-label="Captação"></button>
+  <button class="dot"        data-target="vision"          data-i18n-label="dot_vis"        data-label="Visão"></button>
 </nav>
 
 <div id="main-content">
@@ -1554,7 +1661,7 @@ blockquote em { font-style: italic; color: var(--coral); }
     <h2 class="slide-title fadeUp delay-1" data-i18n-html="ni_h">O insight que<br><em>muda tudo.</em></h2>
     <p class="slide-subtitle fadeUp delay-2" data-i18n="ni_sub">25% das famílias tratam em 2 ou mais clínicas. Uma criança faz fono na Clínica A e TO na Clínica B. Hoje: zero comunicação entre elas.</p>
 
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:40px" class="fadeUp delay-3">
+    <div class="ni-grid fadeUp delay-3">
       <div>
         <div style="background:var(--cloud);border-radius:20px;padding:36px 32px;text-align:center">
           <div style="display:flex;flex-direction:column;align-items:center;gap:16px">
@@ -1771,7 +1878,7 @@ blockquote em { font-style: italic; color: var(--coral); }
 ════════════════════════════════ -->
 <section id="prod-family" class="bg-white">
   <div class="inner">
-    <div class="product-layout" style="grid-template-columns:1fr 1fr">
+    <div class="product-layout">
 
       <!-- LEFT: phone mockup -->
       <div class="family-mockup-wrap fadeUp delay-1">
@@ -1879,7 +1986,7 @@ blockquote em { font-style: italic; color: var(--coral); }
     <div class="eyebrow fadeUp" data-i18n="mkt_eyebrow">Tamanho de Mercado</div>
     <h2 class="slide-title fadeUp delay-1" data-i18n-html="mkt_h">5.500 clínicas.<br><em>Zero infraestrutura</em> de coordenação.</h2>
 
-    <div class="market-layout" style="grid-template-columns:1fr 1fr;gap:40px;align-items:start">
+    <div class="market-layout" style="gap:40px;align-items:start">
 
       <!-- Mercado de Entrada -->
       <div class="fadeUp delay-2" style="background:var(--white);border:1px solid var(--border);border-radius:20px;padding:32px 28px;box-shadow:var(--shadow-sm)">
@@ -2055,7 +2162,7 @@ blockquote em { font-style: italic; color: var(--coral); }
       </div>
 
       <!-- William -->
-      <div class="team-card fadeUp delay-3">
+      <div class="team-card is-hidden fadeUp delay-3">
         <div class="team-avatar avatar-miguel">
           <span class="team-avatar-initial">W</span>
         </div>
@@ -2174,11 +2281,14 @@ blockquote em { font-style: italic; color: var(--coral); }
 /* ══ I18N ══ */
 const i18n = {
 pt:{
-  nav_01:'Fundadora',nav_02:'Descoberta',nav_03:'Problema',nav_04:'Solução',
-  nav_05:'Tração',nav_06:'Mercado',nav_07:'Captação',nav_08:'Visão',
-  nav_wf:'Produto',nav_biz:'Modelo',nav_comp:'Competição',nav_gtm:'Estratégia',nav_vis:'Visão',
-  nav_ni:'Insight de Rede',nav_team:'Time',
+  nav_founder:'Fundadora',nav_problem:'Problema',nav_solution:'Solução',
+  nav_traction:'Tração',nav_market:'Mercado',nav_ask:'Captação',nav_vision:'Visão',
   nav_cta:'Agendar Reunião',
+  dot_cover:'Capa',dot_founder:'Fundadora',dot_frag:'Fragmentação',dot_platform:'Plataforma',
+  dot_ni:'Insight de Rede',dot_discovery:'Descoberta',dot_problem:'Problema',dot_solution:'Solução',
+  dot_workflow:'Como Funciona',dot_therapist:'Terapeuta',dot_family:'Família',dot_traction:'Tração',
+  dot_market:'Mercado',dot_biz:'Modelo',dot_comp:'Concorrência',dot_gtm:'Estratégia',
+  dot_team:'Time',dot_ask:'Captação',dot_vis:'Visão',
   cover_badge:'Pré-Seed · 2025',
   cover_h1:'Construímos uma clínica.<br>Então encontramos<br>o <em>problema real.</em>',
   cover_p:'A Casa do Urso é a infraestrutura que conecta terapeutas, clínicas, escolas e famílias nascida de dentro do problema.',
@@ -2327,13 +2437,14 @@ pt:{
   pc_family_insight:'A família ganha acesso gratuito ao portal. Quando a família trata em mais de uma clínica, ela pode conectar todas — e a rede cresce organicamente, sem custo de aquisição.',
 },
 en:{
-  nav_01:'Founder',nav_02:'Discovery',nav_03:'Problem',nav_04:'Solution',
-  nav_05:'Traction',nav_06:'Market',nav_07:'Ask',nav_08:'Vision',
-  nav_wf:'Product',nav_biz:'Model',nav_comp:'Competition',nav_gtm:'Strategy',nav_vis:'Vision',
-  nav_ni:'Network Insight',
-  nav_pt:'Therapist',nav_pf:'Family',
-  nav_team:'Team',
+  nav_founder:'Founder',nav_problem:'Problem',nav_solution:'Solution',
+  nav_traction:'Traction',nav_market:'Market',nav_ask:'The Ask',nav_vision:'Vision',
   nav_cta:'Schedule a Call',
+  dot_cover:'Cover',dot_founder:'Founder',dot_frag:'Fragmentation',dot_platform:'Platform',
+  dot_ni:'Network Insight',dot_discovery:'Discovery',dot_problem:'Problem',dot_solution:'Solution',
+  dot_workflow:'How It Works',dot_therapist:'Therapist',dot_family:'Family',dot_traction:'Traction',
+  dot_market:'Market',dot_biz:'Model',dot_comp:'Competition',dot_gtm:'Strategy',
+  dot_team:'Team',dot_ask:'The Ask',dot_vis:'Vision',
   cover_badge:'Pre-Seed · 2025',
   cover_h1:'We built a clinic.<br>Then we found<br>the <em>real problem.</em>',
   cover_p:'Casa do Urso is the infrastructure connecting therapists, clinics, schools and families built from inside the problem.',

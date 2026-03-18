@@ -517,7 +517,7 @@ blockquote em { font-style: italic; color: var(--coral); }
 }
 .eco-logo {
   width: 52px; height: 52px; border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, #FECACA, #F87171);
+  background: none;
   display: flex; align-items: center; justify-content: center;
   box-shadow: 0 4px 24px rgba(248,113,113,0.3);
   animation: eco-glow 3s ease-in-out infinite;
@@ -906,7 +906,7 @@ blockquote em { font-style: italic; color: var(--coral); }
 .fbar-track { flex: 1; height: 5px; background: rgba(255,255,255,0.08); border-radius: 100px; overflow: hidden; }
 .fbar-fill { height: 100%; background: var(--coral); border-radius: 100px; animation: fb 1.2s cubic-bezier(.16,1,.3,1) backwards; }
 @keyframes fb { from{width:0!important} }
-.fbar-pct { font-size: 12px; font-weight: 700; color: var(--coral); min-width: 32px; text-align: right; }
+.fbar-pct { font-size: 11px; font-weight: 700; color: var(--coral); min-width: 90px; text-align: right; white-space: nowrap; }
 
 .milestones { display: flex; flex-direction: column; gap: 14px; }
 .ms-title { font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px; }
@@ -1185,7 +1185,7 @@ blockquote em { font-style: italic; color: var(--coral); }
 /* Each member gets a distinct gradient */
 .avatar-manu    { background: linear-gradient(135deg, #FEE2E2 0%, #FECACA 60%, #FCA5A5 100%); color: var(--coral-dark); }
 .avatar-mariana { background: linear-gradient(135deg, #EDE9FE 0%, #DDD6FE 60%, #C4B5FD 100%); color: #6D28D9; }
-.avatar-miguel  { background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 60%, #93C5FD 100%); color: #1D4ED8; }
+.avatar-miguel, .avatar-william { background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 60%, #93C5FD 100%); color: #1D4ED8; }
 .avatar-adriano { background: linear-gradient(135deg, #D1FAE5 0%, #A7F3D0 60%, #6EE7B7 100%); color: #065F46; }
 
 .team-avatar-initial {
@@ -1368,7 +1368,7 @@ blockquote em { font-style: italic; color: var(--coral); }
         <div class="cover-stat fadeUp delay-4">
           <div class="cs-icon" style="background:#EDE9FE;color:#7C3AED;"><svg class="ic" width="20" height="20"><use href="#ic-target"/></svg></div>
           <div>
-            <div class="cs-num">R$<span>1,5M</span></div>
+            <div class="cs-num">R$<span>1,2M</span></div>
             <div class="cs-lbl" data-i18n="cover_stat3">Captação pré-seed</div>
           </div>
           <div class="cs-tag" data-i18n="cover_tag3">Aberto</div>
@@ -1506,7 +1506,7 @@ blockquote em { font-style: italic; color: var(--coral); }
             <div class="eco-layer-label">Plataforma</div>
             <div class="eco-center-row">
               <div class="eco-logo"><img src="urso.svg" width="32" height="32" alt="Casa do Urso" style="display:block"></div>
-              <div>
+              <div style="color:var(--coral)">
                 <div class="eco-title">Casa do Urso</div>
                 <div class="eco-subtitle">Coordenação centralizada do cuidado</div>
               </div>
@@ -1645,11 +1645,11 @@ blockquote em { font-style: italic; color: var(--coral); }
 <section id="problem" class="bg-white">
   <div class="inner">
     <div class="eyebrow fadeUp" data-i18n="prob_eyebrow">O Problema</div>
-    <h2 class="slide-title fadeUp delay-1" data-i18n-html="prob_h">8.000 clínicas de neurodesenvolvimento.<br><em>Zero infraestrutura</em> de coordenação.</h2>
+    <h2 class="slide-title fadeUp delay-1" data-i18n-html="prob_h">5.500 clínicas de neurodesenvolvimento.<br><em>Zero infraestrutura</em> de coordenação.</h2>
     <div class="prob-top fadeUp delay-2" style="margin-bottom:36px">
-      <div class="prob-stat"><div class="prob-stat-num"><span>1M+</span></div><div class="prob-stat-lbl" data-i18n="ps1">Crianças com autismo no Brasil</div></div>
+      <div class="prob-stat"><div class="prob-stat-num"><span>2,4M</span></div><div class="prob-stat-lbl" data-i18n="ps1">Pessoas com TEA no Brasil (IBGE 2022)</div></div>
       <div class="prob-stat"><div class="prob-stat-num"><span>5M+</span></div><div class="prob-stat-lbl" data-i18n="ps2">Com necessidades de neurodesenvolvimento</div></div>
-      <div class="prob-stat"><div class="prob-stat-num"><span>8K</span></div><div class="prob-stat-lbl" data-i18n="ps3">Clínicas de neurodesenvolvimento no Brasil</div></div>
+      <div class="prob-stat"><div class="prob-stat-num"><span>5,5K</span></div><div class="prob-stat-lbl" data-i18n="ps3">Clínicas de neurodesenvolvimento no Brasil</div></div>
     </div>
     <div class="prob-consequences fadeUp delay-3">
       <div class="consq-card"><div class="consq-num">01</div><div><div class="consq-title" data-i18n="cq1t">Progresso invisível</div><div class="consq-desc" data-i18n="cq1d">Famílias não sabem o que acontece em cada sessão. Terapeutas não veem o progresso consolidado.</div></div></div>
@@ -1877,40 +1877,56 @@ blockquote em { font-style: italic; color: var(--coral); }
 <section id="market" class="bg-cloud">
   <div class="inner">
     <div class="eyebrow fadeUp" data-i18n="mkt_eyebrow">Tamanho de Mercado</div>
-    <h2 class="slide-title fadeUp delay-1" data-i18n-html="mkt_h">8.000 clínicas.<br><em>Zero infraestrutura</em> de coordenação.</h2>
-    <div class="market-layout">
-      <div class="mkt-funnel fadeUp delay-2">
-        <div class="mkt-bar mkt-bar--tam">
-          <div class="mkt-bar-tag">TAM</div>
-          <div class="mkt-bar-val">R$58M</div>
-          <div class="mkt-bar-desc" data-i18n="tam_sub">8.000 clínicas × R$600 × 12 meses</div>
-        </div>
-        <div class="mkt-bar mkt-bar--sam">
-          <div class="mkt-bar-tag">SAM</div>
-          <div class="mkt-bar-val">R$29M</div>
-          <div class="mkt-bar-desc" data-i18n="sam_sub">50% com perfil digital = 4.000 clínicas</div>
-        </div>
-        <div class="mkt-bar mkt-bar--som">
-          <div class="mkt-bar-tag">SOM</div>
-          <div class="mkt-bar-val">R$7.2M</div>
-          <div class="mkt-bar-desc" data-i18n="som_sub">1.000 clínicas = 25% do SAM</div>
-        </div>
-      </div>
-      <div class="market-right fadeUp delay-3">
-        <div class="mkt-stat">
-          <div class="mkt-ico" style="background:#FFF7ED;color:#D97706"><svg class="ic" width="20" height="20"><use href="#ic-users"/></svg></div>
-          <div><div class="mkt-num"><span>5M+</span></div><div class="mkt-lbl" data-i18n="ms1">Crianças com necessidades de neurodesenvolvimento no Brasil</div></div>
-        </div>
-        <div class="mkt-stat">
-          <div class="mkt-ico" style="background:#EFF6FF;color:#3B82F6"><svg class="ic" width="20" height="20"><use href="#ic-building"/></svg></div>
-          <div><div class="mkt-num"><span>8K</span></div><div class="mkt-lbl" data-i18n="ms2">Clínicas de neurodesenvolvimento no Brasil</div></div>
-        </div>
-        <div class="mkt-stat">
-          <div class="mkt-ico" style="background:#F5F3FF;color:#7C3AED"><svg class="ic" width="20" height="20"><use href="#ic-target"/></svg></div>
-          <div><div class="mkt-num">1K <span data-i18n="mkt_clinics" style="font-size:16px;color:var(--slate)">clínicas</span></div><div class="mkt-lbl" data-i18n="ms3">= R$7.2M ARR (25% do SAM)</div></div>
+    <h2 class="slide-title fadeUp delay-1" data-i18n-html="mkt_h">5.500 clínicas.<br><em>Zero infraestrutura</em> de coordenação.</h2>
+
+    <div class="market-layout" style="grid-template-columns:1fr 1fr;gap:40px;align-items:start">
+
+      <!-- Mercado de Entrada -->
+      <div class="fadeUp delay-2" style="background:var(--white);border:1px solid var(--border);border-radius:20px;padding:32px 28px;box-shadow:var(--shadow-sm)">
+        <div style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral);margin-bottom:16px" data-i18n="mkt_entry_label">Mercado de Entrada</div>
+        <div style="font-size:14px;color:var(--slate);margin-bottom:20px;line-height:1.6" data-i18n="mkt_entry_desc">5.500 clínicas de neurodesenvolvimento no Brasil</div>
+
+        <div class="mkt-funnel" style="gap:10px;align-items:stretch">
+          <div class="mkt-bar mkt-bar--tam" style="width:100%">
+            <div class="mkt-bar-tag">TAM</div>
+            <div class="mkt-bar-val">R$39,6M</div>
+            <div class="mkt-bar-desc" data-i18n="tam_sub">5.500 × R$600 × 12 meses</div>
+          </div>
+          <div class="mkt-bar mkt-bar--sam" style="width:85%">
+            <div class="mkt-bar-tag">SAM</div>
+            <div class="mkt-bar-val">R$19,8M</div>
+            <div class="mkt-bar-desc" data-i18n="sam_sub">50% com perfil digital = 2.750 clínicas</div>
+          </div>
+          <div class="mkt-bar mkt-bar--som" style="width:65%">
+            <div class="mkt-bar-tag">SOM</div>
+            <div class="mkt-bar-val">R$3,96M</div>
+            <div class="mkt-bar-desc" data-i18n="som_sub">550 clínicas em 3 anos</div>
+          </div>
         </div>
       </div>
+
+      <!-- Mercado Expandido -->
+      <div class="fadeUp delay-3" style="display:flex;flex-direction:column;gap:20px">
+        <div style="background:var(--navy);border-radius:20px;padding:32px 28px;color:var(--white)">
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral);margin-bottom:16px" data-i18n="mkt_expand_label">Mercado Expandido</div>
+          <div style="font-size:14px;color:rgba(255,255,255,0.6);margin-bottom:20px;line-height:1.6" data-i18n="mkt_expand_desc">Toda reabilitação pediátrica + escolas + operadoras</div>
+          <div style="font-family:var(--serif);font-size:48px;font-weight:700;letter-spacing:-0.03em;line-height:1;margin-bottom:8px">R$500M<span style="font-size:24px;color:var(--coral)">+</span></div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.4)" data-i18n="mkt_expand_tam">TAM expandido</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div class="mkt-stat">
+            <div class="mkt-ico" style="background:#FFF7ED;color:#D97706"><svg class="ic" width="20" height="20"><use href="#ic-users"/></svg></div>
+            <div><div class="mkt-num"><span>2,4M</span></div><div class="mkt-lbl" data-i18n="ms1">Pessoas com TEA no Brasil (Censo IBGE 2022)</div></div>
+          </div>
+          <div class="mkt-stat">
+            <div class="mkt-ico" style="background:#EFF6FF;color:#3B82F6"><svg class="ic" width="20" height="20"><use href="#ic-building"/></svg></div>
+            <div><div class="mkt-num"><span>5,5K</span></div><div class="mkt-lbl" data-i18n="ms2">Clínicas de neurodesenvolvimento no Brasil</div></div>
+          </div>
+        </div>
+      </div>
+
     </div>
+    <div style="margin-top:24px;font-size:11px;color:var(--mist);text-align:center;font-style:italic" class="fadeUp delay-4" data-i18n="mkt_source">Estimativa baseada em extrapolação FCEE/SC + Censo IBGE 2022 (2,4M pessoas com TEA no Brasil)</div>
   </div>
   <div class="slide-num">08</div>
 </section>
@@ -1924,31 +1940,24 @@ blockquote em { font-style: italic; color: var(--coral); }
     <h2 class="slide-title fadeUp delay-1" data-i18n-html="biz_h">SaaS simples.<br><em>Focado na clínica.</em></h2>
     <div class="biz-layout">
       <div class="pricing-stack fadeUp delay-2">
-        <div class="price-card">
-          <div><div class="pc-label" data-i18n="pc1l">Inicial</div><div class="pc-name" data-i18n="pc1n">Clínica Pequena</div></div>
-          <div class="pc-price">R$300 <small>/mês</small></div>
-        </div>
         <div class="price-card featured">
-          <div><div class="pc-label" data-i18n="pc2l">Crescimento</div><div class="pc-name" data-i18n="pc2n">Clínica Média</div></div>
+          <div><div class="pc-label" data-i18n="pc2l">SaaS Flat</div><div class="pc-name" data-i18n="pc2n">Clínica</div></div>
           <div class="pc-price">R$600 <small style="color:rgba(255,255,255,.35)">/mês</small></div>
         </div>
-        <div class="price-card">
-          <div><div class="pc-label" data-i18n="pc3l">Escala</div><div class="pc-name" data-i18n="pc3n">Clínica Grande</div></div>
-          <div class="pc-price">R$1.200 <small>/mês</small></div>
+        <div style="background:var(--coral-light);border:1px solid #FECACA;border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:12px">
+          <div style="background:var(--coral);color:var(--white);width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg class="ic" width="16" height="16"><use href="#ic-users"/></svg></div>
+          <div style="font-size:13px;font-weight:600;color:var(--coral-dark);line-height:1.5" data-i18n="pc_family_portal">Família ganha portal grátis incluso no plano da clínica</div>
         </div>
-        <div style="background:var(--cloud);border-radius:10px;padding:14px 16px;font-size:12px;color:var(--mist);" data-i18n="pc_driver">
-          Preço baseado em: número de terapeutas · crianças atendidas · funcionalidades
-        </div>
-        <div class="sol-key-msg" style="margin-top:12px;font-size:13px" data-i18n="pc_family_insight">A família ganha acesso gratuito ao portal. Quando a família trata em mais de uma clínica, ela pode conectar todas — e a rede cresce organicamente, sem custo de aquisição.</div>
+        <div class="sol-key-msg" style="margin-top:12px;font-size:13px" data-i18n="pc_family_insight">Quando a família trata em mais de uma clínica, ela pode conectar todas — e a rede cresce organicamente, sem custo de aquisição.</div>
       </div>
       <div class="fadeUp delay-3">
         <div class="math-card">
-          <div class="math-label" data-i18n="math_lbl">Cenário Conservador</div>
-          <div class="math-row"><span class="math-key" data-i18n="math_k1">Clínicas na plataforma</span><span class="math-val">1.000</span></div>
-          <div class="math-row"><span class="math-key" data-i18n="math_k2">Ticket médio/mês</span><span class="math-val">R$600</span></div>
+          <div class="math-label" data-i18n="math_lbl">Cenário SOM (3 anos)</div>
+          <div class="math-row"><span class="math-key" data-i18n="math_k1">Clínicas na plataforma</span><span class="math-val">550</span></div>
+          <div class="math-row"><span class="math-key" data-i18n="math_k2">Ticket flat/mês</span><span class="math-val">R$600</span></div>
           <div class="math-divider"></div>
-          <div class="math-row"><span class="math-key">MRR</span><span class="math-val">R$600K</span></div>
-          <div class="math-row"><span class="math-key">ARR</span><span class="math-val accent">R$7.2M</span></div>
+          <div class="math-row"><span class="math-key">MRR</span><span class="math-val">R$330K</span></div>
+          <div class="math-row"><span class="math-key">ARR</span><span class="math-val accent">R$3,96M</span></div>
         </div>
       </div>
     </div>
@@ -1990,10 +1999,10 @@ blockquote em { font-style: italic; color: var(--coral); }
     <div class="eyebrow fadeUp" data-i18n="gtm_eyebrow">Estratégia de Go-to-Market</div>
     <h2 class="slide-title fadeUp delay-1" data-i18n-html="gtm_h">Entrar pelo ecossistema.<br><em>Escalar pelo efeito de rede.</em></h2>
     <div class="gtm-grid fadeUp delay-2">
-      <div class="gtm-card"><div class="gtm-ico-wrap"><div class="gtm-ico"><svg class="ic" width="19" height="19"><use href="#ic-building"/></svg></div><div class="gtm-step-num" data-i18n="s1">Etapa 01</div></div><div><div class="gtm-t" data-i18n="g1t">Clínica Própria</div><div class="gtm-d" data-i18n="g1d">A Casa do Urso (clínica) é o primeiro cliente. Validação com risco zero.</div></div></div>
-      <div class="gtm-card"><div class="gtm-ico-wrap"><div class="gtm-ico"><svg class="ic" width="19" height="19"><use href="#ic-users"/></svg></div><div class="gtm-step-num" data-i18n="s2">Etapa 02</div></div><div><div class="gtm-t" data-i18n="g2t">Clínicas Piloto</div><div class="gtm-d" data-i18n="g2d">5-10 clínicas parceiras usando a plataforma. Provar retenção.</div></div></div>
-      <div class="gtm-card"><div class="gtm-ico-wrap"><div class="gtm-ico"><svg class="ic" width="19" height="19"><use href="#ic-network"/></svg></div><div class="gtm-step-num" data-i18n="s3">Etapa 03</div></div><div><div class="gtm-t" data-i18n="g3t">Família Conecta</div><div class="gtm-d" data-i18n="g3d">25% das famílias tratam em 2+ clínicas. Elas puxam novas clínicas para a rede.</div></div></div>
-      <div class="gtm-card"><div class="gtm-ico-wrap"><div class="gtm-ico"><svg class="ic" width="19" height="19"><use href="#ic-refresh"/></svg></div><div class="gtm-step-num" data-i18n="s4">Etapa 04</div></div><div><div class="gtm-t" data-i18n="g4t">Efeito de Rede</div><div class="gtm-d" data-i18n="g4d">Cada clínica conectada aumenta o valor para todas. Crescimento composto.</div></div></div>
+      <div class="gtm-card"><div class="gtm-ico-wrap"><div class="gtm-ico"><svg class="ic" width="19" height="19"><use href="#ic-building"/></svg></div><div class="gtm-step-num" data-i18n="s1">Etapa 01</div></div><div><div class="gtm-t" data-i18n="g1t">Clínica Própria</div><div class="gtm-d" data-i18n="g1d">Validação do produto na clínica real. Hoje: R$30K MRR, 104 famílias/mês.</div></div></div>
+      <div class="gtm-card"><div class="gtm-ico-wrap"><div class="gtm-ico"><svg class="ic" width="19" height="19"><use href="#ic-users"/></svg></div><div class="gtm-step-num" data-i18n="s2">Etapa 02</div></div><div><div class="gtm-t" data-i18n="g2t">Pilotos Pagos</div><div class="gtm-d" data-i18n="g2d">5-10 clínicas parceiras com onboarding white-glove. Provar retenção e valor.</div></div></div>
+      <div class="gtm-card"><div class="gtm-ico-wrap"><div class="gtm-ico"><svg class="ic" width="19" height="19"><use href="#ic-network"/></svg></div><div class="gtm-step-num" data-i18n="s3">Etapa 03</div></div><div><div class="gtm-t" data-i18n="g3t">Família Conecta</div><div class="gtm-d" data-i18n="g3d">Famílias convidam outras clínicas onde tratam. Crescimento sem CAC.</div></div></div>
+      <div class="gtm-card"><div class="gtm-ico-wrap"><div class="gtm-ico"><svg class="ic" width="19" height="19"><use href="#ic-refresh"/></svg></div><div class="gtm-step-num" data-i18n="s4">Etapa 04</div></div><div><div class="gtm-t" data-i18n="g4t">Efeito de Rede</div><div class="gtm-d" data-i18n="g4d">Crescimento orgânico via conexões cross-clínica. Cada clínica aumenta o valor para todas.</div></div></div>
     </div>
   </div>
   <div class="slide-num">11</div>
@@ -2045,19 +2054,19 @@ blockquote em { font-style: italic; color: var(--coral); }
         </div>
       </div>
 
-      <!-- Miguel -->
+      <!-- William -->
       <div class="team-card fadeUp delay-3">
         <div class="team-avatar avatar-miguel">
-          <span class="team-avatar-initial">M</span>
+          <span class="team-avatar-initial">W</span>
         </div>
         <div class="team-info">
-          <div class="team-role" data-i18n="miguel_role">Lead Developer (Part-time → CTO)</div>
-          <div class="team-name">Miguel</div>
-          <div class="team-bio" data-i18n="miguel_bio">Senior MLOps Engineer na HubSpot Londres. Arquitetura, backend e infraestrutura. Entra part-time com equity, transição para CTO full-time após a rodada.</div>
+          <div class="team-role" data-i18n="william_role">Lead Developer (Part-time → CTO)</div>
+          <div class="team-name">William Oliveira</div>
+          <div class="team-bio" data-i18n="william_bio">Software Engineer com +10 anos de experiência. Fullstack (React, Node.js, Python) com especialização em backend, cloud (AWS, GCP) e AI Agents. Passagens por IKEA (Madrid), QuintoAndar, iti Itaú e Loggi. Entra part-time com equity, transição para CTO full-time após a rodada.</div>
           <div class="team-tags">
-            <span class="team-tag">Backend</span>
-            <span class="team-tag">MLOps</span>
-            <span class="team-tag" data-i18n="tag_arch">Arquitetura</span>
+            <span class="team-tag">Fullstack</span>
+            <span class="team-tag">Node.js / Python</span>
+            <span class="team-tag">Cloud / AI</span>
           </div>
         </div>
       </div>
@@ -2095,16 +2104,16 @@ blockquote em { font-style: italic; color: var(--coral); }
         <div class="eyebrow fadeUp" data-i18n="ask_eyebrow">A Captação</div>
         <div class="raise-box fadeUp delay-1">
           <div class="raise-label" data-i18n="raise_lbl">Captando</div>
-          <div class="raise-amt">R$1–1,5M</div>
-          <div class="raise-sub" data-i18n="raise_sub">Rodada Pré-Seed</div>
+          <div class="raise-amt">R$1,2M</div>
+          <div class="raise-sub" data-i18n="raise_sub">Pré-Seed · 18 meses de runway</div>
           <div class="fund-divider"></div>
           <div class="fund-label" data-i18n="fund_lbl">Uso dos Recursos</div>
           <div class="fund-bars">
-            <div class="fbar"><div class="fbar-lbl" data-i18n="fb1">Engenharia (CTO + dev)</div><div class="fbar-track"><div class="fbar-fill" style="width:45%;animation-delay:.2s"></div></div><div class="fbar-pct">45%</div></div>
-            <div class="fbar"><div class="fbar-lbl" data-i18n="fb2">Founder (Manu)</div><div class="fbar-track"><div class="fbar-fill" style="width:20%;animation-delay:.3s"></div></div><div class="fbar-pct">20%</div></div>
-            <div class="fbar"><div class="fbar-lbl" data-i18n="fb3">Operações + CS</div><div class="fbar-track"><div class="fbar-fill" style="width:15%;animation-delay:.4s"></div></div><div class="fbar-pct">15%</div></div>
-            <div class="fbar"><div class="fbar-lbl" data-i18n="fb4">Marketing + vendas</div><div class="fbar-track"><div class="fbar-fill" style="width:12%;animation-delay:.5s"></div></div><div class="fbar-pct">12%</div></div>
-            <div class="fbar"><div class="fbar-lbl" data-i18n="fb5">Infra + buffer</div><div class="fbar-track"><div class="fbar-fill" style="width:8%;animation-delay:.6s"></div></div><div class="fbar-pct">8%</div></div>
+            <div class="fbar"><div class="fbar-lbl" data-i18n="fb1">Engenharia (CTO + 1 dev)</div><div class="fbar-track"><div class="fbar-fill" style="width:45%;animation-delay:.2s"></div></div><div class="fbar-pct" data-i18n="fb1v">45% · R$540K</div></div>
+            <div class="fbar"><div class="fbar-lbl" data-i18n="fb2">Founder (Manu)</div><div class="fbar-track"><div class="fbar-fill" style="width:20%;animation-delay:.3s"></div></div><div class="fbar-pct" data-i18n="fb2v">20% · R$240K</div></div>
+            <div class="fbar"><div class="fbar-lbl" data-i18n="fb3">Ops + CS</div><div class="fbar-track"><div class="fbar-fill" style="width:15%;animation-delay:.4s"></div></div><div class="fbar-pct" data-i18n="fb3v">15% · R$180K</div></div>
+            <div class="fbar"><div class="fbar-lbl" data-i18n="fb4">Marketing + vendas</div><div class="fbar-track"><div class="fbar-fill" style="width:12%;animation-delay:.5s"></div></div><div class="fbar-pct" data-i18n="fb4v">12% · R$144K</div></div>
+            <div class="fbar"><div class="fbar-lbl" data-i18n="fb5">Infra + buffer</div><div class="fbar-track"><div class="fbar-fill" style="width:8%;animation-delay:.6s"></div></div><div class="fbar-pct" data-i18n="fb5v">8% · R$96K</div></div>
           </div>
           <div style="margin-top:12px;font-size:11px;color:rgba(255,255,255,0.35);font-weight:600" data-i18n="fund_runway">Runway: 18 meses</div>
         </div>
@@ -2112,9 +2121,9 @@ blockquote em { font-style: italic; color: var(--coral); }
       <div>
         <div class="ms-title fadeUp delay-1" data-i18n="ms_title">Milestones 18 Meses</div>
         <div class="milestones">
-          <div class="ms-card fadeUp delay-2"><div class="ms-num">M6</div><div><div class="ms-t" data-i18n="ms1t">MVP lançado</div><div class="ms-d" data-i18n="ms1d">5 clínicas piloto pagando.</div></div></div>
-          <div class="ms-card fadeUp delay-3"><div class="ms-num">M12</div><div><div class="ms-t" data-i18n="ms2t">30 clínicas ativas</div><div class="ms-d" data-i18n="ms2d">R$18K MRR. Primeiras famílias conectando clínicas.</div></div></div>
-          <div class="ms-card fadeUp delay-4"><div class="ms-num">M18</div><div><div class="ms-t" data-i18n="ms3t">50 clínicas · R$30K MRR</div><div class="ms-d" data-i18n="ms3d">Validação do efeito de rede. Setup para Seed.</div></div></div>
+          <div class="ms-card fadeUp delay-2"><div class="ms-num">M6</div><div><div class="ms-t" data-i18n="ms1t">5 clínicas pagantes</div><div class="ms-d" data-i18n="ms1d">MVP validado com pilotos pagos e onboarding white-glove.</div></div></div>
+          <div class="ms-card fadeUp delay-3"><div class="ms-num">M12</div><div><div class="ms-t" data-i18n="ms2t">30 clínicas · R$18K MRR</div><div class="ms-d" data-i18n="ms2d">Primeiras famílias conectando clínicas. Efeito de rede emergindo.</div></div></div>
+          <div class="ms-card fadeUp delay-4"><div class="ms-num">M18</div><div><div class="ms-t" data-i18n="ms3t">50 clínicas · R$30K MRR</div><div class="ms-d" data-i18n="ms3d">Efeito de rede validado. Posição para Series Seed.</div></div></div>
         </div>
       </div>
     </div>
@@ -2151,7 +2160,7 @@ blockquote em { font-style: italic; color: var(--coral); }
         <div class="vc-logo-wrap" style="background:rgba(248,113,113,0.2);color:var(--coral)">🐻</div>
         <div class="vc-company">Casa do Urso</div>
         <div class="vc-tagline" data-i18n="vc3tag">OS do neurodesenvolvimento</div>
-        <div class="vc-desc" data-i18n="vc3d">A infraestrutura que conecta clínicas, terapeutas, escolas e famílias. Não somos marketplace. Não somos agenda. Somos a camada de coordenação que não existe — e que 5 milhões de crianças precisam.</div>
+        <div class="vc-desc" data-i18n="vc3d">Não somos marketplace. Somos a camada de coordenação que conecta clínicas, terapeutas, escolas e famílias em torno do paciente.</div>
         <div class="vc-badge" data-i18n="vc3b">Infraestrutura clínica</div>
       </div>
     </div>
@@ -2204,8 +2213,8 @@ pt:{
   actor5:'Pais e Famílias',actor5s:'Cuidado diário e reforço',
   chaos_lbl:'"Infraestrutura" Atual',ct1:'WhatsApp',ct2:'PDFs',ct3:'Planilhas',ct4:'Sistemas isolados',
   chaos_insight:'<strong>Insight da clínica:</strong> Os profissionais eram bons. A coordenação era o problema. Cada um trabalhava em silos, sem visão do progresso da criança como um todo.',
-  prob_eyebrow:'O Problema',prob_h:'8.000 clínicas de neurodesenvolvimento.<br><em>Zero infraestrutura</em> de coordenação.',
-  ps1:'Crianças com autismo no Brasil',ps2:'Com necessidades de neurodesenvolvimento',ps3:'Clínicas de neurodesenvolvimento no Brasil',
+  prob_eyebrow:'O Problema',prob_h:'5.500 clínicas de neurodesenvolvimento.<br><em>Zero infraestrutura</em> de coordenação.',
+  ps1:'Pessoas com TEA no Brasil (IBGE 2022)',ps2:'Com necessidades de neurodesenvolvimento',ps3:'Clínicas de neurodesenvolvimento no Brasil',
   cq1t:'Progresso invisível',cq1d:'Famílias não sabem o que acontece em cada sessão. Terapeutas não veem o progresso consolidado.',
   cq2t:'Esforço duplicado',cq2d:'Cada profissional repete avaliações e histórico porque não há registro compartilhado.',
   cq3t:'Família excluída',cq3d:'Pais são responsáveis pelo cuidado em casa mas recebem zero suporte estruturado dos profissionais.',
@@ -2255,15 +2264,18 @@ pt:{
   mc1l:'Famílias atendidas',mc1s:'nos últimos 12 meses em São Paulo',
   mc2l:'Profissionais ativos',mc2s:'terapeutas usando o protocolo diariamente',
   mc3l:'Lista de espera ativa',mc3v:'Demanda maior que capacidade',mc3s:'Indicações constantes sem esforço de marketing',
-  mkt_eyebrow:'Tamanho de Mercado',mkt_h:'8.000 clínicas.<br><em>Zero infraestrutura</em> de coordenação.',
-  tam_sub:'8.000 clínicas × R$600 × 12 meses',sam_sub:'50% com perfil digital = 4.000 clínicas',som_sub:'1.000 clínicas = 25% do SAM',
-  ms1:'Crianças com necessidades de neurodesenvolvimento no Brasil',
+  mkt_eyebrow:'Tamanho de Mercado',mkt_h:'5.500 clínicas.<br><em>Zero infraestrutura</em> de coordenação.',
+  mkt_entry_label:'Mercado de Entrada',mkt_entry_desc:'5.500 clínicas de neurodesenvolvimento no Brasil',
+  tam_sub:'5.500 × R$600 × 12 meses',sam_sub:'50% com perfil digital = 2.750 clínicas',som_sub:'550 clínicas em 3 anos',
+  mkt_expand_label:'Mercado Expandido',mkt_expand_desc:'Toda reabilitação pediátrica + escolas + operadoras',mkt_expand_tam:'TAM expandido',
+  ms1:'Pessoas com TEA no Brasil (Censo IBGE 2022)',
   ms2:'Clínicas de neurodesenvolvimento no Brasil',
-  ms3:'= R$7.2M ARR (25% do SAM)',mkt_clinics:'clínicas',
+  mkt_source:'Estimativa baseada em extrapolação FCEE/SC + Censo IBGE 2022 (2,4M pessoas com TEA no Brasil)',
   biz_eyebrow:'Modelo de Negócio',biz_h:'SaaS simples.<br><em>Focado na clínica.</em>',
-  pc1l:'Inicial',pc1n:'Clínica Pequena',pc2l:'Crescimento',pc2n:'Clínica Média',pc3l:'Escala',pc3n:'Clínica Grande',
-  pc_driver:'Preço baseado em: número de terapeutas · crianças atendidas · funcionalidades',
-  math_lbl:'Cenário Conservador',math_k1:'Clínicas na plataforma',math_k2:'Ticket médio/mês',
+  pc2l:'SaaS Flat',pc2n:'Clínica',
+  pc_family_portal:'Família ganha portal grátis incluso no plano da clínica',
+  pc_family_insight:'Quando a família trata em mais de uma clínica, ela pode conectar todas — e a rede cresce organicamente, sem custo de aquisição.',
+  math_lbl:'Cenário SOM (3 anos)',math_k1:'Clínicas na plataforma',math_k2:'Ticket flat/mês',
   comp_eyebrow:'Concorrência',comp_h:'Uma categoria<br><em>completamente diferente.</em>',
   comp_sub:'Players existentes fazem entrega de terapia ou administração clínica. Ninguém constrói a camada de infraestrutura de coordenação.',
   comp_c0:'Capacidade',comp_c1:'Software Clínico',comp_c2:'Genial Care',
@@ -2272,10 +2284,10 @@ pt:{
   yes:'Sim',no:'Não',par:'Parcial',oos:'Fora do escopo',core:'Core',
   gtm_eyebrow:'Estratégia de Go-to-Market',gtm_h:'Entrar pelo ecossistema.<br><em>Escalar pelo efeito de rede.</em>',
   s1:'Etapa 01',s2:'Etapa 02',s3:'Etapa 03',s4:'Etapa 04',
-  g1t:'Clínica Própria',g1d:'A Casa do Urso (clínica) é o primeiro cliente. Validação com risco zero.',
-  g2t:'Clínicas Piloto',g2d:'5-10 clínicas parceiras usando a plataforma. Provar retenção.',
-  g3t:'Família Conecta',g3d:'25% das famílias tratam em 2+ clínicas. Elas puxam novas clínicas para a rede.',
-  g4t:'Efeito de Rede',g4d:'Cada clínica conectada aumenta o valor para todas. Crescimento composto.',
+  g1t:'Clínica Própria',g1d:'Validação do produto na clínica real. Hoje: R$30K MRR, 104 famílias/mês.',
+  g2t:'Pilotos Pagos',g2d:'5-10 clínicas parceiras com onboarding white-glove. Provar retenção e valor.',
+  g3t:'Família Conecta',g3d:'Famílias convidam outras clínicas onde tratam. Crescimento sem CAC.',
+  g4t:'Efeito de Rede',g4d:'Crescimento orgânico via conexões cross-clínica. Cada clínica aumenta o valor para todas.',
   team_eyebrow:'O Time',
   team_h:'As pessoas certas<br>para <em>resolver isso.</em>',
   team_sub:'Um time pequeno e complementar com expertise em produto, design, tecnologia e operações clínicas.',
@@ -2283,26 +2295,27 @@ pt:{
   manu_bio:'Fundou a Casa do Urso após identificar a lacuna de coordenação gerindo uma clínica de TEA em São Paulo. Product designer com +10 anos de experiência em sistemas de design e produtos digitais. Construiu a plataforma do zero.',
   adriano_role:'Head of Clinical Operations',
   adriano_bio:'Coordena os fluxos clínicos da Casa do Urso. Especialista em protocolos de neurodesenvolvimento e na ponte entre prática clínica e produto digital.',
-  miguel_role:'Lead Developer (Part-time → CTO)',
-  miguel_bio:'Senior MLOps Engineer na HubSpot Londres. Arquitetura, backend e infraestrutura. Entra part-time com equity, transição para CTO full-time após a rodada.',
+  william_role:'Lead Developer (Part-time → CTO)',
+  william_bio:'Software Engineer com +10 anos de experiência. Fullstack (React, Node.js, Python) com especialização em backend, cloud (AWS, GCP) e AI Agents. Passagens por IKEA (Madrid), QuintoAndar, iti Itaú e Loggi. Entra part-time com equity, transição para CTO full-time após a rodada.',
   mariana_role:'Co-founder & Head of Brand',
   tag_founder:'Fundadora',tag_design_sys:'Design Systems',tag_clinic:'Gestora Clínica',
   tag_neuro:'Neurodesenvolvimento',tag_protocols:'Protocolos',tag_ops:'Operações',
   tag_infra:'Infraestrutura',tag_platform:'Plataforma',tag_arch:'Arquitetura',
   tag_brand:'Branding',tag_visual:'Identidade Visual',tag_cofounder:'Co-fundadora',
-  ask_eyebrow:'A Captação',raise_lbl:'Captando',raise_sub:'Rodada Pré-Seed',fund_lbl:'Uso dos Recursos',
-  fb1:'Engenharia (CTO + dev)',fb2:'Founder (Manu)',fb3:'Operações + CS',fb4:'Marketing + vendas',fb5:'Infra + buffer',
+  ask_eyebrow:'A Captação',raise_lbl:'Captando',raise_sub:'Pré-Seed · 18 meses de runway',fund_lbl:'Uso dos Recursos',
+  fb1:'Engenharia (CTO + 1 dev)',fb2:'Founder (Manu)',fb3:'Ops + CS',fb4:'Marketing + vendas',fb5:'Infra + buffer',
+  fb1v:'45% · R$540K',fb2v:'20% · R$240K',fb3v:'15% · R$180K',fb4v:'12% · R$144K',fb5v:'8% · R$96K',
   fund_runway:'Runway: 18 meses',
   ms_title:'Milestones 18 Meses',
-  ms1t:'MVP lançado',ms1d:'5 clínicas piloto pagando.',
-  ms2t:'30 clínicas ativas',ms2d:'R$18K MRR. Primeiras famílias conectando clínicas.',
-  ms3t:'50 clínicas · R$30K MRR',ms3d:'Validação do efeito de rede. Setup para Seed.',
+  ms1t:'5 clínicas pagantes',ms1d:'MVP validado com pilotos pagos e onboarding white-glove.',
+  ms2t:'30 clínicas · R$18K MRR',ms2d:'Primeiras famílias conectando clínicas. Efeito de rede emergindo.',
+  ms3t:'50 clínicas · R$30K MRR',ms3d:'Efeito de rede validado. Posição para Series Seed.',
   vis_eyebrow:'Nossa Visão',
   vis_h:'Somos para o neurodesenvolvimento<br>o que a <em>Stripe</em> é para pagamentos.',
   vis_sub:'Infraestrutura que desaparece por baixo do cuidado mas torna tudo mais eficiente, conectado e mensurável.',
   vc1tag:'Infraestrutura de pagamentos',vc1d:'Toda empresa de internet usa Stripe sem pensar. A infraestrutura desaparece, o negócio escala.',vc1b:'Infraestrutura financeira',
   vc2tag:'OS dos hospitais nos EUA',vc2d:'Toda clínica e hospital nos EUA roda em Epic. O sistema que conecta todos os dados de saúde.',vc2b:'Infraestrutura hospitalar',
-  vc3tag:'OS do neurodesenvolvimento',vc3d:'A infraestrutura que conecta clínicas, terapeutas, escolas e famílias. Não somos marketplace. Não somos agenda. Somos a camada de coordenação que não existe — e que 5 milhões de crianças precisam.',vc3b:'Infraestrutura clínica',
+  vc3tag:'OS do neurodesenvolvimento',vc3d:'Não somos marketplace. Somos a camada de coordenação que conecta clínicas, terapeutas, escolas e famílias em torno do paciente.',vc3b:'Infraestrutura clínica',
   ni_eyebrow:'O Insight de Rede',ni_h:'O insight que<br><em>muda tudo.</em>',
   ni_sub:'25% das famílias tratam em 2 ou mais clínicas. Uma criança faz fono na Clínica A e TO na Clínica B. Hoje: zero comunicação entre elas.',
   ni_family:'Família',ni_connects:'conecta',ni_clinic_a:'Clínica A',ni_fono:'Fono',ni_clinic_b:'Clínica B',ni_school:'Escola',
@@ -2355,8 +2368,8 @@ en:{
   actor5:'Parents & Families',actor5s:'Daily care & reinforcement',
   chaos_lbl:'Current "Infrastructure"',ct1:'WhatsApp',ct2:'PDFs',ct3:'Spreadsheets',ct4:'Disconnected apps',
   chaos_insight:'<strong>Clinic insight:</strong> The professionals were great. Coordination was the problem. Everyone worked in silos with no visibility into the child\'s overall progress.',
-  prob_eyebrow:'The Problem',prob_h:'8,000 neurodevelopment clinics.<br><em>Zero coordination</em> infrastructure.',
-  ps1:'Children with autism in Brazil',ps2:'With neurodevelopment needs',ps3:'Neurodevelopment clinics in Brazil',
+  prob_eyebrow:'The Problem',prob_h:'5,500 neurodevelopment clinics.<br><em>Zero coordination</em> infrastructure.',
+  ps1:'People with ASD in Brazil (IBGE 2022)',ps2:'With neurodevelopment needs',ps3:'Neurodevelopment clinics in Brazil',
   cq1t:'Invisible progress',cq1d:'Families don\'t know what happens in each session. Therapists can\'t see consolidated progress.',
   cq2t:'Duplicated effort',cq2d:'Every professional repeats assessments and history because there\'s no shared record.',
   cq3t:'Family excluded',cq3d:'Parents are responsible for home care but receive zero structured support from professionals.',
@@ -2406,15 +2419,18 @@ en:{
   mc1l:'Families served',mc1s:'in the last 12 months in São Paulo',
   mc2l:'Active professionals',mc2s:'therapists using the protocol daily',
   mc3l:'Active waitlist',mc3v:'Demand exceeds capacity',mc3s:'Constant referrals with zero marketing effort',
-  mkt_eyebrow:'Market Size',mkt_h:'8,000 clinics.<br><em>Zero coordination</em> infrastructure.',
-  tam_sub:'8,000 clinics × R$600 × 12 months',sam_sub:'50% with digital profile = 4,000 clinics',som_sub:'1,000 clinics = 25% of SAM',
-  ms1:'Children with neurodevelopment needs in Brazil',
+  mkt_eyebrow:'Market Size',mkt_h:'5,500 clinics.<br><em>Zero coordination</em> infrastructure.',
+  mkt_entry_label:'Entry Market',mkt_entry_desc:'5,500 neurodevelopment clinics in Brazil',
+  tam_sub:'5,500 × R$600 × 12 months',sam_sub:'50% with digital profile = 2,750 clinics',som_sub:'550 clinics in 3 years',
+  mkt_expand_label:'Expanded Market',mkt_expand_desc:'All pediatric rehab + schools + insurers',mkt_expand_tam:'Expanded TAM',
+  ms1:'People with ASD in Brazil (IBGE Census 2022)',
   ms2:'Neurodevelopment clinics in Brazil',
-  ms3:'= R$7.2M ARR (25% of SAM)',mkt_clinics:'clinics',
+  mkt_source:'Estimate based on FCEE/SC extrapolation + IBGE Census 2022 (2.4M people with ASD in Brazil)',
   biz_eyebrow:'Business Model',biz_h:'Simple SaaS.<br><em>Clinic-first.</em>',
-  pc1l:'Starter',pc1n:'Small Clinic',pc2l:'Growth',pc2n:'Mid-size Clinic',pc3l:'Scale',pc3n:'Large Clinic',
-  pc_driver:'Pricing based on: number of therapists · children served · features',
-  math_lbl:'Conservative Scenario',math_k1:'Clinics on platform',math_k2:'Avg. ticket / month',
+  pc2l:'SaaS Flat',pc2n:'Clinic',
+  pc_family_portal:'Family gets free portal included in the clinic plan',
+  pc_family_insight:'When a family treats at more than one clinic, they can connect all of them — and the network grows organically, at zero acquisition cost.',
+  math_lbl:'SOM Scenario (3 years)',math_k1:'Clinics on platform',math_k2:'Flat ticket / month',
   comp_eyebrow:'Competition',comp_h:'A completely<br><em>different category.</em>',
   comp_sub:'Existing players do therapy delivery or clinic admin. No one builds the coordination infrastructure layer.',
   comp_c0:'Capability',comp_c1:'Clinic Software',comp_c2:'Genial Care',
@@ -2423,10 +2439,10 @@ en:{
   yes:'Yes',no:'No',par:'Partial',oos:'Out of scope',core:'Core',
   gtm_eyebrow:'Go-to-Market Strategy',gtm_h:'Enter through the ecosystem.<br><em>Scale through network effects.</em>',
   s1:'Step 01',s2:'Step 02',s3:'Step 03',s4:'Step 04',
-  g1t:'Own Clinic',g1d:'Casa do Urso (the clinic) is the first customer. Zero-risk validation.',
-  g2t:'Pilot Clinics',g2d:'5-10 partner clinics using the platform. Prove retention.',
-  g3t:'Family Connects',g3d:'25% of families treat at 2+ clinics. They pull new clinics into the network.',
-  g4t:'Network Effect',g4d:'Each connected clinic increases value for all. Compounding growth.',
+  g1t:'Own Clinic',g1d:'Product validation at the real clinic. Today: R$30K MRR, 104 families/month.',
+  g2t:'Paid Pilots',g2d:'5-10 partner clinics with white-glove onboarding. Prove retention and value.',
+  g3t:'Family Connects',g3d:'Families invite other clinics where they treat. Growth at zero CAC.',
+  g4t:'Network Effect',g4d:'Organic growth via cross-clinic connections. Each clinic increases value for all.',
   team_eyebrow:'The Team',
   team_h:'The right people<br>to <em>solve this.</em>',
   team_sub:'A small, complementary team with expertise in product, design, technology and clinical operations.',
@@ -2434,26 +2450,27 @@ en:{
   manu_bio:'Founded Casa do Urso after spotting the coordination gap while managing an ASD clinic in São Paulo. Product designer with 10+ years in design systems and digital products. Built the platform from scratch.',
   adriano_role:'Head of Clinical Operations',
   adriano_bio:'Coordinates clinical workflows at Casa do Urso. Expert in neurodevelopment protocols and bridging clinical practice with digital product.',
-  miguel_role:'Lead Developer (Part-time → CTO)',
-  miguel_bio:'Senior MLOps Engineer at HubSpot London. Architecture, backend and infrastructure. Joining part-time with equity, transitioning to full-time CTO after the round.',
+  william_role:'Lead Developer (Part-time → CTO)',
+  william_bio:'Software Engineer with 10+ years of experience. Fullstack (React, Node.js, Python) specializing in backend, cloud (AWS, GCP) and AI Agents. Previously at IKEA (Madrid), QuintoAndar, iti Itaú and Loggi. Joining part-time with equity, transitioning to full-time CTO after the round.',
   mariana_role:'Co-founder & Head of Brand',
   tag_founder:'Founder',tag_design_sys:'Design Systems',tag_clinic:'Clinic Manager',
   tag_neuro:'Neurodevelopment',tag_protocols:'Protocols',tag_ops:'Operations',
   tag_infra:'Infrastructure',tag_platform:'Platform',tag_arch:'Architecture',
   tag_brand:'Branding',tag_visual:'Visual Identity',tag_cofounder:'Co-founder',
-  ask_eyebrow:'The Ask',raise_lbl:'Raising',raise_sub:'Pre-Seed Round',fund_lbl:'Use of Funds',
-  fb1:'Engineering (CTO + dev)',fb2:'Founder (Manu)',fb3:'Operations + CS',fb4:'Marketing + sales',fb5:'Infra + buffer',
+  ask_eyebrow:'The Ask',raise_lbl:'Raising',raise_sub:'Pre-Seed · 18 months runway',fund_lbl:'Use of Funds',
+  fb1:'Engineering (CTO + 1 dev)',fb2:'Founder (Manu)',fb3:'Ops + CS',fb4:'Marketing + sales',fb5:'Infra + buffer',
+  fb1v:'45% · R$540K',fb2v:'20% · R$240K',fb3v:'15% · R$180K',fb4v:'12% · R$144K',fb5v:'8% · R$96K',
   fund_runway:'Runway: 18 months',
   ms_title:'Milestones 18 Months',
-  ms1t:'MVP launched',ms1d:'5 pilot clinics paying.',
-  ms2t:'30 active clinics',ms2d:'R$18K MRR. First families connecting clinics.',
-  ms3t:'50 clinics · R$30K MRR',ms3d:'Network effect validated. Setup for Seed.',
+  ms1t:'5 paying clinics',ms1d:'MVP validated with paid pilots and white-glove onboarding.',
+  ms2t:'30 clinics · R$18K MRR',ms2d:'First families connecting clinics. Network effect emerging.',
+  ms3t:'50 clinics · R$30K MRR',ms3d:'Network effect validated. Position for Series Seed.',
   vis_eyebrow:'Our Vision',
   vis_h:'We are to neurodevelopment<br>what <em>Stripe</em> is to payments.',
   vis_sub:'Infrastructure that disappears beneath care but makes everything more efficient, connected and measurable.',
   vc1tag:'Payments infrastructure',vc1d:'Every internet company uses Stripe without thinking. The infrastructure disappears, the business scales.',vc1b:'Financial infrastructure',
   vc2tag:'OS for US hospitals',vc2d:'Every clinic and hospital in the US runs on Epic. The system that connects all health data.',vc2b:'Hospital infrastructure',
-  vc3tag:'OS for neurodevelopment',vc3d:'The infrastructure connecting clinics, therapists, schools and families. Not a marketplace. Not a scheduler. The coordination layer that doesn\'t exist — and that 5 million children need.',vc3b:'Clinical infrastructure',
+  vc3tag:'OS for neurodevelopment',vc3d:'Not a marketplace. We are the coordination layer connecting clinics, therapists, schools and families around the patient.',vc3b:'Clinical infrastructure',
   ni_eyebrow:'The Network Insight',ni_h:'The insight that<br><em>changes everything.</em>',
   ni_sub:'25% of families treat at 2 or more clinics. A child does speech therapy at Clinic A and OT at Clinic B. Today: zero communication between them.',
   ni_family:'Family',ni_connects:'connects',ni_clinic_a:'Clinic A',ni_fono:'Speech',ni_clinic_b:'Clinic B',ni_school:'School',

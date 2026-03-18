@@ -189,8 +189,34 @@ body { font-family: var(--sans); background: var(--white); color: var(--ink); -w
 .delay-5 { transition-delay: 0.40s; }
 
 /* Main transition for lang switch */
-#main-content { transition: opacity 0.15s; }
+#main-content {
+  transition: opacity 0.15s;
+  display: flex;
+  flex-direction: column;
+}
 #main-content.switching { opacity: 0; }
+
+/* Narrative flow order (problem -> solution) */
+#cover { order: 1; }
+#founder { order: 2; }
+#discovery { order: 3; }
+#frag-problem { order: 4; }
+#problem { order: 5; }
+#network-insight { order: 6; }
+#solution { order: 7; }
+#sol-platform { order: 8; }
+#workflow { order: 9; }
+#prod-therapist { order: 10; }
+#prod-family { order: 11; }
+#traction { order: 12; }
+#market { order: 13; }
+#bizmodel { order: 14; }
+#competition { order: 15; }
+#gtm { order: 16; }
+#team { order: 17; }
+#ask { order: 18; }
+#vision { order: 19; }
+.slide-num { display: none !important; }
 
 /* ══ SECTION BASE ══ */
 section {
@@ -1395,8 +1421,9 @@ blockquote em { font-style: italic; color: var(--coral); }
   <ul class="nav-pills" id="navPills">
     <li><button class="nav-pill" data-target="founder"     data-i18n="nav_founder">Fundadora</button></li>
     <li><button class="nav-pill" data-target="frag-problem" data-i18n="nav_problem">Problema</button></li>
+    <li><button class="nav-pill" data-target="network-insight" data-i18n="nav_insight">Insight</button></li>
     <li><button class="nav-pill" data-target="solution"    data-i18n="nav_solution">Solução</button></li>
-    <li><button class="nav-pill" data-target="traction"    data-i18n="nav_traction">Tração</button></li>
+    <li><button class="nav-pill" data-target="traction"    data-i18n="nav_traction">A Clínica</button></li>
     <li><button class="nav-pill" data-target="market"      data-i18n="nav_market">Mercado</button></li>
     <li><button class="nav-pill" data-target="ask"         data-i18n="nav_ask">Captação</button></li>
     <li><button class="nav-pill" data-target="vision"      data-i18n="nav_vision">Visão</button></li>
@@ -1419,16 +1446,16 @@ blockquote em { font-style: italic; color: var(--coral); }
 <nav id="dot-nav" aria-label="Navegação por slides">
   <button class="dot active" data-target="cover"           data-i18n-label="dot_cover"      data-label="Capa"></button>
   <button class="dot"        data-target="founder"         data-i18n-label="dot_founder"    data-label="Fundadora"></button>
-  <button class="dot"        data-target="frag-problem"    data-i18n-label="dot_frag"       data-label="Fragmentação"></button>
-  <button class="dot"        data-target="sol-platform"    data-i18n-label="dot_platform"   data-label="Plataforma"></button>
-  <button class="dot"        data-target="network-insight" data-i18n-label="dot_ni"         data-label="Insight de Rede"></button>
   <button class="dot"        data-target="discovery"       data-i18n-label="dot_discovery"  data-label="Descoberta"></button>
+  <button class="dot"        data-target="frag-problem"    data-i18n-label="dot_frag"       data-label="Fragmentação"></button>
   <button class="dot"        data-target="problem"         data-i18n-label="dot_problem"    data-label="Problema"></button>
+  <button class="dot"        data-target="network-insight" data-i18n-label="dot_ni"         data-label="Insight de Rede"></button>
   <button class="dot"        data-target="solution"        data-i18n-label="dot_solution"   data-label="Solução"></button>
+  <button class="dot"        data-target="sol-platform"    data-i18n-label="dot_platform"   data-label="Plataforma"></button>
   <button class="dot"        data-target="workflow"        data-i18n-label="dot_workflow"   data-label="Como Funciona"></button>
   <button class="dot"        data-target="prod-therapist"  data-i18n-label="dot_therapist"  data-label="Terapeuta"></button>
   <button class="dot"        data-target="prod-family"     data-i18n-label="dot_family"     data-label="Família"></button>
-  <button class="dot"        data-target="traction"        data-i18n-label="dot_traction"   data-label="Tração"></button>
+  <button class="dot"        data-target="traction"        data-i18n-label="dot_traction"   data-label="A Clínica"></button>
   <button class="dot"        data-target="market"          data-i18n-label="dot_market"     data-label="Mercado"></button>
   <button class="dot"        data-target="bizmodel"        data-i18n-label="dot_biz"        data-label="Modelo"></button>
   <button class="dot"        data-target="competition"     data-i18n-label="dot_comp"       data-label="Concorrência"></button>
@@ -1580,7 +1607,7 @@ blockquote em { font-style: italic; color: var(--coral); }
 </section>
 
 <!-- ════════════════════════════════
-  02c SOLUTION PLATFORM
+  05b SOLUTION PLATFORM
 ════════════════════════════════ -->
 <section id="sol-platform" class="bg-cloud">
   <div class="inner">
@@ -1649,7 +1676,7 @@ blockquote em { font-style: italic; color: var(--coral); }
       </div>
     </div>
   </div>
-  <div class="slide-num">02c</div>
+  <div class="slide-num">05b</div>
 </section>
 
 <!-- ════════════════════════════════
@@ -1695,7 +1722,7 @@ blockquote em { font-style: italic; color: var(--coral); }
       <div>
         <div style="display:flex;flex-direction:column;gap:14px">
           <div style="display:flex;gap:12px;align-items:flex-start;padding:16px;background:var(--cloud);border-radius:12px">
-            <div style="font-family:var(--serif);font-size:28px;font-weight:800;color:var(--coral-light);line-height:1;flex-shrink:0">25%</div>
+            <div style="font-family:var(--serif);font-size:28px;font-weight:800;color:var(--coral);line-height:1;flex-shrink:0">25%</div>
             <div style="font-size:14px;color:var(--slate);line-height:1.6" data-i18n="ni_stat1">das famílias tratam em 2 ou mais clínicas</div>
           </div>
           <div style="display:flex;gap:12px;align-items:flex-start;padding:16px;background:var(--cloud);border-radius:12px">
@@ -1754,7 +1781,7 @@ blockquote em { font-style: italic; color: var(--coral); }
     <div class="eyebrow fadeUp" data-i18n="prob_eyebrow">O Problema</div>
     <h2 class="slide-title fadeUp delay-1" data-i18n-html="prob_h">5.500 clínicas de neurodesenvolvimento.<br><em>Zero infraestrutura</em> de coordenação.</h2>
     <div class="prob-top fadeUp delay-2" style="margin-bottom:36px">
-      <div class="prob-stat"><div class="prob-stat-num"><span>2,4M</span></div><div class="prob-stat-lbl" data-i18n="ps1">Pessoas com TEA no Brasil (IBGE 2022)</div></div>
+      <div class="prob-stat"><div class="prob-stat-num"><span>0.9M</span></div><div class="prob-stat-lbl" data-i18n="ps1">Pessoas com TEA no Brasil (IBGE 2022)</div></div>
       <div class="prob-stat"><div class="prob-stat-num"><span>5M+</span></div><div class="prob-stat-lbl" data-i18n="ps2">Com necessidades de neurodesenvolvimento</div></div>
       <div class="prob-stat"><div class="prob-stat-num"><span>5,5K</span></div><div class="prob-stat-lbl" data-i18n="ps3">Clínicas de neurodesenvolvimento no Brasil</div></div>
     </div>
@@ -1930,7 +1957,7 @@ blockquote em { font-style: italic; color: var(--coral); }
 ════════════════════════════════ -->
 <section id="traction" class="bg-white">
   <div class="inner">
-    <div class="eyebrow fadeUp" data-i18n="tr_eyebrow">Tração</div>
+    <div class="eyebrow fadeUp" data-i18n="tr_eyebrow">A Clínica</div>
     <h2 class="slide-title fadeUp delay-1" data-i18n-html="tr_h">A clínica como<br><em>laboratório vivo.</em></h2>
     <div class="traction-layout">
       <div class="traction-left">
@@ -2281,12 +2308,12 @@ blockquote em { font-style: italic; color: var(--coral); }
 /* ══ I18N ══ */
 const i18n = {
 pt:{
-  nav_founder:'Fundadora',nav_problem:'Problema',nav_solution:'Solução',
-  nav_traction:'Tração',nav_market:'Mercado',nav_ask:'Captação',nav_vision:'Visão',
+  nav_founder:'Fundadora',nav_problem:'Problema',nav_insight:'Insight',nav_solution:'Solução',
+  nav_traction:'A Clínica',nav_market:'Mercado',nav_ask:'Captação',nav_vision:'Visão',
   nav_cta:'Agendar Reunião',
   dot_cover:'Capa',dot_founder:'Fundadora',dot_frag:'Fragmentação',dot_platform:'Plataforma',
   dot_ni:'Insight de Rede',dot_discovery:'Descoberta',dot_problem:'Problema',dot_solution:'Solução',
-  dot_workflow:'Como Funciona',dot_therapist:'Terapeuta',dot_family:'Família',dot_traction:'Tração',
+  dot_workflow:'Como Funciona',dot_therapist:'Terapeuta',dot_family:'Família',dot_traction:'A Clínica',
   dot_market:'Mercado',dot_biz:'Modelo',dot_comp:'Concorrência',dot_gtm:'Estratégia',
   dot_team:'Time',dot_ask:'Captação',dot_vis:'Visão',
   cover_badge:'Pré-Seed · 2025',
@@ -2368,7 +2395,7 @@ pt:{
   ps_goals:'Metas da semana',ppg1:'Contato visual',ppg2:'Comunicação verbal',ppg3:'Regulação emocional',
   ps_next_lbl:'Próxima sessão',ps_next_val:'Terça · 14h · Dra. Carla',
   pn1:'Início',pn2:'Progresso',pn3:'Mensagens',pn4:'Perfil',
-  tr_eyebrow:'Tração',tr_h:'A clínica como<br><em>laboratório vivo.</em>',
+  tr_eyebrow:'A Clínica',tr_h:'A clínica como<br><em>laboratório vivo.</em>',
   lab_quote:'<strong>A clínica não é só prova de conceito</strong> é onde o produto é construído. Cada feature foi testada com profissionais e famílias reais antes de escalar.',
   tc_lbl:'Famílias atendidas por mês',tc_tag:'Crescendo',tc_note:'Últimos 6 meses de operação da clínica',
   mc1l:'Famílias atendidas',mc1s:'nos últimos 12 meses em São Paulo',
@@ -2437,12 +2464,12 @@ pt:{
   pc_family_insight:'A família ganha acesso gratuito ao portal. Quando a família trata em mais de uma clínica, ela pode conectar todas — e a rede cresce organicamente, sem custo de aquisição.',
 },
 en:{
-  nav_founder:'Founder',nav_problem:'Problem',nav_solution:'Solution',
-  nav_traction:'Traction',nav_market:'Market',nav_ask:'The Ask',nav_vision:'Vision',
+  nav_founder:'Founder',nav_problem:'Problem',nav_insight:'Network Insight',nav_solution:'Solution',
+  nav_traction:'The Clinic',nav_market:'Market',nav_ask:'The Ask',nav_vision:'Vision',
   nav_cta:'Schedule a Call',
   dot_cover:'Cover',dot_founder:'Founder',dot_frag:'Fragmentation',dot_platform:'Platform',
   dot_ni:'Network Insight',dot_discovery:'Discovery',dot_problem:'Problem',dot_solution:'Solution',
-  dot_workflow:'How It Works',dot_therapist:'Therapist',dot_family:'Family',dot_traction:'Traction',
+  dot_workflow:'How It Works',dot_therapist:'Therapist',dot_family:'Family',dot_traction:'The Clinic',
   dot_market:'Market',dot_biz:'Model',dot_comp:'Competition',dot_gtm:'Strategy',
   dot_team:'Team',dot_ask:'The Ask',dot_vis:'Vision',
   cover_badge:'Pre-Seed · 2025',
@@ -2524,7 +2551,7 @@ en:{
   ps_goals:'This week\'s goals',ppg1:'Eye contact',ppg2:'Verbal communication',ppg3:'Emotional regulation',
   ps_next_lbl:'Next session',ps_next_val:'Tuesday · 2pm · Dr. Carla',
   pn1:'Home',pn2:'Progress',pn3:'Messages',pn4:'Profile',
-  tr_eyebrow:'Traction',tr_h:'The clinic as a<br><em>living laboratory.</em>',
+  tr_eyebrow:'The Clinic',tr_h:'The clinic as a<br><em>living laboratory.</em>',
   lab_quote:'<strong>The clinic isn\'t just proof of concept</strong> it\'s where the product is built. Every feature was tested with real professionals and families before scaling.',
   tc_lbl:'Families served per month',tc_tag:'Growing',tc_note:'Last 6 months of clinic operations',
   mc1l:'Families served',mc1s:'in the last 12 months in São Paulo',

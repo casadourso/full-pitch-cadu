@@ -881,14 +881,14 @@ blockquote em { font-style: italic; color: var(--coral); }
 ══════════════════════════════════ */
 #competition { background: var(--cloud); }
 .comp-table { border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
-.comp-hdr { display: grid; grid-template-columns: 2fr 1fr 1fr 1.2fr; background: var(--navy); padding: 14px 20px; gap: 12px; }
-.ch { font-size: 10.5px; font-weight: 700; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.1em; }
+.comp-hdr { display: grid; grid-template-columns: 1.4fr 1fr 1fr; background: var(--navy); padding: 14px 20px; gap: 12px; }
+.ch { font-size: 10.5px; font-weight: 700; color: rgba(255,255,255,0.62); text-transform: uppercase; letter-spacing: 0.1em; }
 .ch.ours { color: var(--coral); }
-.comp-row { display: grid; grid-template-columns: 2fr 1fr 1fr 1.2fr; padding: 14px 20px; gap: 12px; border-top: 1px solid var(--border); align-items: center; background: var(--white); transition: background 0.15s; }
+.comp-row { display: grid; grid-template-columns: 1.4fr 1fr 1fr; padding: 14px 20px; gap: 12px; border-top: 1px solid var(--border); align-items: center; background: var(--white); transition: background 0.15s; }
 .comp-row:hover { background: #FAFAFA; }
 .comp-row.ours { background: var(--cloud); border-left: 3px solid var(--coral); }
 .cf { font-size: 13px; font-weight: 600; color: var(--ink); }
-.cc { display: flex; align-items: center; gap: 5px; font-size: 12.5px; font-weight: 500; }
+.cc { display: flex; align-items: center; gap: 5px; font-size: 12.5px; font-weight: 600; color: var(--slate); }
 .cy{color:#16A34A} .cn{color:var(--mist)} .cp{color:#D97706}
 
 /* ══════════════════════════════════
@@ -1301,7 +1301,6 @@ blockquote em { font-style: italic; color: var(--coral); }
   .gtm-grid { grid-template-columns: 1fr; }
   .vision-compare { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: 1fr 1fr; }
-  .ch:last-child, .cc:last-child { display: none; }
   .slide-num { display: none; }
   .mkt-funnel { gap: 10px; }
   .mkt-bar { padding: 16px 18px; gap: 10px; }
@@ -1439,7 +1438,7 @@ blockquote em { font-style: italic; color: var(--coral); }
         <span>🇺🇸</span> EN
       </button>
     </div>
-    <button class="nav-cta" data-i18n="nav_cta">Agendar Reunião</button>
+    <button class="nav-cta" data-i18n="nav_cta" onclick="window.location.href='mailto:mcosta@clinicacasadourso.com.br'">Entre em contato</button>
   </div>
 </nav>
 
@@ -1459,7 +1458,7 @@ blockquote em { font-style: italic; color: var(--coral); }
   <button class="dot"        data-target="traction"        data-i18n-label="dot_traction"   data-label="A Clínica"></button>
   <button class="dot"        data-target="market"          data-i18n-label="dot_market"     data-label="Mercado"></button>
   <button class="dot"        data-target="bizmodel"        data-i18n-label="dot_biz"        data-label="Modelo"></button>
-  <button class="dot"        data-target="competition"     data-i18n-label="dot_comp"       data-label="Concorrência"></button>
+  <button class="dot"        data-target="competition"     data-i18n-label="dot_comp"       data-label="Posicionamento"></button>
   <button class="dot"        data-target="gtm"             data-i18n-label="dot_gtm"        data-label="Estratégia"></button>
   <button class="dot"        data-target="team"            data-i18n-label="dot_team"       data-label="Time"></button>
   <button class="dot"        data-target="ask"             data-i18n-label="dot_ask"        data-label="Captação"></button>
@@ -1475,12 +1474,12 @@ blockquote em { font-style: italic; color: var(--coral); }
   <div class="inner">
     <div class="cover-grid">
       <div>
-        <div class="cover-badge fadeUp"><span class="cover-dot"></span><span data-i18n="cover_badge">Pré-Seed · 2025</span></div>
+        <div class="cover-badge fadeUp"><span class="cover-dot"></span><span data-i18n="cover_badge">Pré-Seed · 2026</span></div>
         <h1 class="cover-h1 fadeUp delay-1" data-i18n-html="cover_h1">Construímos uma clínica.<br>Então encontramos<br>o <em>problema real.</em></h1>
         <p class="cover-p fadeUp delay-2" data-i18n="cover_p">A Casa do Urso é a infraestrutura que conecta terapeutas, clínicas, escolas e famílias nascida de dentro do problema.</p>
         <div class="cover-btns fadeUp delay-3">
-          <button class="btn-coral" data-i18n="cover_btn1">Ver o Pitch</button>
-          <button class="btn-outline" data-i18n="cover_btn2">Fale Conosco</button>
+          <button class="btn-coral" data-i18n="cover_btn1" onclick="window.open('http://cadu.health','_blank','noopener,noreferrer')">Conheça mais</button>
+          <button class="btn-outline" data-i18n="cover_btn2" onclick="window.location.href='mailto:ola@cadu.health'">Fale Conosco</button>
         </div>
       </div>
       <div class="cover-stats">
@@ -2027,7 +2026,7 @@ blockquote em { font-style: italic; color: var(--coral); }
           <div class="mkt-bar mkt-bar--som" style="width:65%">
             <div class="mkt-bar-tag">SOM</div>
             <div class="mkt-bar-val">R$3,96M</div>
-            <div class="mkt-bar-desc" data-i18n="som_sub">550 clínicas em 3 anos</div>
+            <div class="mkt-bar-desc" data-i18n="som_sub">550 clínicas</div>
           </div>
         </div>
       </div>
@@ -2097,23 +2096,20 @@ blockquote em { font-style: italic; color: var(--coral); }
 ════════════════════════════════ -->
 <section id="competition" class="bg-cloud">
   <div class="inner">
-    <div class="eyebrow fadeUp" data-i18n="comp_eyebrow">Concorrência</div>
-    <h2 class="slide-title fadeUp delay-1" data-i18n-html="comp_h">Uma categoria<br><em>completamente diferente.</em></h2>
-    <p class="slide-subtitle fadeUp delay-2" data-i18n="comp_sub">Players existentes fazem entrega de terapia ou administração clínica. Ninguém constrói a camada de infraestrutura de coordenação.</p>
+    <div class="eyebrow fadeUp" data-i18n="comp_eyebrow">Posicionamento</div>
+    <h2 class="slide-title fadeUp delay-1" data-i18n="comp_h">Onde a Casa do Urso entra</h2>
+    <p class="slide-subtitle fadeUp delay-2" data-i18n="comp_sub">Operadoras de clínicas escalam com capital. A Casa do Urso escala habilitando clínicas existentes com infraestrutura.</p>
     <div class="comp-table fadeUp delay-3">
       <div class="comp-hdr">
         <div class="ch" data-i18n="comp_c0">Capacidade</div>
-        <div class="ch" data-i18n="comp_c1">Software Clínico</div>
-        <div class="ch" data-i18n="comp_c2">Genial Care</div>
+        <div class="ch" data-i18n="comp_c1">Operadoras de clínicas<br><span style="font-size:10px;font-weight:600;letter-spacing:0;text-transform:none;color:rgba(255,255,255,0.5)">Genial Care, Bloomy</span></div>
         <div class="ch ours">Casa do Urso</div>
       </div>
-      <div class="comp-row"><div class="cf" data-i18n="cr1">Administração e agendamento</div><div class="cc cy"><svg class="ic" width="14" height="14"><use href="#ic-check"/></svg> <span data-i18n="yes">Sim</span></div><div class="cc cp"><svg class="ic" width="14" height="14"><use href="#ic-minus"/></svg> <span data-i18n="par">Parcial</span></div><div class="cc cy"><svg class="ic" width="14" height="14"><use href="#ic-check"/></svg> <span data-i18n="yes">Sim</span></div></div>
-      <div class="comp-row"><div class="cf" data-i18n="cr2">Rede de entrega de terapia</div><div class="cc cn"><svg class="ic" width="14" height="14"><use href="#ic-x"/></svg> <span data-i18n="no">Não</span></div><div class="cc cy"><svg class="ic" width="14" height="14"><use href="#ic-check"/></svg> <span data-i18n="yes">Sim</span></div><div class="cc cn"><svg class="ic" width="14" height="14"><use href="#ic-x"/></svg> <span data-i18n="oos">Fora do escopo</span></div></div>
-      <div class="comp-row ours"><div class="cf" data-i18n="cr3">Coordenação entre profissionais</div><div class="cc cn"><svg class="ic" width="14" height="14"><use href="#ic-x"/></svg> <span data-i18n="no">Não</span></div><div class="cc cn"><svg class="ic" width="14" height="14"><use href="#ic-x"/></svg> <span data-i18n="no">Não</span></div><div class="cc cy"><svg class="ic" width="14" height="14"><use href="#ic-check"/></svg> <strong data-i18n="core">Core</strong></div></div>
-      <div class="comp-row ours"><div class="cf" data-i18n="cr4">Portal para famílias</div><div class="cc cn"><svg class="ic" width="14" height="14"><use href="#ic-x"/></svg> <span data-i18n="no">Não</span></div><div class="cc cn"><svg class="ic" width="14" height="14"><use href="#ic-x"/></svg> <span data-i18n="no">Não</span></div><div class="cc cy"><svg class="ic" width="14" height="14"><use href="#ic-check"/></svg> <strong data-i18n="core">Core</strong></div></div>
-      <div class="comp-row ours"><div class="cf" data-i18n="cr5">Dados estruturados de desenvolvimento</div><div class="cc cn"><svg class="ic" width="14" height="14"><use href="#ic-x"/></svg> <span data-i18n="no">Não</span></div><div class="cc cn"><svg class="ic" width="14" height="14"><use href="#ic-x"/></svg> <span data-i18n="no">Não</span></div><div class="cc cy"><svg class="ic" width="14" height="14"><use href="#ic-check"/></svg> <strong data-i18n="core">Core</strong></div></div>
-      <div class="comp-row ours"><div class="cf" data-i18n="cr6">Insights e relatórios automáticos</div><div class="cc cn"><svg class="ic" width="14" height="14"><use href="#ic-x"/></svg> <span data-i18n="no">Não</span></div><div class="cc cn"><svg class="ic" width="14" height="14"><use href="#ic-x"/></svg> <span data-i18n="no">Não</span></div><div class="cc cy"><svg class="ic" width="14" height="14"><use href="#ic-check"/></svg> <strong data-i18n="core">Core</strong></div></div>
+      <div class="comp-row"><div class="cf" data-i18n="cr1">Infraestrutura</div><div class="cc" data-i18n="cr1v1">Abrem unidades próprias</div><div class="cc" data-i18n="cr1v2">Habilita clínicas existentes</div></div>
+      <div class="comp-row"><div class="cf" data-i18n="cr2">Modelo de escala</div><div class="cc" data-i18n="cr2v1">Escalam com capital</div><div class="cc" data-i18n="cr2v2">Escalamos com software</div></div>
+      <div class="comp-row ours"><div class="cf" data-i18n="cr3">Arquitetura da rede</div><div class="cc" data-i18n="cr3v1">Sistema fechado</div><div class="cc" data-i18n="cr3v2">Rede aberta</div></div>
     </div>
+    <div class="sol-key-msg fadeUp delay-4" style="margin-top:18px" data-i18n="comp_key">Não competimos. Podemos ser a infraestrutura que eles usam.</div>
   </div>
   <div class="slide-num">10</div>
 </section>
@@ -2303,16 +2299,16 @@ const i18n = {
 pt:{
   nav_founder:'Fundadora',nav_discovery:'Descoberta',nav_problem:'Problema',nav_insight:'Insight',nav_solution:'Solução',
   nav_traction:'A Clínica',nav_market:'Mercado',nav_ask:'Captação',nav_vision:'Visão',
-  nav_cta:'Agendar Reunião',
+  nav_cta:'Entre em contato',
   dot_cover:'Capa',dot_founder:'Fundadora',dot_frag:'Fragmentação',dot_platform:'Plataforma',
   dot_ni:'Insight de Rede',dot_discovery:'Descoberta',dot_problem:'Problema',dot_solution:'Solução',
   dot_workflow:'Como Funciona',dot_therapist:'Terapeuta',dot_family:'Família',dot_traction:'A Clínica',
-  dot_market:'Mercado',dot_biz:'Modelo',dot_comp:'Concorrência',dot_gtm:'Estratégia',
+  dot_market:'Mercado',dot_biz:'Modelo',dot_comp:'Posicionamento',dot_gtm:'Estratégia',
   dot_team:'Time',dot_ask:'Captação',dot_vis:'Visão',
-  cover_badge:'Pré-Seed · 2025',
+  cover_badge:'Pré-Seed · 2026',
   cover_h1:'Construímos uma clínica.<br>Então encontramos<br>o <em>problema real.</em>',
   cover_p:'A Casa do Urso é a infraestrutura que conecta terapeutas, clínicas, escolas e famílias nascida de dentro do problema.',
-  cover_btn1:'Ver o Pitch',cover_btn2:'Fale Conosco',
+  cover_btn1:'Conheça mais',cover_btn2:'Fale Conosco',
   cover_year:'ano',cover_stat1:'Operando como clínica real',cover_stat2:'famílias buscaram atendimento nos últimos 12 meses',cover_stat3_num:'ZERO',cover_stat3:'Organização',
   cover_tag1:'Laboratório',cover_tag2:'104/mês',cover_tag3:'Aberto',
   founder_eyebrow:'A Fundadora',
@@ -2396,7 +2392,7 @@ pt:{
   mc3l:'Lista de espera ativa',mc3v:'Demanda maior que capacidade',mc3s:'Indicações constantes sem esforço de marketing',
   mkt_eyebrow:'Tamanho de Mercado',mkt_h:'5.500 clínicas.<br><em>Zero infraestrutura</em> de coordenação.',
   mkt_entry_label:'Mercado de Entrada',mkt_entry_desc:'5.500 clínicas de neurodesenvolvimento no Brasil',
-  tam_sub:'5.500 × R$600 × 12 meses',sam_sub:'50% com perfil digital = 2.750 clínicas',som_sub:'550 clínicas em 3 anos',
+  tam_sub:'5.500 × R$600 × 12 meses',sam_sub:'50% com perfil digital = 2.750 clínicas',som_sub:'550 clínicas',
   mkt_expand_label:'Mercado Expandido',mkt_expand_desc:'Toda reabilitação pediátrica + escolas + operadoras',mkt_expand_tam:'TAM expandido',
   ms1:'Pessoas com TEA no Brasil (Censo IBGE 2022)',
   ms2:'Clínicas de neurodesenvolvimento no Brasil',
@@ -2406,9 +2402,13 @@ pt:{
   pc_family_portal:'Família ganha portal grátis incluso no plano da clínica',
   pc_family_insight:'Quando a família trata em mais de uma clínica, ela pode conectar todas — e a rede cresce organicamente, sem custo de aquisição.',
   math_lbl:'Cenário SOM (3 anos)',math_k1:'Clínicas na plataforma',math_k2:'Ticket flat/mês',
-  comp_eyebrow:'Concorrência',comp_h:'Uma categoria<br><em>completamente diferente.</em>',
-  comp_sub:'Players existentes fazem entrega de terapia ou administração clínica. Ninguém constrói a camada de infraestrutura de coordenação.',
-  comp_c0:'Capacidade',comp_c1:'Software Clínico',comp_c2:'Genial Care',
+  comp_eyebrow:'Posicionamento',comp_h:'Onde a Casa do Urso entra',
+  comp_sub:'Operadoras de clínicas escalam com capital. A Casa do Urso escala habilitando clínicas existentes com infraestrutura.',
+  comp_c0:'Capacidade',comp_c1:'Operadoras de clínicas',
+  cr1:'Infraestrutura',cr1v1:'Abrem unidades próprias',cr1v2:'Habilita clínicas existentes',
+  cr2:'Modelo de escala',cr2v1:'Escalam com capital',cr2v2:'Escalamos com software',
+  cr3:'Arquitetura da rede',cr3v1:'Sistema fechado',cr3v2:'Rede aberta',
+  comp_key:'Não competimos. Podemos ser a infraestrutura que eles usam.',
   cr1:'Administração e agendamento',cr2:'Rede de entrega de terapia',cr3:'Coordenação entre profissionais',
   cr4:'Portal para famílias',cr5:'Dados estruturados de desenvolvimento',cr6:'Insights e relatórios automáticos',
   yes:'Sim',no:'Não',par:'Parcial',oos:'Fora do escopo',core:'Core',
@@ -2459,16 +2459,16 @@ pt:{
 en:{
   nav_founder:'Founder',nav_discovery:'Discovery',nav_problem:'Problem',nav_insight:'Network Insight',nav_solution:'Solution',
   nav_traction:'The Clinic',nav_market:'Market',nav_ask:'The Ask',nav_vision:'Vision',
-  nav_cta:'Schedule a Call',
+  nav_cta:'Get in touch',
   dot_cover:'Cover',dot_founder:'Founder',dot_frag:'Fragmentation',dot_platform:'Platform',
   dot_ni:'Network Insight',dot_discovery:'Discovery',dot_problem:'Problem',dot_solution:'Solution',
   dot_workflow:'How It Works',dot_therapist:'Therapist',dot_family:'Family',dot_traction:'The Clinic',
-  dot_market:'Market',dot_biz:'Model',dot_comp:'Competition',dot_gtm:'Strategy',
+  dot_market:'Market',dot_biz:'Model',dot_comp:'Positioning',dot_gtm:'Strategy',
   dot_team:'Team',dot_ask:'The Ask',dot_vis:'Vision',
-  cover_badge:'Pre-Seed · 2025',
+  cover_badge:'Pre-Seed · 2026',
   cover_h1:'We built a clinic.<br>Then we found<br>the <em>real problem.</em>',
   cover_p:'Casa do Urso is the infrastructure connecting therapists, clinics, schools and families built from inside the problem.',
-  cover_btn1:'View the Deck',cover_btn2:'Contact Us',
+  cover_btn1:'Learn more',cover_btn2:'Contact Us',
   cover_year:'year',cover_stat1:'Operating as a real clinic',cover_stat2:'families sought care in the last 12 months',cover_stat3_num:'ZERO',cover_stat3:'Organization',
   cover_tag1:'Lab',cover_tag2:'104/month',cover_tag3:'Open',
   founder_eyebrow:'The Founder',
@@ -2552,7 +2552,7 @@ en:{
   mc3l:'Active waitlist',mc3v:'Demand exceeds capacity',mc3s:'Constant referrals with zero marketing effort',
   mkt_eyebrow:'Market Size',mkt_h:'5,500 clinics.<br><em>Zero coordination</em> infrastructure.',
   mkt_entry_label:'Entry Market',mkt_entry_desc:'5,500 neurodevelopment clinics in Brazil',
-  tam_sub:'5,500 × R$600 × 12 months',sam_sub:'50% with digital profile = 2,750 clinics',som_sub:'550 clinics in 3 years',
+  tam_sub:'5,500 × R$600 × 12 months',sam_sub:'50% with digital profile = 2,750 clinics',som_sub:'550 clinics',
   mkt_expand_label:'Expanded Market',mkt_expand_desc:'All pediatric rehab + schools + insurers',mkt_expand_tam:'Expanded TAM',
   ms1:'People with ASD in Brazil (IBGE Census 2022)',
   ms2:'Neurodevelopment clinics in Brazil',
@@ -2562,9 +2562,13 @@ en:{
   pc_family_portal:'Family gets free portal included in the clinic plan',
   pc_family_insight:'When a family treats at more than one clinic, they can connect all of them — and the network grows organically, at zero acquisition cost.',
   math_lbl:'SOM Scenario (3 years)',math_k1:'Clinics on platform',math_k2:'Flat ticket / month',
-  comp_eyebrow:'Competition',comp_h:'A completely<br><em>different category.</em>',
-  comp_sub:'Existing players do therapy delivery or clinic admin. No one builds the coordination infrastructure layer.',
-  comp_c0:'Capability',comp_c1:'Clinic Software',comp_c2:'Genial Care',
+  comp_eyebrow:'Positioning',comp_h:'Where Casa do Urso fits',
+  comp_sub:'Clinic operators scale with capital. Casa do Urso scales by enabling existing clinics with infrastructure.',
+  comp_c0:'Capability',comp_c1:'Clinic operators',
+  cr1:'Infrastructure',cr1v1:'Open their own units',cr1v2:'Enables existing clinics',
+  cr2:'Scaling model',cr2v1:'Scale with capital',cr2v2:'We scale with software',
+  cr3:'Network architecture',cr3v1:'Closed system',cr3v2:'Open network',
+  comp_key:'We are not competing. We can be the infrastructure they use.',
   cr1:'Admin & scheduling',cr2:'Therapy delivery network',cr3:'Cross-professional coordination',
   cr4:'Family portal',cr5:'Structured developmental data',cr6:'Automated insights & reports',
   yes:'Yes',no:'No',par:'Partial',oos:'Out of scope',core:'Core',
